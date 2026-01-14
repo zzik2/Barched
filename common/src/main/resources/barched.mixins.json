@@ -1,0 +1,38 @@
+{
+  "required": true,
+  "plugin": "zzik2.barched.modifier.ModifyAccessTransformer",
+  "package": "zzik2.barched.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+    "client.EntityRenderersMixin",
+    "client.LayerDefinitionsMixin",
+    "client.ModelLayersMixin",
+    "client.SkeletonModelMixin"
+  ],
+  "mixins": [
+    "AbstractSkeletonMixin",
+    "BiomeDefaultFeaturesMixin",
+    "CreativeModeTabsMixin",
+    "DataFixersMixin",
+    "DefaultAttributesMixin",
+    "EntityLootSubProviderMixin",
+    "EntityMixin",
+    "EntityTypeMixin",
+    "EntityTypeTagsProviderMixin",
+    "HuskMixin",
+    "ItemMixin",
+    "ItemsMixin",
+    "ItemTagsMixin",
+    "MonsterMixin",
+    "ParrotMixin",
+    "SoundEventsMixin",
+    "SpawnPlacementsMixin",
+    "VanillaAdventureAdvancementsMixin",
+    "VanillaEntityLootMixin",
+    "VanillaItemTagsProviderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

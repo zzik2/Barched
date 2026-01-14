@@ -1,0 +1,23 @@
+{
+  "entity.minecraft.parched": "파치트",
+  "entity.minecraft.camel_husk": "낙타 허스크",
+
+  "item.minecraft.parched_spawn_egg": "파치트 생성 알",
+  "item.minecraft.camel_husk_spawn_egg": "낙타 허스크 생성 알",
+
+  "subtitles.entity.parched.ambient": "파치트가 달그락거림",
+  "subtitles.entity.parched.death": "파치트가 죽음",
+  "subtitles.entity.parched.hurt": "파치트가 상처를 입음",
+  "subtitles.entity.camel_husk.ambient": "낙타 허스크가 으르렁거림",
+  "subtitles.entity.camel_husk.dash": "낙타 허스크가 돌진함",
+  "subtitles.entity.camel_husk.dash_ready": "낙타 허스크가 회복함",
+  "subtitles.entity.camel_husk.death": "낙타 허스크가 죽음",
+  "subtitles.entity.camel_husk.eat": "낙타 허스크가 먹음",
+  "subtitles.entity.camel_husk.hurt": "낙타 허스크가 상처를 입음",
+  "subtitles.entity.camel_husk.saddle": "안장을 장착함",
+  "subtitles.entity.camel_husk.sit": "낙타 허스크가 앉음",
+  "subtitles.entity.camel_husk.stand": "낙타 허스크가 일어섬",
+
+  "subtitles.entity.parrot.imitate.parched": "앵무새가 달그락거리는 소리를 흉내 냄",
+  "subtitles.entity.parrot.imitate.camel_husk": "앵무새가 으르렁거리는 소리를 흉내 냄"
+}
