@@ -11,7 +11,7 @@ authors = "zzik2"
 description = '''
 
 '''
-#logoFile = ""
+logoFile = "assets/barched/icon.png"
 
 [[dependencies.barched]]
 modId = "neoforge"
