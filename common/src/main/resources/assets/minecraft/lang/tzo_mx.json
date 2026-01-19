@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Jtakijel",
+  "entity.minecraft.camel_husk": "Ulem toromerario",
+  "item.minecraft.parched_spawn_egg": "Vinajesob jtakijel",
+  "item.minecraft.camel_husk_spawn_egg": "Vinajesob ulem toromerario",
+  "subtitles.entity.parched.ambient": "Chnik li jtakijele",
+  "subtitles.entity.parched.death": "Chlaj li jtakijele",
+  "subtitles.entity.parched.hurt": "Chyaj li jtakijele",
+  "subtitles.entity.camel_husk.ambient": "Ta xjiet li takin toromerarioe",
+  "subtitles.entity.camel_husk.dash": "Cht'al li takin toromerarioe",
+  "subtitles.entity.camel_husk.dash_ready": "Chkol li takin toromerarioe",
+  "subtitles.entity.camel_husk.death": "Chlaj li takin toromerarioe",
+  "subtitles.entity.camel_husk.eat": "Chve' li takin toromerarioe",
+  "subtitles.entity.camel_husk.hurt": "Chyaj li takin toromerarioe",
+  "subtitles.entity.camel_husk.saddle": "Ch-ak'at li xilae",
+  "subtitles.entity.camel_husk.sit": "Chchotij li takin toromerarioe",
+  "subtitles.entity.camel_husk.stand": "Chvechi li takin toromerarioe",
+  "subtitles.entity.parrot.imitate.parched": "Tspas jech k'ucha'al jun jtakijel li puyuch'e",
+  "subtitles.entity.parrot.imitate.camel_husk": "Tspas jech k'ucha'al jkot takin toromerario li puyuch'e"
+}

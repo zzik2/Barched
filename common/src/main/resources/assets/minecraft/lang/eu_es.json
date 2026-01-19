@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Idorrekoa",
+  "entity.minecraft.camel_husk": "Gamelu momifikatua",
+  "item.minecraft.parched_spawn_egg": "Idorreko sortzaile arrautza",
+  "item.minecraft.camel_husk_spawn_egg": "Gamelu momifikatu sortzaile arrautza",
+  "subtitles.entity.parched.ambient": "Idorrekoa triki-traka egiten",
+  "subtitles.entity.parched.death": "Idorrekoa hiltzen",
+  "subtitles.entity.parched.hurt": "Idorrekoa zauritzen",
+  "subtitles.entity.camel_husk.ambient": "Gamelu momifikatua kurrinkatzen",
+  "subtitles.entity.camel_husk.dash": "Gamelu momifikatua oldartzen",
+  "subtitles.entity.camel_husk.dash_ready": "Gamelu momifikatua berreskuratzen",
+  "subtitles.entity.camel_husk.death": "Gamelu momifikatua hiltzen",
+  "subtitles.entity.camel_husk.eat": "Gamelu momifikatua jaten",
+  "subtitles.entity.camel_husk.hurt": "Gamelu momifikatua zauritzen",
+  "subtitles.entity.camel_husk.saddle": "Jarlekua jarrita",
+  "subtitles.entity.camel_husk.sit": "Gamelu momifikatua esertzen",
+  "subtitles.entity.camel_husk.stand": "Gamelu momifikatua altxatzen",
+  "subtitles.entity.parrot.imitate.parched": "Loroa idorrekoa imitatzen",
+  "subtitles.entity.parrot.imitate.camel_husk": "Loroa gamelu momifikatua imitatzen"
+}

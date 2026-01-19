@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "מצומק",
+  "entity.minecraft.camel_husk": "גמל האסק",
+  "item.minecraft.parched_spawn_egg": "ביצת זימון פארצ'ד",
+  "item.minecraft.camel_husk_spawn_egg": "ביצת זימון גמן האסק",
+  "subtitles.entity.parched.ambient": "פארצ'ד מרשרש",
+  "subtitles.entity.parched.death": "פארצ'ד מת",
+  "subtitles.entity.parched.hurt": "פארצ'ד נפגע",
+  "subtitles.entity.camel_husk.ambient": "גמל האסק נוהם",
+  "subtitles.entity.camel_husk.dash": "גמל האסק מזנק",
+  "subtitles.entity.camel_husk.dash_ready": "גמל האסק מתאושש",
+  "subtitles.entity.camel_husk.death": "גמל האסק מת",
+  "subtitles.entity.camel_husk.eat": "גמל האסק אוכל",
+  "subtitles.entity.camel_husk.hurt": "גמל האסק נפצע",
+  "subtitles.entity.camel_husk.saddle": "אוכף הולבש",
+  "subtitles.entity.camel_husk.sit": "גמל האסק מתיישב",
+  "subtitles.entity.camel_husk.stand": "גמל האסק נעמד",
+  "subtitles.entity.parrot.imitate.parched": "תוכי מפצפץ",
+  "subtitles.entity.parrot.imitate.camel_husk": "תוכי רוטן"
+}

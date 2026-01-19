@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "โครงกระดูกทะเลทราย",
+  "entity.minecraft.camel_husk": "อูฐซอมบี้ทะเลทราย",
+  "item.minecraft.parched_spawn_egg": "ไข่เกิดโครงกระดูกทะเลทราย",
+  "item.minecraft.camel_husk_spawn_egg": "ไข่เกิดอูฐซอมบี้ทะเลทราย",
+  "subtitles.entity.parched.ambient": "โครงกระดูกทะเลทรายส่งเสียงแตก",
+  "subtitles.entity.parched.death": "โครงกระดูกทะเลทรายตาย",
+  "subtitles.entity.parched.hurt": "โครงกระดูกทะเลทรายเจ็บ",
+  "subtitles.entity.camel_husk.ambient": "อูฐซอมบี้ทะเลทรายงึมงำ",
+  "subtitles.entity.camel_husk.dash": "อูฐซอมบี้ทะเลทรายพุ่ง",
+  "subtitles.entity.camel_husk.dash_ready": "อูฐซอมบี้ทะเลทรายฟื้นฟู",
+  "subtitles.entity.camel_husk.death": "อูฐซอมบี้ทะเลทรายตาย",
+  "subtitles.entity.camel_husk.eat": "อูฐซอมบี้ทะเลทรายกิน",
+  "subtitles.entity.camel_husk.hurt": "อูฐซอมบี้ทะเลทรายเจ็บ",
+  "subtitles.entity.camel_husk.saddle": "อานสวมใส่",
+  "subtitles.entity.camel_husk.sit": "อูฐซอมบี้ทะเลทรายนั่งลง",
+  "subtitles.entity.camel_husk.stand": "อูฐซอมบี้ทะเลทรายยืนขึ้น",
+  "subtitles.entity.parrot.imitate.parched": "นกแก้วส่งเสียงแตก",
+  "subtitles.entity.parrot.imitate.camel_husk": "นกแก้วงึมงำ"
+}

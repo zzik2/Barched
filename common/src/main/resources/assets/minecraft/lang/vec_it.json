@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Arsirà",
+  "entity.minecraft.camel_husk": "Camel Seco",
+  "item.minecraft.parched_spawn_egg": "Ovo zenerador de Arsirà",
+  "item.minecraft.camel_husk_spawn_egg": "Ovo zenerador de Camel Seco",
+  "subtitles.entity.parched.ambient": "Arsirà el cricola",
+  "subtitles.entity.parched.death": "Arsirà el more",
+  "subtitles.entity.parched.hurt": "Arsirà ferìo",
+  "subtitles.entity.camel_husk.ambient": "Camel Husk grumphs",
+  "subtitles.entity.camel_husk.dash": "Camel Husk yeets",
+  "subtitles.entity.camel_husk.dash_ready": "Camel Husk recovers",
+  "subtitles.entity.camel_husk.death": "Camel Seco el more",
+  "subtitles.entity.camel_husk.eat": "Camel Seco el magna",
+  "subtitles.entity.camel_husk.hurt": "Camel Seco ferìo",
+  "subtitles.entity.camel_husk.saddle": "Sela pareciada",
+  "subtitles.entity.camel_husk.sit": "Camel Seco el se senta",
+  "subtitles.entity.camel_husk.stand": "Camel Seco el se leva su",
+  "subtitles.entity.parrot.imitate.parched": "Papagal el cricola",
+  "subtitles.entity.parrot.imitate.camel_husk": "Parrot grumphs"
+}

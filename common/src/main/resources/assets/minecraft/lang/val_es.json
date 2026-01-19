@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Esquelet de les arenes",
+  "entity.minecraft.camel_husk": "Dromedari momificat",
+  "item.minecraft.parched_spawn_egg": "Generar esquelet de les arenes",
+  "item.minecraft.camel_husk_spawn_egg": "Generar dromedari momificat",
+  "subtitles.entity.parched.ambient": "Un esquelet glacial s'està sacsant",
+  "subtitles.entity.parched.death": "Ha mort un esquelet glacial",
+  "subtitles.entity.parched.hurt": "Han ferit un esquelet glacial",
+  "subtitles.entity.camel_husk.ambient": "Un dromedari momificat està grunyint",
+  "subtitles.entity.camel_husk.dash": "Un dromedari momificat s'ha llançat",
+  "subtitles.entity.camel_husk.dash_ready": "Un dromedari momificat s'està recuperant",
+  "subtitles.entity.camel_husk.death": "Ha mort un dromedari momificat",
+  "subtitles.entity.camel_husk.eat": "Un dromedari momificat està menjant",
+  "subtitles.entity.camel_husk.hurt": "Han ferit un dromedari momificat",
+  "subtitles.entity.camel_husk.saddle": "S'ha equipat una sella de muntar",
+  "subtitles.entity.camel_husk.sit": "Un dromedari momificat s'ha assegut",
+  "subtitles.entity.camel_husk.stand": "Un dromedari momificat s'ha posat dempeus",
+  "subtitles.entity.parrot.imitate.parched": "Un lloro està espurnejant",
+  "subtitles.entity.parrot.imitate.camel_husk": "Un lloro està grunyint"
+}

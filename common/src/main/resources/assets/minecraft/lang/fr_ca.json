@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Desséché",
+  "entity.minecraft.camel_husk": "Dromadaire momifié",
+  "item.minecraft.parched_spawn_egg": "Oeuf spawneur de desséché",
+  "item.minecraft.camel_husk_spawn_egg": "Oeuf spawneur de dromadaire momifié",
+  "subtitles.entity.parched.ambient": "Desséché qui craque",
+  "subtitles.entity.parched.death": "Desséché qui meurt",
+  "subtitles.entity.parched.hurt": "Desséché blessé",
+  "subtitles.entity.camel_husk.ambient": "Dromadaire momifié qui grogne",
+  "subtitles.entity.camel_husk.dash": "Dromadaire momifié qui s'élance",
+  "subtitles.entity.camel_husk.dash_ready": "Dromadaire momifié qui récupère",
+  "subtitles.entity.camel_husk.death": "Dromadaire momifié qui meurt",
+  "subtitles.entity.camel_husk.eat": "Dromadaire momifié qui mange",
+  "subtitles.entity.camel_husk.hurt": "Dromadaire momifié blessé",
+  "subtitles.entity.camel_husk.saddle": "Selle équipée",
+  "subtitles.entity.camel_husk.sit": "Dromadaire momifié qui s'assoit",
+  "subtitles.entity.camel_husk.stand": "Dromadaire momifié qui se lève",
+  "subtitles.entity.parrot.imitate.parched": "Perroquet imitant le desséché",
+  "subtitles.entity.parrot.imitate.camel_husk": "Perroquet imitant le dromadaire momifié"
+}

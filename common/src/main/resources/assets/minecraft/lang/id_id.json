@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Kerontang",
+  "entity.minecraft.camel_husk": "Unta Belulang",
+  "item.minecraft.parched_spawn_egg": "Telur Pewujudan Kerontang",
+  "item.minecraft.camel_husk_spawn_egg": "Telur Pewujudan Unta Belulang",
+  "subtitles.entity.parched.ambient": "Kerontang menggeretak",
+  "subtitles.entity.parched.death": "Kerontang mati",
+  "subtitles.entity.parched.hurt": "Kerontang terluka",
+  "subtitles.entity.camel_husk.ambient": "Unta Belulang berdengus",
+  "subtitles.entity.camel_husk.dash": "Unta Belulang berjingkrak",
+  "subtitles.entity.camel_husk.dash_ready": "Unta Belulang pulih",
+  "subtitles.entity.camel_husk.death": "Unta Belulang mati",
+  "subtitles.entity.camel_husk.eat": "Unta Belulang makan",
+  "subtitles.entity.camel_husk.hurt": "Unta Belulang terluka",
+  "subtitles.entity.camel_husk.saddle": "Pelana dipasang",
+  "subtitles.entity.camel_husk.sit": "Unta Belulang duduk",
+  "subtitles.entity.camel_husk.stand": "Unta Belulang berdiri",
+  "subtitles.entity.parrot.imitate.parched": "Bayan meniru Kerontang",
+  "subtitles.entity.parrot.imitate.camel_husk": "Bayan meniru Unta Belulang"
+}

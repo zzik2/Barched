@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "pǝɥɔɹɐԀ",
+  "entity.minecraft.camel_husk": "ʞsnH ꞁǝɯɐƆ",
+  "item.minecraft.parched_spawn_egg": "ᵷᵷƎ uʍɐdS pǝɥɔɹɐԀ",
+  "item.minecraft.camel_husk_spawn_egg": "ᵷᵷƎ uʍɐdS ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.parched.ambient": "sǝꞁʞɔɐɹɔ pǝɥɔɹɐԀ",
+  "subtitles.entity.parched.death": "sǝᴉp pǝɥɔɹɐԀ",
+  "subtitles.entity.parched.hurt": "sʇɹnɥ pǝɥɔɹɐԀ",
+  "subtitles.entity.camel_husk.ambient": "sɥdɯnɹᵷ ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.camel_husk.dash": "sʇǝǝʎ ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.camel_husk.dash_ready": "sɹǝʌoɔǝɹ ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.camel_husk.death": "sǝᴉp ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.camel_husk.eat": "sʇɐǝ ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.camel_husk.hurt": "sʇɹnɥ ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.camel_husk.saddle": "sdᴉnbǝ ǝꞁppɐS",
+  "subtitles.entity.camel_husk.sit": "uʍop sʇᴉs ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.camel_husk.stand": "dn spuɐʇs ʞsnH ꞁǝɯɐƆ",
+  "subtitles.entity.parrot.imitate.parched": "sǝꞁʞɔɐɹɔ ʇoɹɹɐԀ",
+  "subtitles.entity.parrot.imitate.camel_husk": "sɥdɯnɹᵷ ʇoɹɹɐԀ"
+}

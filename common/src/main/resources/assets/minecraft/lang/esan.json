@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Momificao",
+  "entity.minecraft.camel_husk": "Cameyo diçecao",
+  "item.minecraft.parched_spawn_egg": "Henerâh momificao",
+  "item.minecraft.camel_husk_spawn_egg": "Henerâh cameyo diçecao",
+  "subtitles.entity.parched.ambient": "Momificao traquetea",
+  "subtitles.entity.parched.death": "Momificao muere",
+  "subtitles.entity.parched.hurt": "Momificao erío",
+  "subtitles.entity.camel_husk.ambient": "Cameyo diçecao gruñe",
+  "subtitles.entity.camel_husk.dash": "Cameyo diçecao çe lança",
+  "subtitles.entity.camel_husk.dash_ready": "Cameyo diçecao çe recupera",
+  "subtitles.entity.camel_husk.death": "Cameyo diçecao muere",
+  "subtitles.entity.camel_husk.eat": "Cameyo diçecao come",
+  "subtitles.entity.camel_husk.hurt": "Cameyo diçecao erío",
+  "subtitles.entity.camel_husk.saddle": "Montura equipá",
+  "subtitles.entity.camel_husk.sit": "Cameyo diçecao çe çienta",
+  "subtitles.entity.camel_husk.stand": "Cameyo diçecao çe lebanta",
+  "subtitles.entity.parrot.imitate.parched": "Loro imita a un momificao",
+  "subtitles.entity.parrot.imitate.camel_husk": "Loro imita a un cameyo diçecao"
+}

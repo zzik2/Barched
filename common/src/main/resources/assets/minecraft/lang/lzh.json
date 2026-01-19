@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "枯髑",
+  "entity.minecraft.camel_husk": "枯橐駝",
+  "item.minecraft.parched_spawn_egg": "孳枯髑之卵",
+  "item.minecraft.camel_husk_spawn_egg": "孳枯橐駝之卵",
+  "subtitles.entity.parched.ambient": "枯髑格格",
+  "subtitles.entity.parched.death": "枯髑斃",
+  "subtitles.entity.parched.hurt": "枯髑傷",
+  "subtitles.entity.camel_husk.ambient": "枯橐駝鳴",
+  "subtitles.entity.camel_husk.dash": "枯橐駝衝",
+  "subtitles.entity.camel_husk.dash_ready": "枯橐駝復故",
+  "subtitles.entity.camel_husk.death": "枯橐駝斃",
+  "subtitles.entity.camel_husk.eat": "枯橐駝食",
+  "subtitles.entity.camel_husk.hurt": "枯橐駝傷",
+  "subtitles.entity.camel_husk.saddle": "著鞍",
+  "subtitles.entity.camel_husk.sit": "枯橐駝伏",
+  "subtitles.entity.camel_husk.stand": "枯橐駝立",
+  "subtitles.entity.parrot.imitate.parched": "鸚鵡格格",
+  "subtitles.entity.parrot.imitate.camel_husk": "鸚鵡鳴"
+}

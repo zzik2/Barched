@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Кебір",
+  "entity.minecraft.camel_husk": "Түйе мәйіті",
+  "item.minecraft.parched_spawn_egg": "Кебір тұқымы",
+  "item.minecraft.camel_husk_spawn_egg": "Түйе мәйітінің тұқымы",
+  "subtitles.entity.parched.ambient": "Кебір шырт етті",
+  "subtitles.entity.parched.death": "Кебір өлді",
+  "subtitles.entity.parched.hurt": "Кебір жараланды",
+  "subtitles.entity.camel_husk.ambient": "Түйе мәйіті қыр етті",
+  "subtitles.entity.camel_husk.dash": "Түйе мәйіті жұлқынды",
+  "subtitles.entity.camel_husk.dash_ready": "Түйе мәйіті суыды",
+  "subtitles.entity.camel_husk.death": "Түйе мәйіті өлді",
+  "subtitles.entity.camel_husk.eat": "Түйе мәйіті жем жеді",
+  "subtitles.entity.camel_husk.hurt": "Түйе мәйіті жараланды",
+  "subtitles.entity.camel_husk.saddle": "Ер салынды",
+  "subtitles.entity.camel_husk.sit": "Түйе мәйіті шөкті",
+  "subtitles.entity.camel_husk.stand": "Түйе мәйіті түрегелді",
+  "subtitles.entity.parrot.imitate.parched": "Parrot crackles",
+  "subtitles.entity.parrot.imitate.camel_husk": "Parrot grumphs"
+}

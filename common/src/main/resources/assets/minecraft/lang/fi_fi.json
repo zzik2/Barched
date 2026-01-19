@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Kuivahtanut",
+  "entity.minecraft.camel_husk": "Kameliholkki",
+  "item.minecraft.parched_spawn_egg": "Luo kuivahtanut",
+  "item.minecraft.camel_husk_spawn_egg": "Luo kameliholkki",
+  "subtitles.entity.parched.ambient": "Kuivahtanut rätisee",
+  "subtitles.entity.parched.death": "Kuivahtanut kuolee",
+  "subtitles.entity.parched.hurt": "Kuivahtanut vahingoittuu",
+  "subtitles.entity.camel_husk.ambient": "Kameliholkki murisee",
+  "subtitles.entity.camel_husk.dash": "Kameliholkki loikkaa",
+  "subtitles.entity.camel_husk.dash_ready": "Kameliholkki palautuu",
+  "subtitles.entity.camel_husk.death": "Kameliholkki kuolee",
+  "subtitles.entity.camel_husk.eat": "Kameliholkki syö",
+  "subtitles.entity.camel_husk.hurt": "Kameliholkki vahingoittuu",
+  "subtitles.entity.camel_husk.saddle": "Kameliholkki satuloidaan",
+  "subtitles.entity.camel_husk.sit": "Kameliholkki istahtaa",
+  "subtitles.entity.camel_husk.stand": "Kameliholkki nousee ylös",
+  "subtitles.entity.parrot.imitate.parched": "Papukaija rätisee",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papukaija murisee"
+}

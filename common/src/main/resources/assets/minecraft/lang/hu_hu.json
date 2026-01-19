@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Perzselt",
+  "entity.minecraft.camel_husk": "Eltevetett",
+  "item.minecraft.parched_spawn_egg": "Perzseltidéző tojás",
+  "item.minecraft.camel_husk_spawn_egg": "Eltevetettidéző tojás",
+  "subtitles.entity.parched.ambient": "Perzselt csörög",
+  "subtitles.entity.parched.death": "Perzselt meghal",
+  "subtitles.entity.parched.hurt": "Perzselt sérül",
+  "subtitles.entity.camel_husk.ambient": "Eltevetett morog",
+  "subtitles.entity.camel_husk.dash": "Eltevetett ugrik",
+  "subtitles.entity.camel_husk.dash_ready": "Eltevetett kipiheni magát",
+  "subtitles.entity.camel_husk.death": "Eltevetett meghal",
+  "subtitles.entity.camel_husk.eat": "Eltevetett eszik",
+  "subtitles.entity.camel_husk.hurt": "Eltevetett sérül",
+  "subtitles.entity.camel_husk.saddle": "Felnyergelés",
+  "subtitles.entity.camel_husk.sit": "Eltevetett leül",
+  "subtitles.entity.camel_husk.stand": "Eltevetett feláll",
+  "subtitles.entity.parrot.imitate.parched": "Papagáj ropog",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papagáj morog"
+}

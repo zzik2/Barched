@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Suchlak",
+  "entity.minecraft.camel_husk": "Viarblud-zdychlak",
+  "item.minecraft.parched_spawn_egg": "Jajka vykliku — Suchlak",
+  "item.minecraft.camel_husk_spawn_egg": "Jajka vykliku — Viarblud-zdychlak",
+  "subtitles.entity.parched.ambient": "Suchlak brazhoča kasciami",
+  "subtitles.entity.parched.death": "Suchlak hinie",
+  "subtitles.entity.parched.hurt": "Suchlak paranieny",
+  "subtitles.entity.camel_husk.ambient": "Viarblud-zdychlak burkoča",
+  "subtitles.entity.camel_husk.dash": "Viarblud-zdychlak pieraskokvaje",
+  "subtitles.entity.camel_husk.dash_ready": "Viarblud-zdychlak nabirajecca sił",
+  "subtitles.entity.camel_husk.death": "Viarblud-zdychlak hinie",
+  "subtitles.entity.camel_husk.eat": "Viarblud-zdychlak jesć",
+  "subtitles.entity.camel_husk.hurt": "Viarblud-zdychlak paranieny",
+  "subtitles.entity.camel_husk.saddle": "Viarblud-zdychlak asiadłany",
+  "subtitles.entity.camel_husk.sit": "Viarblud-zdychlak siadaje",
+  "subtitles.entity.camel_husk.stand": "Viarblud-zdychlak ustaje",
+  "subtitles.entity.parrot.imitate.parched": "Papuhaj pierajmaje suchlaka",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papuhaj pierajmaje viarbluda-zdychlaka"
+}

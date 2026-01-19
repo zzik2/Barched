@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Tlakakaliwki",
+  "entity.minecraft.camel_husk": "Īxtsayānki trometarioh",
+  "item.minecraft.parched_spawn_egg": "Tlakaliwkānēxtihkētl",
+  "item.minecraft.camel_husk_spawn_egg": "Īxtsayānki trometariohnēxtihkētl",
+  "subtitles.entity.parched.ambient": "Kakalatsa tlakakaliwki",
+  "subtitles.entity.parched.death": "Miki tlakakaliwki",
+  "subtitles.entity.parched.hurt": "Kikokoa tlakakaliwki",
+  "subtitles.entity.camel_husk.ambient": "Kikinaka īxtsayānki trometarioh",
+  "subtitles.entity.camel_husk.dash": "Kwitlaxeloa īxtsayānki trometarioh",
+  "subtitles.entity.camel_husk.dash_ready": "Yōli īxtsayānki trometarioh",
+  "subtitles.entity.camel_husk.death": "Miki īxtsayānki trometarioh",
+  "subtitles.entity.camel_husk.eat": "Tlakwa īxtsayānki trometarioh",
+  "subtitles.entity.camel_husk.hurt": "Kikokoa īxtsayānki trometarioh",
+  "subtitles.entity.camel_husk.saddle": "Kitlālia siyah",
+  "subtitles.entity.camel_husk.sit": "Mosēwia īxtsayānki trometarioh",
+  "subtitles.entity.camel_husk.stand": "Moketsa īxtsayānki trometarioh",
+  "subtitles.entity.parrot.imitate.parched": "Kochotl kiyehyekalwia sē tlakakaliwki",
+  "subtitles.entity.parrot.imitate.camel_husk": "Kochotl kiyehyekalwia sē īxtsayānki trometarioh"
+}

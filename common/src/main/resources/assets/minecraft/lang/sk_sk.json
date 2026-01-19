@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Suchár",
+  "entity.minecraft.camel_husk": "Ťaví zdochliak",
+  "item.minecraft.parched_spawn_egg": "Vajíčko so suchárom",
+  "item.minecraft.camel_husk_spawn_egg": "Vajíčko s ťavím zdochliakom",
+  "subtitles.entity.parched.ambient": "Praskot suchára",
+  "subtitles.entity.parched.death": "Umieranie suchára",
+  "subtitles.entity.parched.hurt": "Poranenie suchára",
+  "subtitles.entity.camel_husk.ambient": "Bručanie ťavieho zdochliaka",
+  "subtitles.entity.camel_husk.dash": "Skok ťavieho zdochliaka",
+  "subtitles.entity.camel_husk.dash_ready": "Oddýchnutie ťavieho zdochliaka",
+  "subtitles.entity.camel_husk.death": "Umieranie ťavieho zdochliaka",
+  "subtitles.entity.camel_husk.eat": "Žranie ťavieho zdochliaka",
+  "subtitles.entity.camel_husk.hurt": "Poranenie ťavieho zdochliaka",
+  "subtitles.entity.camel_husk.saddle": "Nasadenie sedla",
+  "subtitles.entity.camel_husk.sit": "Sadnutie ťavieho zdochliaka",
+  "subtitles.entity.camel_husk.stand": "Vstávanie ťavieho zdochliaka",
+  "subtitles.entity.parrot.imitate.parched": "Praskot papagája",
+  "subtitles.entity.parrot.imitate.camel_husk": "Bručanie papagája"
+}

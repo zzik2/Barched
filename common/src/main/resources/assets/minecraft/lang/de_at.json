@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Wüstnwondara",
+  "entity.minecraft.camel_husk": "Untots Kamel",
+  "item.minecraft.parched_spawn_egg": "Wüstnwondara-Spawn-Ei",
+  "item.minecraft.camel_husk_spawn_egg": "Untots-Kamel-Spawn-Ei",
+  "subtitles.entity.parched.ambient": "Eiswondara klappat",
+  "subtitles.entity.parched.death": "Eiswondara stiabt",
+  "subtitles.entity.parched.hurt": "Eiswondara nimmt Schodn",
+  "subtitles.entity.camel_husk.ambient": "Untots Kamel grummlt",
+  "subtitles.entity.camel_husk.dash": "Untots Kamel prescht",
+  "subtitles.entity.camel_husk.dash_ready": "Untots Kamel eaholt sich",
+  "subtitles.entity.camel_husk.death": "Untots Kamel stiabt",
+  "subtitles.entity.camel_husk.eat": "Untots Kamel frisst",
+  "subtitles.entity.camel_husk.hurt": "Untots Kamel nimmt Schodn",
+  "subtitles.entity.camel_husk.saddle": "Untots Kamel gsottlt",
+  "subtitles.entity.camel_husk.sit": "Untots Kamel setzt sich hi",
+  "subtitles.entity.camel_husk.stand": "Untots Kamel steht auf",
+  "subtitles.entity.parrot.imitate.parched": "Popagei knistat",
+  "subtitles.entity.parrot.imitate.camel_husk": "Popagei grummlt"
+}

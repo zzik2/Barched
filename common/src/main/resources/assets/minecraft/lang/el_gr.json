@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Αφυδατωμένος",
+  "entity.minecraft.camel_husk": "Μούμια Καμήλα",
+  "item.minecraft.parched_spawn_egg": "Αβγό Γέννησης Αφυδατωμένου",
+  "item.minecraft.camel_husk_spawn_egg": "Αβγό Γέννησης Μούμιας Καμήλας",
+  "subtitles.entity.parched.ambient": "Αφυδατωμένος κροταλίζει",
+  "subtitles.entity.parched.death": "Αφυδατωμένος πεθαίνει",
+  "subtitles.entity.parched.hurt": "Αφυδατωμένος τραυματίζεται",
+  "subtitles.entity.camel_husk.ambient": "Μούμια Καμήλα μουγκρίζει",
+  "subtitles.entity.camel_husk.dash": "Μούμια Καμήλα ορμάει",
+  "subtitles.entity.camel_husk.dash_ready": "Μούμια Καμήλα ανακάμπτει",
+  "subtitles.entity.camel_husk.death": "Μούμια Καμήλα πεθαίνει",
+  "subtitles.entity.camel_husk.eat": "Μούμια Καμήλα τρώει",
+  "subtitles.entity.camel_husk.hurt": "Μούμια Καμήλα τραυματίζεται",
+  "subtitles.entity.camel_husk.saddle": "Σέλα φοριέται",
+  "subtitles.entity.camel_husk.sit": "Μούμια Καμήλα κάθεται",
+  "subtitles.entity.camel_husk.stand": "Μούμια Καμήλα σηκώνεται",
+  "subtitles.entity.parrot.imitate.parched": "Παπαγάλος κροταλίζει",
+  "subtitles.entity.parrot.imitate.camel_husk": "Παπαγάλος μουγκρίζει"
+}

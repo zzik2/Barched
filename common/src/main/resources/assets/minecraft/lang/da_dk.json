@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Udtørret skelet",
+  "entity.minecraft.camel_husk": "Udtørret kamel",
+  "item.minecraft.parched_spawn_egg": "Udtørret skelet fremkaldningsæg",
+  "item.minecraft.camel_husk_spawn_egg": "Udtørret kamel fremkaldningsæg",
+  "subtitles.entity.parched.ambient": "Udtørret skelet rasler",
+  "subtitles.entity.parched.death": "Udtørret skelet dør",
+  "subtitles.entity.parched.hurt": "Udtørret skelet skades",
+  "subtitles.entity.camel_husk.ambient": "Udtørret kamel brummer",
+  "subtitles.entity.camel_husk.dash": "Udtørret kamel suser frem",
+  "subtitles.entity.camel_husk.dash_ready": "Udtørret kamel kommer sig",
+  "subtitles.entity.camel_husk.death": "Udtørret kamel dør",
+  "subtitles.entity.camel_husk.eat": "Udtørret kamel spiser",
+  "subtitles.entity.camel_husk.hurt": "Udtørret kamel skades",
+  "subtitles.entity.camel_husk.saddle": "Sadle udstyres",
+  "subtitles.entity.camel_husk.sit": "Udtørret kamel sætter sig",
+  "subtitles.entity.camel_husk.stand": "Udtørret kamel rejser sig",
+  "subtitles.entity.parrot.imitate.parched": "Papegøje knitrer",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papegøje brummer"
+}

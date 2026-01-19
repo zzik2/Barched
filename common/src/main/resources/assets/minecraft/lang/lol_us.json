@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Dry Bonez",
+  "entity.minecraft.camel_husk": "Ripe Banana Hors",
+  "item.minecraft.parched_spawn_egg": "Dry Bonez spon ec",
+  "item.minecraft.camel_husk_spawn_egg": "Ripe Banana Hors spon ec",
+  "subtitles.entity.parched.ambient": "Dry Bonez spoooooooky",
+  "subtitles.entity.parched.death": "Dry Bonez ded",
+  "subtitles.entity.parched.hurt": "Dry Bonez hurz",
+  "subtitles.entity.camel_husk.ambient": "Ripe Banana Hors gruuumpy",
+  "subtitles.entity.camel_husk.dash": "Ripe Banana Hors YEETZ",
+  "subtitles.entity.camel_husk.dash_ready": "Ripe Banana Hors ready 2 YEET again",
+  "subtitles.entity.camel_husk.death": "Ripe Banana Hors ded",
+  "subtitles.entity.camel_husk.eat": "Ripe Banana Hors nomz",
+  "subtitles.entity.camel_husk.hurt": "Ripe Banana Hors ouchs",
+  "subtitles.entity.camel_husk.saddle": "Sad-dle :c eqeeps",
+  "subtitles.entity.camel_husk.sit": "Ripe Banana Hors sitz down",
+  "subtitles.entity.camel_husk.stand": "Ripe Banana Hors standz up",
+  "subtitles.entity.parrot.imitate.parched": "Rainbow Bird Craklz",
+  "subtitles.entity.parrot.imitate.camel_husk": "Rainbow Bird gruuumpy"
+}

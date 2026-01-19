@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Esqueleto disecado",
+  "entity.minecraft.camel_husk": "Camello momificado",
+  "item.minecraft.parched_spawn_egg": "Generar esqueleto disecado",
+  "item.minecraft.camel_husk_spawn_egg": "Generador de Camello seco",
+  "subtitles.entity.parched.ambient": "Esqueleto disecado cruje",
+  "subtitles.entity.parched.death": "Esqueleto disecado muere",
+  "subtitles.entity.parched.hurt": "Esqueleto disecado herido",
+  "subtitles.entity.camel_husk.ambient": "Gruñidos del Camello seco",
+  "subtitles.entity.camel_husk.dash": "Impulso del Camello seco",
+  "subtitles.entity.camel_husk.dash_ready": "Recarga del Camello seco",
+  "subtitles.entity.camel_husk.death": "Camello seco muere",
+  "subtitles.entity.camel_husk.eat": "Camello seco come",
+  "subtitles.entity.camel_husk.hurt": "Camello seco es atacado",
+  "subtitles.entity.camel_husk.saddle": "La montura es equipada",
+  "subtitles.entity.camel_husk.sit": "El Camello seco se sienta",
+  "subtitles.entity.camel_husk.stand": "Camello seco se levanta",
+  "subtitles.entity.parrot.imitate.parched": "Loro imita un esqueleto disecado",
+  "subtitles.entity.parrot.imitate.camel_husk": "Loro imita un Camello seco"
+}

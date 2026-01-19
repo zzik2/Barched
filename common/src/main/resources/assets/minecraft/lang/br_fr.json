@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Balzamegenn",
+  "entity.minecraft.camel_husk": "Dremedal disec'het",
+  "item.minecraft.parched_spawn_egg": "Vi genel balzamegenn",
+  "item.minecraft.camel_husk_spawn_egg": "Vi genel dremedal disec'het",
+  "subtitles.entity.parched.ambient": "Trouzioù eskern balzamet",
+  "subtitles.entity.parched.death": "Balzamegenn o vervel",
+  "subtitles.entity.parched.hurt": "Balzamegenn gloazet",
+  "subtitles.entity.camel_husk.ambient": "Dremedal disec'het o toc'hellat",
+  "subtitles.entity.camel_husk.dash": "Dremedal disec'het o sailhañ",
+  "subtitles.entity.camel_husk.dash_ready": "Dremedal disec'het o tont e-barzh",
+  "subtitles.entity.camel_husk.death": "Dremedal disec'het o vervel",
+  "subtitles.entity.camel_husk.eat": "Dremedal disec'het o tebriñ",
+  "subtitles.entity.camel_husk.hurt": "Dremedal disec'het gloazet",
+  "subtitles.entity.camel_husk.saddle": "Dibr aveet",
+  "subtitles.entity.camel_husk.sit": "Dremedal disec'het oc'h azezañ",
+  "subtitles.entity.camel_husk.stand": "Dremedal disec'het o sevel",
+  "subtitles.entity.parrot.imitate.parched": "Parrot crackles",
+  "subtitles.entity.parrot.imitate.camel_husk": "Peroked o toc'hellat"
+}

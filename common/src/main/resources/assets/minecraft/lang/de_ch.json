@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Vertröchneter",
+  "entity.minecraft.camel_husk": "Zombiedromedar",
+  "item.minecraft.parched_spawn_egg": "Vertröchneter-Spawn-Ei",
+  "item.minecraft.camel_husk_spawn_egg": "Zombiedromedar-Spawn-Ei",
+  "subtitles.entity.parched.ambient": "Vertröchneter chnisteret",
+  "subtitles.entity.parched.death": "Vertröchneter stirbt",
+  "subtitles.entity.parched.hurt": "Vertröchneter nimmt Schade",
+  "subtitles.entity.camel_husk.ambient": "Zombiedromedar grummlet",
+  "subtitles.entity.camel_husk.dash": "Zombiedromedar prescht",
+  "subtitles.entity.camel_husk.dash_ready": "Zombiedromedar erholt sich",
+  "subtitles.entity.camel_husk.death": "Zombiedromedar stirbt",
+  "subtitles.entity.camel_husk.eat": "Zombiedromedar frisst",
+  "subtitles.entity.camel_husk.hurt": "Zombiedromedar nimmt Schade",
+  "subtitles.entity.camel_husk.saddle": "Zombiedromedar gsattlet",
+  "subtitles.entity.camel_husk.sit": "Zombiedromedar legt sich ane",
+  "subtitles.entity.camel_husk.stand": "Zombiedromedar erhebt sich",
+  "subtitles.entity.parrot.imitate.parched": "Papagei chnisteret",
+  "subtitles.entity.parrot.imitate.camel_husk": "Vertröchneter grummlet"
+}

@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "کريڠن",
+  "entity.minecraft.camel_husk": "اونتا رڤوتن",
+  "item.minecraft.parched_spawn_egg": "تلور ڤنجلماٴن کريڠن",
+  "item.minecraft.camel_husk_spawn_egg": "تلور ڤنجلماٴن اونتا رڤوتن",
+  "subtitles.entity.parched.ambient": "کريڠن برݢمرتق",
+  "subtitles.entity.parched.death": "کريڠن ماتي",
+  "subtitles.entity.parched.hurt": "کريڠن ترچدرا",
+  "subtitles.entity.camel_husk.ambient": "اونتا رڤوتن مندڠوس",
+  "subtitles.entity.camel_husk.dash": "اونتا رڤوتن ملنتون",
+  "subtitles.entity.camel_husk.dash_ready": "اونتا رڤوتن مڠيمبڠ ديري",
+  "subtitles.entity.camel_husk.death": "اونتا رڤوتن ماتي",
+  "subtitles.entity.camel_husk.eat": "اونتا رڤوتن مماکن",
+  "subtitles.entity.camel_husk.hurt": "اونتا رڤوتن ترچدرا",
+  "subtitles.entity.camel_husk.saddle": "ڤلان دلڠکڤي",
+  "subtitles.entity.camel_husk.sit": "اونتا رڤوتن دودوق",
+  "subtitles.entity.camel_husk.stand": "اونتا رڤوتن برديري",
+  "subtitles.entity.parrot.imitate.parched": "بوروڠ نوري برݢمرتق",
+  "subtitles.entity.parrot.imitate.camel_husk": "بوروڠ نوري مندڠوس"
+}

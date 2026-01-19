@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Knuskrangel",
+  "entity.minecraft.camel_husk": "Dromedar-skaldauding",
+  "item.minecraft.parched_spawn_egg": "Fremkallingsegg for knuskrangel",
+  "item.minecraft.camel_husk_spawn_egg": "Framkalleegg for dromedar-skaldauding",
+  "subtitles.entity.parched.ambient": "Knuskrangel rasler",
+  "subtitles.entity.parched.death": "Knuskrangel dør",
+  "subtitles.entity.parched.hurt": "Knuskrangel skades",
+  "subtitles.entity.camel_husk.ambient": "Dromedarzombie beljer",
+  "subtitles.entity.camel_husk.dash": "Dromedarzombie springer",
+  "subtitles.entity.camel_husk.dash_ready": "Dromedar-skaldauding kjem seg",
+  "subtitles.entity.camel_husk.death": "Dromedar-skaldauding døyr",
+  "subtitles.entity.camel_husk.eat": "Dromedar-skaldauding et",
+  "subtitles.entity.camel_husk.hurt": "Dromedar-skaldauding verkjer",
+  "subtitles.entity.camel_husk.saddle": "Dromedar-skaldauding vert ikledd sâl",
+  "subtitles.entity.camel_husk.sit": "Dromedarzombie setter seg ned",
+  "subtitles.entity.camel_husk.stand": "Dromedarzombie reiser seg opp",
+  "subtitles.entity.parrot.imitate.parched": "Papegøye rasler",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papegøye beljer"
+}

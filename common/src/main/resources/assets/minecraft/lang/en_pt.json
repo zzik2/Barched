@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Dried bag o' bones",
+  "entity.minecraft.camel_husk": "Heated sand horse",
+  "item.minecraft.parched_spawn_egg": "Dried bag o' bones cackle fruit",
+  "item.minecraft.camel_husk_spawn_egg": "Heated sand horse cackle fruit",
+  "subtitles.entity.parched.ambient": "Dried bag o' bones rattles",
+  "subtitles.entity.parched.death": "Dried bag o' bones perishes",
+  "subtitles.entity.parched.hurt": "Dried bag o' bones hurts",
+  "subtitles.entity.camel_husk.ambient": "Heated sand horse grumphs",
+  "subtitles.entity.camel_husk.dash": "Heated sand horse yeets",
+  "subtitles.entity.camel_husk.dash_ready": "Heated sand horse recovers",
+  "subtitles.entity.camel_husk.death": "Heated sand horse perishes",
+  "subtitles.entity.camel_husk.eat": "Heated sand horse munches",
+  "subtitles.entity.camel_husk.hurt": "Heated sand horse hurts",
+  "subtitles.entity.camel_husk.saddle": "Saddle equips",
+  "subtitles.entity.camel_husk.sit": "Heated sand horse sits down",
+  "subtitles.entity.camel_husk.stand": "Heated sand horse stands up",
+  "subtitles.entity.parrot.imitate.parched": "Yer' best matey be cracklin'",
+  "subtitles.entity.parrot.imitate.camel_husk": "Yer' best mate be grumphin'"
+}

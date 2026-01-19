@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Корыгас",
+  "entity.minecraft.camel_husk": "Дөя-үлек",
+  "item.minecraft.parched_spawn_egg": "Корыгас чакыру йомыркасы",
+  "item.minecraft.camel_husk_spawn_egg": "Дөя-үлек чакыру йомыркасы",
+  "subtitles.entity.parched.ambient": "Parched crackles",
+  "subtitles.entity.parched.death": "Корыгас үлә",
+  "subtitles.entity.parched.hurt": "Корыгас яраланды",
+  "subtitles.entity.camel_husk.ambient": "Camel Husk grumphs",
+  "subtitles.entity.camel_husk.dash": "Camel Husk yeets",
+  "subtitles.entity.camel_husk.dash_ready": "Дөя-үлек ял итә",
+  "subtitles.entity.camel_husk.death": "Дөя-үлек үлә",
+  "subtitles.entity.camel_husk.eat": "Дөя-үлек ашый",
+  "subtitles.entity.camel_husk.hurt": "Дөя-үлек яраланды",
+  "subtitles.entity.camel_husk.saddle": "Утыргыч киертелде",
+  "subtitles.entity.camel_husk.sit": "Дөя-үлек утыра",
+  "subtitles.entity.camel_husk.stand": "Дөя-үлек тора",
+  "subtitles.entity.parrot.imitate.parched": "Parrot crackles",
+  "subtitles.entity.parrot.imitate.camel_husk": "Parrot grumphs"
+}

@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Засушень",
+  "entity.minecraft.camel_husk": "Верблюд-висушень",
+  "item.minecraft.parched_spawn_egg": "Яйце виклику засушня",
+  "item.minecraft.camel_husk_spawn_egg": "Яйце виклику верблюда-висушня",
+  "subtitles.entity.parched.ambient": "Засушень брязкає кістками",
+  "subtitles.entity.parched.death": "Засушень гине",
+  "subtitles.entity.parched.hurt": "Засушня поранено",
+  "subtitles.entity.camel_husk.ambient": "Верблюд-висушень бурчить",
+  "subtitles.entity.camel_husk.dash": "Верблюд-висушень перестрибує",
+  "subtitles.entity.camel_husk.dash_ready": "Верблюд-висушень відновлюється",
+  "subtitles.entity.camel_husk.death": "Верблюд-висушень гине",
+  "subtitles.entity.camel_husk.eat": "Верблюд-висушень їсть",
+  "subtitles.entity.camel_husk.hurt": "Верблюда-висушня поранено",
+  "subtitles.entity.camel_husk.saddle": "Сідло споряджається",
+  "subtitles.entity.camel_husk.sit": "Верблюд-висушень сідає",
+  "subtitles.entity.camel_husk.stand": "Верблюд-висушень встає",
+  "subtitles.entity.parrot.imitate.parched": "Папуга вдає брязкання",
+  "subtitles.entity.parrot.imitate.camel_husk": "Папуга бурчить"
+}

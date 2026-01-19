@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Assedegat",
+  "entity.minecraft.camel_husk": "Pell de camell",
+  "item.minecraft.parched_spawn_egg": "Ou de generació Assedegat",
+  "item.minecraft.camel_husk_spawn_egg": "Ou de generació Dromedari esquelet sec",
+  "subtitles.entity.parched.ambient": "Esquelet Extraviat grinyola",
+  "subtitles.entity.parched.death": "L'Esquelet extraviat mor",
+  "subtitles.entity.parched.hurt": "Esquelet Extraviat rep mal",
+  "subtitles.entity.camel_husk.ambient": "El Dromedari Ressec gruny",
+  "subtitles.entity.camel_husk.dash": "El Dromedari Ressec llença",
+  "subtitles.entity.camel_husk.dash_ready": "El Dromedari Ressec es recupera",
+  "subtitles.entity.camel_husk.death": "El Dromedari Ressec mor",
+  "subtitles.entity.camel_husk.eat": "El Dromedari Ressec menja",
+  "subtitles.entity.camel_husk.hurt": "El Dromedari Ressec rep mal",
+  "subtitles.entity.camel_husk.saddle": "Sella equipada",
+  "subtitles.entity.camel_husk.sit": "El Dromedari Ressec s’asseu",
+  "subtitles.entity.camel_husk.stand": "El Dromedari Ressec s'aixeca",
+  "subtitles.entity.parrot.imitate.parched": "El Lloro crepita",
+  "subtitles.entity.parrot.imitate.camel_husk": "El Lloro gruny"
+}

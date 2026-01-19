@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Secjât",
+  "entity.minecraft.camel_husk": "Dromedari sec",
+  "item.minecraft.parched_spawn_egg": "Ûf di nassite dal secjât",
+  "item.minecraft.camel_husk_spawn_egg": "Ûf di nassite dal dromedario sec",
+  "subtitles.entity.parched.ambient": "Criçâ di secjât",
+  "subtitles.entity.parched.death": "Secjât al mûr",
+  "subtitles.entity.parched.hurt": "Secjât ferît",
+  "subtitles.entity.camel_husk.ambient": "Dromedari sec al rugne",
+  "subtitles.entity.camel_husk.dash": "Dromedari sec al salte",
+  "subtitles.entity.camel_husk.dash_ready": "Dromedari sec al torne a dâ di ca",
+  "subtitles.entity.camel_husk.death": "Dromedari sec al mûr",
+  "subtitles.entity.camel_husk.eat": "Dromedari sec al mangje",
+  "subtitles.entity.camel_husk.hurt": "Dromedari sec ferît",
+  "subtitles.entity.camel_husk.saddle": "Siele metude sù",
+  "subtitles.entity.camel_husk.sit": "Dromedari sec si sente",
+  "subtitles.entity.camel_husk.stand": "Dromedari sec si alce",
+  "subtitles.entity.parrot.imitate.parched": "Pampagal al imite il criçâ dal secjât",
+  "subtitles.entity.parrot.imitate.camel_husk": "Pampagal al rugne come un dromedari sec"
+}

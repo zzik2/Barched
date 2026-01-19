@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Għatxan",
+  "entity.minecraft.camel_husk": "Ġemel Minxuf",
+  "item.minecraft.parched_spawn_egg": "Bajda tat-Tnissil ta' Għatxan",
+  "item.minecraft.camel_husk_spawn_egg": "Bajda tat-Tnissil ta' Ġemel Minxuf",
+  "subtitles.entity.parched.ambient": "Għatxan iċekċek",
+  "subtitles.entity.parched.death": "Għatxan imut",
+  "subtitles.entity.parched.hurt": "Għatxan iweġġa'",
+  "subtitles.entity.camel_husk.ambient": "Ġemel Minxuf igerger",
+  "subtitles.entity.camel_husk.dash": "Ġemel Minxuf jiġri",
+  "subtitles.entity.camel_husk.dash_ready": "Ġemel Minxuf jirkupra",
+  "subtitles.entity.camel_husk.death": "Ġemel Minxuf imut",
+  "subtitles.entity.camel_husk.eat": "Ġemel Minxuf jiekol",
+  "subtitles.entity.camel_husk.hurt": "Ġemel Minxuf iweġġa'",
+  "subtitles.entity.camel_husk.saddle": "Sarġ jintrama",
+  "subtitles.entity.camel_husk.sit": "Ġemel Minxuf joqgħod bilqiegħda",
+  "subtitles.entity.camel_husk.stand": "Ġemel Minxuf iqum bilwieqfa",
+  "subtitles.entity.parrot.imitate.parched": "Pappagall iċekċek",
+  "subtitles.entity.parrot.imitate.camel_husk": "Pappagall igerger"
+}

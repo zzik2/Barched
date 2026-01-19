@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Cnámharlach Fásaigh",
+  "entity.minecraft.camel_husk": "Camall Seargtha",
+  "item.minecraft.parched_spawn_egg": "Ubh Ghiniúna Cnámharlach Fásaigh",
+  "item.minecraft.camel_husk_spawn_egg": "Ubh Ghiniúna Camall Seargtha",
+  "subtitles.entity.parched.ambient": "Cnámharlach Fásaigh ag cnagarlach",
+  "subtitles.entity.parched.death": "Cnámharlach Fásaigh ag fáil bháis",
+  "subtitles.entity.parched.hurt": "Cnámharlach Fásaigh á ghortú",
+  "subtitles.entity.camel_husk.ambient": "Camall Seargtha ag gnúsachtach",
+  "subtitles.entity.camel_husk.dash": "Camall Seargtha ag sciurdadh",
+  "subtitles.entity.camel_husk.dash_ready": "Camall Seargtha ag teacht chuige féin",
+  "subtitles.entity.camel_husk.death": "Camall Seargtha ag fáil bháis",
+  "subtitles.entity.camel_husk.eat": "Camall Seargtha ag ithe",
+  "subtitles.entity.camel_husk.hurt": "Camall Seargtha á ghortú",
+  "subtitles.entity.camel_husk.saddle": "Diallait á feistiú",
+  "subtitles.entity.camel_husk.sit": "Camall Seargtha ag suí síos",
+  "subtitles.entity.camel_husk.stand": "Camall Seargtha ag éirí ina sheasamh",
+  "subtitles.entity.parrot.imitate.parched": "Pearóid ag cnagarnach",
+  "subtitles.entity.parrot.imitate.camel_husk": "Pearóid ag gnúsachtach"
+}

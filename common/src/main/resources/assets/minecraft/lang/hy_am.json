@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Չորացած",
+  "entity.minecraft.camel_husk": "Ուղտի կեղև",
+  "item.minecraft.parched_spawn_egg": "Չորացրած ձվադրման ձու",
+  "item.minecraft.camel_husk_spawn_egg": "Ուղտի կեղևի ձվադրման ձու",
+  "subtitles.entity.parched.ambient": "Parched crackles",
+  "subtitles.entity.parched.death": "Parched dies",
+  "subtitles.entity.parched.hurt": "Parched hurts",
+  "subtitles.entity.camel_husk.ambient": "Քեմել Հասկը դժգոհում է",
+  "subtitles.entity.camel_husk.dash": "Քեմել Հասք յեթս",
+  "subtitles.entity.camel_husk.dash_ready": "Քեմել Հուսկը ապաքինվում է",
+  "subtitles.entity.camel_husk.death": "Քեմել Հուսկը մահանում է",
+  "subtitles.entity.camel_husk.eat": "Ուղտի կեղևը ուտում է",
+  "subtitles.entity.camel_husk.hurt": "Ուղտի Հյուսկը ցավում է",
+  "subtitles.entity.camel_husk.saddle": "Թամբի սարքավորում",
+  "subtitles.entity.camel_husk.sit": "Քեմել Հուսկը նստում է",
+  "subtitles.entity.camel_husk.stand": "Ուղտի Հասկը ոտքի է կանգնում",
+  "subtitles.entity.parrot.imitate.parched": "Parrot crackles",
+  "subtitles.entity.parrot.imitate.camel_husk": "Parrot grumphs"
+}

@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Kavruk",
+  "entity.minecraft.camel_husk": "Kalıntı Deve",
+  "item.minecraft.parched_spawn_egg": "Kavruk Çağırma Yumurtası",
+  "item.minecraft.camel_husk_spawn_egg": "Kalıntı Deve Çağırma Yumurtası",
+  "subtitles.entity.parched.ambient": "Kavruk çatırdıyor",
+  "subtitles.entity.parched.death": "Kavruk öldü",
+  "subtitles.entity.parched.hurt": "Kavruk hasar aldı",
+  "subtitles.entity.camel_husk.ambient": "Kalıntı Deve homurdanıyor",
+  "subtitles.entity.camel_husk.dash": "Kalıntı Deve ileriye sıçradı",
+  "subtitles.entity.camel_husk.dash_ready": "Kalıntı Deve toparlandı",
+  "subtitles.entity.camel_husk.death": "Kalıntı Deve öldü",
+  "subtitles.entity.camel_husk.eat": "Kalıntı Deve yiyor",
+  "subtitles.entity.camel_husk.hurt": "Kalıntı Deve hasar aldı",
+  "subtitles.entity.camel_husk.saddle": "Eyer kuşanıldı",
+  "subtitles.entity.camel_husk.sit": "Kalıntı Deve oturuyor",
+  "subtitles.entity.camel_husk.stand": "Kalıntı Deve ayağa kalktı",
+  "subtitles.entity.parrot.imitate.parched": "Papağan çatırdıyor",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papağan homurdanıyor"
+}

@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Soifanto",
+  "entity.minecraft.camel_husk": "Seka kamelo",
+  "item.minecraft.parched_spawn_egg": "Aperigovo de soifanto",
+  "item.minecraft.camel_husk_spawn_egg": "Aperigovo de seka kamelo",
+  "subtitles.entity.parched.ambient": "Soifanto krakas",
+  "subtitles.entity.parched.death": "Soifanto mortas",
+  "subtitles.entity.parched.hurt": "Soifanto vundiĝas",
+  "subtitles.entity.camel_husk.ambient": "Seka kamelo grumblas",
+  "subtitles.entity.camel_husk.dash": "Seka kamelo spurtas",
+  "subtitles.entity.camel_husk.dash_ready": "Seka kamelo mallaciĝas",
+  "subtitles.entity.camel_husk.death": "Seka kamelo mortas",
+  "subtitles.entity.camel_husk.eat": "Seka kamelo manĝas",
+  "subtitles.entity.camel_husk.hurt": "Seka kamelo vundiĝas",
+  "subtitles.entity.camel_husk.saddle": "Selo surmetiĝas",
+  "subtitles.entity.camel_husk.sit": "Seka kamelo eksidas",
+  "subtitles.entity.camel_husk.stand": "Seka kamelo ekstaras",
+  "subtitles.entity.parrot.imitate.parched": "Papago krakas",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papago grumblas"
+}

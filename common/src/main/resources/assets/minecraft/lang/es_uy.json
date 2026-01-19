@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Esqueleto momificado",
+  "entity.minecraft.camel_husk": "Camello momificado",
+  "item.minecraft.parched_spawn_egg": "Generar esqueleto momificado",
+  "item.minecraft.camel_husk_spawn_egg": "Generar camello momificado",
+  "subtitles.entity.parched.ambient": "Esqueleto momificado traquetea",
+  "subtitles.entity.parched.death": "Esqueleto momificado muere",
+  "subtitles.entity.parched.hurt": "Esqueleto momificado herido",
+  "subtitles.entity.camel_husk.ambient": "Camello momificado gruñe",
+  "subtitles.entity.camel_husk.dash": "Camello momificado se lanza",
+  "subtitles.entity.camel_husk.dash_ready": "Camello momificado se recupera",
+  "subtitles.entity.camel_husk.death": "Camello momificado muere",
+  "subtitles.entity.camel_husk.eat": "Camello momificado come",
+  "subtitles.entity.camel_husk.hurt": "Camello momificado herido",
+  "subtitles.entity.camel_husk.saddle": "Montura equipada",
+  "subtitles.entity.camel_husk.sit": "Camello momificado se sienta",
+  "subtitles.entity.camel_husk.stand": "Camello momificado se levanta",
+  "subtitles.entity.parrot.imitate.parched": "Loro imita a un esqueleto momificado",
+  "subtitles.entity.parrot.imitate.camel_husk": "Loro imita a un camello momificado"
+}

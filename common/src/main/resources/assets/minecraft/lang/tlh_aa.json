@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "nobmeD QaD",
+  "entity.minecraft.camel_husk": "qa'mel yub",
+  "item.minecraft.parched_spawn_egg": "nobmeD QaD boghmoHbogh QIm'e'",
+  "item.minecraft.camel_husk_spawn_egg": "qa'mel yub boghmoHbogh QIm'e'",
+  "subtitles.entity.parched.ambient": "chuS nobmeD QaD",
+  "subtitles.entity.parched.death": "Hegh nobmeD QaD",
+  "subtitles.entity.parched.hurt": "'oy' nobmeD QaD",
+  "subtitles.entity.camel_husk.ambient": "ghugh qa'mel yub",
+  "subtitles.entity.camel_husk.dash": "Sup qa'mel yub",
+  "subtitles.entity.camel_husk.dash_ready": "Suprupqa' qa'mel yub",
+  "subtitles.entity.camel_husk.death": "Hegh qa'mel yub",
+  "subtitles.entity.camel_husk.eat": "Sop qa'mel yub",
+  "subtitles.entity.camel_husk.hurt": "'oy' qa'mel yub",
+  "subtitles.entity.camel_husk.saddle": "ba'qIn jom",
+  "subtitles.entity.camel_husk.sit": "ba'choH qa'mel yub",
+  "subtitles.entity.camel_husk.stand": "QamchoH qa'mel yub",
+  "subtitles.entity.parrot.imitate.parched": "nobmeD QaD lIl vIlInHoD",
+  "subtitles.entity.parrot.imitate.camel_husk": "qa'mel yub lIl vIlInHoD"
+}

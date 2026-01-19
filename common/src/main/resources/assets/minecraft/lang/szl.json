@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Oschlak",
+  "entity.minecraft.camel_husk": "Wielbłąd-posuch",
+  "item.minecraft.parched_spawn_egg": "Jajco ze oschlŏkym",
+  "item.minecraft.camel_husk_spawn_egg": "Jajo przyzywające wielbłąda-posucha",
+  "subtitles.entity.parched.ambient": "Oschlak klekocze",
+  "subtitles.entity.parched.death": "Oschlŏk umiyrŏ",
+  "subtitles.entity.parched.hurt": "Oschlŏk sie utrŏpiŏ",
+  "subtitles.entity.camel_husk.ambient": "Wielbłąd-posuch burczy",
+  "subtitles.entity.camel_husk.dash": "Wielbłąd-posuch susa",
+  "subtitles.entity.camel_husk.dash_ready": "Wielbłąd-posuch nabiera sił",
+  "subtitles.entity.camel_husk.death": "Wielbłąd-posuch ginie",
+  "subtitles.entity.camel_husk.eat": "Wielbłąd-posuch je",
+  "subtitles.entity.camel_husk.hurt": "Wielbłąd-posuch cierpi",
+  "subtitles.entity.camel_husk.saddle": "Zakłŏdanie zatla",
+  "subtitles.entity.camel_husk.sit": "Wielbłąd-posuch siada",
+  "subtitles.entity.camel_husk.stand": "Wielbłąd-posuch wstaje",
+  "subtitles.entity.parrot.imitate.parched": "Papuga klekocze",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papuga gdera"
+}

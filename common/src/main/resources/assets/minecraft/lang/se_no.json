@@ -1,8 +1,8 @@
 {
-  "entity.minecraft.parched": "Parched",
-  "entity.minecraft.camel_husk": "Camel Husk",
-  "item.minecraft.parched_spawn_egg": "Parched Spawn Egg",
-  "item.minecraft.camel_husk_spawn_egg": "Camel Husk Spawn Egg",
+  "entity.minecraft.parched": "Buollánjámeš",
+  "entity.minecraft.camel_husk": "Kamelajámeš",
+  "item.minecraft.parched_spawn_egg": "Buollánjámeža ealáskanmonni",
+  "item.minecraft.camel_husk_spawn_egg": "Kamelajámeža ealáskanmonni",
   "subtitles.entity.parched.ambient": "Parched crackles",
   "subtitles.entity.parched.death": "Parched dies",
   "subtitles.entity.parched.hurt": "Parched hurts",

@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Ossecco",
+  "entity.minecraft.camel_husk": "Mummifario",
+  "item.minecraft.parched_spawn_egg": "Uovo generatore di ossecco",
+  "item.minecraft.camel_husk_spawn_egg": "Uovo generatore di mummifario",
+  "subtitles.entity.parched.ambient": "Ossecco scricchiola",
+  "subtitles.entity.parched.death": "Ossecco muore",
+  "subtitles.entity.parched.hurt": "Ossecco ferito",
+  "subtitles.entity.camel_husk.ambient": "Mummifario grugnisce",
+  "subtitles.entity.camel_husk.dash": "Mummifario scatta",
+  "subtitles.entity.camel_husk.dash_ready": "Mummifario si riprende",
+  "subtitles.entity.camel_husk.death": "Mummifario muore",
+  "subtitles.entity.camel_husk.eat": "Mummifario mangia",
+  "subtitles.entity.camel_husk.hurt": "Mummifario ferito",
+  "subtitles.entity.camel_husk.saddle": "Sella allacciata",
+  "subtitles.entity.camel_husk.sit": "Mummifario si siede",
+  "subtitles.entity.camel_husk.stand": "Mummifario si alza",
+  "subtitles.entity.parrot.imitate.parched": "Pappagallo imita ossecco",
+  "subtitles.entity.parrot.imitate.camel_husk": "Pappagallo imita mummifario"
+}

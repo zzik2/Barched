@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Trošklys",
+  "entity.minecraft.camel_husk": "Sudžiūvėlis kupranugaris",
+  "item.minecraft.parched_spawn_egg": "Suformuoto trošklio kiaušinis",
+  "item.minecraft.camel_husk_spawn_egg": "Suformuoto sudžiūvėlio kupranugario kiaušinis",
+  "subtitles.entity.parched.ambient": "Trošklys sutarška",
+  "subtitles.entity.parched.death": "Trošklys miršta",
+  "subtitles.entity.parched.hurt": "Trošklys susižeidžia",
+  "subtitles.entity.camel_husk.ambient": "Sudžiūvėlis kupranugaris knarkščia",
+  "subtitles.entity.camel_husk.dash": "Sudžiūvėlis kupranugaris sviedžia",
+  "subtitles.entity.camel_husk.dash_ready": "Sudžiūvėlis kupranugaris atsigauna",
+  "subtitles.entity.camel_husk.death": "Sudžiūvėlis kupranugaris miršta",
+  "subtitles.entity.camel_husk.eat": "Sudžiūvėlis kupranugaris valgo",
+  "subtitles.entity.camel_husk.hurt": "Sudžiūvėlis kupranugaris susižeidžia",
+  "subtitles.entity.camel_husk.saddle": "Balnas uždedamas",
+  "subtitles.entity.camel_husk.sit": "Sudžiūvėlis kupranugaris atsisėda",
+  "subtitles.entity.camel_husk.stand": "Sudžiūvėlis kupranugaris atsistoja",
+  "subtitles.entity.parrot.imitate.parched": "Papūga traška",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papūga knarkščia"
+}

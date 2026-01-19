@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Пустиник",
+  "entity.minecraft.camel_husk": "Верхоблюд-cушень",
+  "item.minecraft.parched_spawn_egg": "Яйце появи пустиника",
+  "item.minecraft.camel_husk_spawn_egg": "Яйце появи верхоблюда-сушнє",
+  "subtitles.entity.parched.ambient": "Пустиник телїпає костєма",
+  "subtitles.entity.parched.death": "Пустиник гине",
+  "subtitles.entity.parched.hurt": "Пустиника скривджено",
+  "subtitles.entity.camel_husk.ambient": "Верхоблюд-cушень буркоче",
+  "subtitles.entity.camel_husk.dash": "Верхоблюд-cушень скаче",
+  "subtitles.entity.camel_husk.dash_ready": "Верхоблюд-cушень віддихає",
+  "subtitles.entity.camel_husk.death": "Верхоблюд-cушень гине",
+  "subtitles.entity.camel_husk.eat": "Верхоблюд-cушень їсь",
+  "subtitles.entity.camel_husk.hurt": "Верхоблюда-cушнє скривджено",
+  "subtitles.entity.camel_husk.saddle": "Сїдло сє вбирає",
+  "subtitles.entity.camel_husk.sit": "Верхоблюд-cушень сїдає",
+  "subtitles.entity.camel_husk.stand": "Верхоблюд-cушень встає",
+  "subtitles.entity.parrot.imitate.parched": "Папуґа тріщит",
+  "subtitles.entity.parrot.imitate.camel_husk": "Папуґа буркоче"
+}

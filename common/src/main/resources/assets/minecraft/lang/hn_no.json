@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Tỳrke",
+  "entity.minecraft.camel_husk": "Ulvaldeskolm",
+  "item.minecraft.parched_spawn_egg": "Kveikjeegg fyre tỳrke",
+  "item.minecraft.camel_husk_spawn_egg": "Kveikjeegg fyr’ ulvaldeskolm",
+  "subtitles.entity.parched.ambient": "Tỳrke ranglar",
+  "subtitles.entity.parched.death": "Tỳrke døyr",
+  "subtitles.entity.parched.hurt": "Tỳrke verkjer",
+  "subtitles.entity.camel_husk.ambient": "Camel Husk grumphs",
+  "subtitles.entity.camel_husk.dash": "Ulvaldeskolm hoppar",
+  "subtitles.entity.camel_husk.dash_ready": "Ulvaldeskolm kjem seg",
+  "subtitles.entity.camel_husk.death": "Ulvaldeskolm døyr",
+  "subtitles.entity.camel_husk.eat": "Ulvaldeskolm et",
+  "subtitles.entity.camel_husk.hurt": "Ulvaldeskolm verkjer",
+  "subtitles.entity.camel_husk.saddle": "Ulvaldeskolm fær på sadel",
+  "subtitles.entity.camel_husk.sit": "Ulvaldeskolm set seg ned",
+  "subtitles.entity.camel_husk.stand": "Ulvaldeskolm stend upp",
+  "subtitles.entity.parrot.imitate.parched": "Pavegauk sprakar",
+  "subtitles.entity.parrot.imitate.camel_husk": "Pavegauk gryler"
+}

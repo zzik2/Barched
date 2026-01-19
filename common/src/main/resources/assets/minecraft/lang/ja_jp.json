@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "パーチド",
+  "entity.minecraft.camel_husk": "ラクダハスク",
+  "item.minecraft.parched_spawn_egg": "パーチドのスポーンエッグ",
+  "item.minecraft.camel_husk_spawn_egg": "ラクダハスクのスポーンエッグ",
+  "subtitles.entity.parched.ambient": "パーチドが骨を鳴らす",
+  "subtitles.entity.parched.death": "パーチドが死ぬ",
+  "subtitles.entity.parched.hurt": "パーチドがダメージを受ける",
+  "subtitles.entity.camel_husk.ambient": "ラクダハスクが唸る",
+  "subtitles.entity.camel_husk.dash": "ラクダハスクが跳躍する",
+  "subtitles.entity.camel_husk.dash_ready": "ラクダハスクの脚力が回復する",
+  "subtitles.entity.camel_husk.death": "ラクダハスクが死ぬ",
+  "subtitles.entity.camel_husk.eat": "ラクダハスクが食べる",
+  "subtitles.entity.camel_husk.hurt": "ラクダハスクがダメージを受ける",
+  "subtitles.entity.camel_husk.saddle": "鞍が装着される",
+  "subtitles.entity.camel_husk.sit": "ラクダハスクが座り込む",
+  "subtitles.entity.camel_husk.stand": "ラクダハスクが立ち上がる",
+  "subtitles.entity.parrot.imitate.parched": "オウムがパーチドの骨を鳴らす音を真似る",
+  "subtitles.entity.parrot.imitate.camel_husk": "オウムがラクダハスクの唸り声を真似る"
+}

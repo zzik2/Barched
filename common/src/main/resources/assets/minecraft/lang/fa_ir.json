@@ -1,5 +1,5 @@
 {
-  "entity.minecraft.parched": "Parched",
+  "entity.minecraft.parched": "خشکيده",
   "entity.minecraft.camel_husk": "Camel Husk",
   "item.minecraft.parched_spawn_egg": "Parched Spawn Egg",
   "item.minecraft.camel_husk_spawn_egg": "Camel Husk Spawn Egg",
@@ -12,7 +12,7 @@
   "subtitles.entity.camel_husk.death": "Camel Husk dies",
   "subtitles.entity.camel_husk.eat": "Camel Husk eats",
   "subtitles.entity.camel_husk.hurt": "Camel Husk hurts",
-  "subtitles.entity.camel_husk.saddle": "Saddle equips",
+  "subtitles.entity.camel_husk.saddle": "زين بسته می‌شود",
   "subtitles.entity.camel_husk.sit": "Camel Husk sits down",
   "subtitles.entity.camel_husk.stand": "Camel Husk stands up",
   "subtitles.entity.parrot.imitate.parched": "Parrot crackles",

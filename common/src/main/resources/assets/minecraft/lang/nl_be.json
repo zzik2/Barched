@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Zoor",
+  "entity.minecraft.camel_husk": "Dromedarismummie",
+  "item.minecraft.parched_spawn_egg": "Zorenspawnei",
+  "item.minecraft.camel_husk_spawn_egg": "Dromedarismummiespawnei",
+  "subtitles.entity.parched.ambient": "Zoor knispert",
+  "subtitles.entity.parched.death": "Zoor sterft",
+  "subtitles.entity.parched.hurt": "Zoor raakt gewond",
+  "subtitles.entity.camel_husk.ambient": "Dromedarismummie gromt",
+  "subtitles.entity.camel_husk.dash": "Dromedarismummie sprint",
+  "subtitles.entity.camel_husk.dash_ready": "Dromedarismummie herstelt",
+  "subtitles.entity.camel_husk.death": "Dromedarismummie sterft",
+  "subtitles.entity.camel_husk.eat": "Dromedarismummie eet",
+  "subtitles.entity.camel_husk.hurt": "Dromedarismummie raakt gewond",
+  "subtitles.entity.camel_husk.saddle": "Zadel wordt opgelegd",
+  "subtitles.entity.camel_husk.sit": "Dromedarismummie zit",
+  "subtitles.entity.camel_husk.stand": "Dromedarismummie staat op",
+  "subtitles.entity.parrot.imitate.parched": "Papegaai knispert",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papegaai gromt"
+}

@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Desiquíu",
+  "entity.minecraft.camel_husk": "Camellu disecáu",
+  "item.minecraft.parched_spawn_egg": "Güevu generaor de desiquíu",
+  "item.minecraft.camel_husk_spawn_egg": "Güevu generaor de camellu disecáu",
+  "subtitles.entity.parched.ambient": "Erranti traquetea",
+  "subtitles.entity.parched.death": "Erranti muer",
+  "subtitles.entity.parched.hurt": "Erranti jierse",
+  "subtitles.entity.camel_husk.ambient": "Camellu disecáu gruñi",
+  "subtitles.entity.camel_husk.dash": "Camellu disecáu lánzase",
+  "subtitles.entity.camel_husk.dash_ready": "Camellu disecáu recupérase",
+  "subtitles.entity.camel_husk.death": "Camellu disecáu muer",
+  "subtitles.entity.camel_husk.eat": "Camellu disecáu comi",
+  "subtitles.entity.camel_husk.hurt": "Camellu disecáu jiersi",
+  "subtitles.entity.camel_husk.saddle": "Muntura equipáa",
+  "subtitles.entity.camel_husk.sit": "Camellu disecáu échase",
+  "subtitles.entity.camel_husk.stand": "Camellu disecáu levántase",
+  "subtitles.entity.parrot.imitate.parched": "Loru arrenda a un erranti",
+  "subtitles.entity.parrot.imitate.camel_husk": "Loru arrenda a un camellu disecáu"
+}

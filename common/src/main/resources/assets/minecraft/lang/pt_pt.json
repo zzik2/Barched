@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Esqueleto-Múmia",
+  "entity.minecraft.camel_husk": "Dromedário-Múmia",
+  "item.minecraft.parched_spawn_egg": "Ovo de Invocação de Esqueleto-Múmia",
+  "item.minecraft.camel_husk_spawn_egg": "Ovo de Invocação de Dromedário-Múmia",
+  "subtitles.entity.parched.ambient": "Esqueleto-Múmia chocalha",
+  "subtitles.entity.parched.death": "Esqueleto-Múmia morre",
+  "subtitles.entity.parched.hurt": "Esqueleto-Múmia aleija-se",
+  "subtitles.entity.camel_husk.ambient": "Dromedário-Múmia grunhe",
+  "subtitles.entity.camel_husk.dash": "Dromedário-Múmia lança-se",
+  "subtitles.entity.camel_husk.dash_ready": "Dromedário-Múmia recupera",
+  "subtitles.entity.camel_husk.death": "Dromedário-Múmia morre",
+  "subtitles.entity.camel_husk.eat": "Dromedário-Múmia come",
+  "subtitles.entity.camel_husk.hurt": "Dromedário-Múmia aleija-se",
+  "subtitles.entity.camel_husk.saddle": "Sela equipada",
+  "subtitles.entity.camel_husk.sit": "Dromedário-Múmia senta-se",
+  "subtitles.entity.camel_husk.stand": "Dromedário-Múmia levanta-se",
+  "subtitles.entity.parrot.imitate.parched": "Papagaio imita um Esqueleto-Múmia",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papagaio imita um Dromedário-Múmia"
+}

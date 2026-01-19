@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Пресъхнал скелет",
+  "entity.minecraft.camel_husk": "Изсъхнала камила",
+  "item.minecraft.parched_spawn_egg": "Яйце на пресъхнал скелет",
+  "item.minecraft.camel_husk_spawn_egg": "Яйце на изсъхнала камила",
+  "subtitles.entity.parched.ambient": "Скелет скитник трака",
+  "subtitles.entity.parched.death": "Скелет скитник умира",
+  "subtitles.entity.parched.hurt": "Скелет скитник се наранява",
+  "subtitles.entity.camel_husk.ambient": "Изсъхнала камила пръхти",
+  "subtitles.entity.camel_husk.dash": "Изсъхнала камила се изхвърля",
+  "subtitles.entity.camel_husk.dash_ready": "Изсъхнала камила се възстановява",
+  "subtitles.entity.camel_husk.death": "Изсъхнала камила загива",
+  "subtitles.entity.camel_husk.eat": "Изсъхнала камила яде",
+  "subtitles.entity.camel_husk.hurt": "Изсъхнала камила се наранява",
+  "subtitles.entity.camel_husk.saddle": "Екипиране на седло",
+  "subtitles.entity.camel_husk.sit": "Изсъхнала камила сяда",
+  "subtitles.entity.camel_husk.stand": "Изсъхнала камила се изправя",
+  "subtitles.entity.parrot.imitate.parched": "Папагал трака",
+  "subtitles.entity.parrot.imitate.camel_husk": "Папагал пръхти"
+}

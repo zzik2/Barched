@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "旱骨",
+  "entity.minecraft.camel_husk": "駱駝屍殼",
+  "item.minecraft.parched_spawn_egg": "旱骨生成蛋",
+  "item.minecraft.camel_husk_spawn_egg": "駱駝屍殼生成蛋",
+  "subtitles.entity.parched.ambient": "旱骨喀勒聲",
+  "subtitles.entity.parched.death": "旱骨死亡",
+  "subtitles.entity.parched.hurt": "旱骨受傷",
+  "subtitles.entity.camel_husk.ambient": "駱駝屍殼低吼聲",
+  "subtitles.entity.camel_husk.dash": "駱駝屍殼衝刺",
+  "subtitles.entity.camel_husk.dash_ready": "駱駝屍殼休息",
+  "subtitles.entity.camel_husk.death": "駱駝屍殼死亡",
+  "subtitles.entity.camel_husk.eat": "駱駝屍殼進食",
+  "subtitles.entity.camel_husk.hurt": "駱駝屍殼受傷",
+  "subtitles.entity.camel_husk.saddle": "鞍被裝上",
+  "subtitles.entity.camel_husk.sit": "駱駝屍殼坐下",
+  "subtitles.entity.camel_husk.stand": "駱駝屍殼起身",
+  "subtitles.entity.parrot.imitate.parched": "鸚鵡喀勒聲",
+  "subtitles.entity.parrot.imitate.camel_husk": "鸚鵡低吼聲"
+}

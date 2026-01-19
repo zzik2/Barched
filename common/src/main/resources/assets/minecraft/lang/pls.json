@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Xídeꞌen jinda",
+  "entity.minecraft.camel_husk": "Kudoromedaario xemá",
+  "item.minecraft.parched_spawn_egg": "Juja xraguxín xídeꞌen jinda",
+  "item.minecraft.camel_husk_spawn_egg": "Juja xraguxín kudoromedaario xemá",
+  "subtitles.entity.parched.ambient": "Xídeꞌen jinda tutsjánga xá",
+  "subtitles.entity.parched.death": "Xídeꞌen jinda deꞌen xá",
+  "subtitles.entity.parched.hurt": "Ncheniꞌi xídeꞌen jinda",
+  "subtitles.entity.camel_husk.ambient": "Kudoromedaario xemá tújieꞌé ba",
+  "subtitles.entity.camel_husk.dash": "Kudoromedaario xemá thingá ba",
+  "subtitles.entity.camel_husk.dash_ready": "Kudoromedaario xemá xingameꞌe ba",
+  "subtitles.entity.camel_husk.death": "Kudoromedaario xemá deꞌen ba",
+  "subtitles.entity.camel_husk.eat": "Kudoromedaario xemá jine ba",
+  "subtitles.entity.camel_husk.hurt": "Ncheniꞌi kudoromedaario xemá",
+  "subtitles.entity.camel_husk.saddle": "Dàkèꞌè xintaun",
+  "subtitles.entity.camel_husk.sit": "Kudoromedaario xemá nchejugaꞌa ba",
+  "subtitles.entity.camel_husk.stand": "Kudoromedaario xemá dingathjen ba",
+  "subtitles.entity.parrot.imitate.parched": "Kulooro nchekuanxiꞌin ba naá xídeꞌen jinda",
+  "subtitles.entity.parrot.imitate.camel_husk": "Kulooro nchekuanxiꞌin ba naá kudoromedaario xemá"
+}

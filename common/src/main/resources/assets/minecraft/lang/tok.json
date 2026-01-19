@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "jan palisa seli",
+  "entity.minecraft.camel_husk": "soweli moli seli pi nena monsi",
+  "item.minecraft.parched_spawn_egg": "sike mama pi jan palisa seli",
+  "item.minecraft.camel_husk_spawn_egg": "sike mama pi soweli moli seli pi nena monsi",
+  "subtitles.entity.parched.ambient": "jan palisa seli li kalama",
+  "subtitles.entity.parched.death": "jan palisa seli li moli sin",
+  "subtitles.entity.parched.hurt": "jan palisa seli li pakala",
+  "subtitles.entity.camel_husk.ambient": "soweli moli seli pi nena monsi li mu",
+  "subtitles.entity.camel_husk.dash": "soweli moli seli pi nena monsi li tawa wawa",
+  "subtitles.entity.camel_husk.dash_ready": "soweli moli seli pi nena monsi li kama wawa",
+  "subtitles.entity.camel_husk.death": "soweli moli seli pi nena monsi li moli sin",
+  "subtitles.entity.camel_husk.eat": "soweli moli seli pi nena monsi li moku",
+  "subtitles.entity.camel_husk.hurt": "soweli moli seli pi nena monsi li pakala",
+  "subtitles.entity.camel_husk.saddle": "jan li len e soweli moli seli pi nena monsi",
+  "subtitles.entity.camel_husk.sit": "soweli moli seli pi nena monsi li lape",
+  "subtitles.entity.camel_husk.stand": "soweli moli seli pi nena monsi li pini lape",
+  "subtitles.entity.parrot.imitate.parched": "waso toki li mu sama jan palisa seli",
+  "subtitles.entity.parrot.imitate.camel_husk": "waso toki li mu sama soweli moli seli pi nena monsi"
+}

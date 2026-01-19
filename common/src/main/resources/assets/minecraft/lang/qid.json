@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Kerontang",
+  "entity.minecraft.camel_husk": "Oenta beloelang",
+  "item.minecraft.parched_spawn_egg": "Teloer pewoedjoedan kerontang",
+  "item.minecraft.camel_husk_spawn_egg": "Teloer pewoedjoedan oenta beloelang",
+  "subtitles.entity.parched.ambient": "Kerontang menggeretak",
+  "subtitles.entity.parched.death": "Kerontang mati",
+  "subtitles.entity.parched.hurt": "Kerontang terloeka",
+  "subtitles.entity.camel_husk.ambient": "Oenta beloelang berdengoes",
+  "subtitles.entity.camel_husk.dash": "Oenta beloelang berdjingkrak",
+  "subtitles.entity.camel_husk.dash_ready": "Oenta beloelang poelih",
+  "subtitles.entity.camel_husk.death": "Oenta beloelang mati",
+  "subtitles.entity.camel_husk.eat": "Oenta beloelang makan",
+  "subtitles.entity.camel_husk.hurt": "Oenta beloelang terloeka",
+  "subtitles.entity.camel_husk.saddle": "Pelana dipasang",
+  "subtitles.entity.camel_husk.sit": "Oenta beloelang doedoek",
+  "subtitles.entity.camel_husk.stand": "Oenta beloelang berdiri",
+  "subtitles.entity.parrot.imitate.parched": "Bajan meniroe kerontang",
+  "subtitles.entity.parrot.imitate.camel_husk": "Bajan meniroe oenta beloelang"
+}

@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Nangatuyot",
+  "entity.minecraft.camel_husk": "Kamelyong Nangatuyo",
+  "item.minecraft.parched_spawn_egg": "Panlikhaang Itlog ng Nangatuyot",
+  "item.minecraft.camel_husk_spawn_egg": "Panlikhaang Itlog ng Kamelyong Nangatuyo",
+  "subtitles.entity.parched.ambient": "Kumakalantog ang Nangatuyot",
+  "subtitles.entity.parched.death": "Namatay ang Nangatuyot",
+  "subtitles.entity.parched.hurt": "Nasaktan ang Nangatuyot",
+  "subtitles.entity.camel_husk.ambient": "Umuungol ang Kamelyong Nangatuyo",
+  "subtitles.entity.camel_husk.dash": "Nagdigidig ang Kamelyong Nangatuyo",
+  "subtitles.entity.camel_husk.dash_ready": "Nagpalakas ang Kamelyong Nangatuyo",
+  "subtitles.entity.camel_husk.death": "Namatay ang Kamelyong Nangatuyo",
+  "subtitles.entity.camel_husk.eat": "Kumain ang Kamelyong Nangatuyo",
+  "subtitles.entity.camel_husk.hurt": "Nasaktan ang Kamelyong Nangatuyo",
+  "subtitles.entity.camel_husk.saddle": "Sinuot ang sintadera",
+  "subtitles.entity.camel_husk.sit": "Umupo ang Kamelyong Nangatuyo",
+  "subtitles.entity.camel_husk.stand": "Tumayo ang Kamelyong Nangatuyo",
+  "subtitles.entity.parrot.imitate.parched": "Kumakalantog ang loro",
+  "subtitles.entity.parrot.imitate.camel_husk": "Umuungol ang loro"
+}

@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "გამომშრალი",
+  "entity.minecraft.camel_husk": "აქლემი-ხმელა",
+  "item.minecraft.parched_spawn_egg": "გამომშრალის გამოძახების კვერცხი",
+  "item.minecraft.camel_husk_spawn_egg": "აქლემი-ხმელას გამოძახების კვერცხი",
+  "subtitles.entity.parched.ambient": "Parched crackles",
+  "subtitles.entity.parched.death": "Parched dies",
+  "subtitles.entity.parched.hurt": "Parched hurts",
+  "subtitles.entity.camel_husk.ambient": "აქლემი-ხმელა ხროტინებს",
+  "subtitles.entity.camel_husk.dash": "აქლემი-ხმელა გავარდა",
+  "subtitles.entity.camel_husk.dash_ready": "აქლემი-ხმელა ისვენებს",
+  "subtitles.entity.camel_husk.death": "აქლემი-ხმელა კვდება",
+  "subtitles.entity.camel_husk.eat": "აქლემი-ხმელა ჭამს",
+  "subtitles.entity.camel_husk.hurt": "აქლემი-ხმელა დაიჭრა",
+  "subtitles.entity.camel_husk.saddle": "უნაგირი დაიდგა",
+  "subtitles.entity.camel_husk.sit": "აქლემი-ხმელა ჯდება",
+  "subtitles.entity.camel_husk.stand": "აქლემი-ხმელა დგება",
+  "subtitles.entity.parrot.imitate.parched": "Parrot crackles",
+  "subtitles.entity.parrot.imitate.camel_husk": "Parrot grumphs"
+}

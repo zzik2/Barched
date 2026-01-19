@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Izkaltušais",
+  "entity.minecraft.camel_husk": "Izžuvušais Kamielis",
+  "item.minecraft.parched_spawn_egg": "Izkaltušā Radīšanas Ola",
+  "item.minecraft.camel_husk_spawn_egg": "Izžuvušā Kamieļa Radīšanas Ola",
+  "subtitles.entity.parched.ambient": "Izkaltušais grab",
+  "subtitles.entity.parched.death": "Izkaltušais nomirst",
+  "subtitles.entity.parched.hurt": "Izkaltušajam sāp",
+  "subtitles.entity.camel_husk.ambient": "Izžuvušais Kamielis murmina",
+  "subtitles.entity.camel_husk.dash": "Izžuvušais Kamielis lec",
+  "subtitles.entity.camel_husk.dash_ready": "Izžuvušais Kamielis atgūstas",
+  "subtitles.entity.camel_husk.death": "Izžuvušais Kamielis nomirst",
+  "subtitles.entity.camel_husk.eat": "Izžuvušais Kamielis ēd",
+  "subtitles.entity.camel_husk.hurt": "Izžuvušajam Kamielim sāp",
+  "subtitles.entity.camel_husk.saddle": "Uzliek seglu",
+  "subtitles.entity.camel_husk.sit": "Izžuvušais Kamielis apsēžas",
+  "subtitles.entity.camel_husk.stand": "Izžuvušais Kamielis pieceļas",
+  "subtitles.entity.parrot.imitate.parched": "Papagailis krakšķ",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papagailis murmina"
+}

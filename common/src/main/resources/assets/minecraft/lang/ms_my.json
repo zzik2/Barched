@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Keringan",
+  "entity.minecraft.camel_husk": "Unta Reputan",
+  "item.minecraft.parched_spawn_egg": "Telur Penjelmaan Keringan",
+  "item.minecraft.camel_husk_spawn_egg": "Telur Penjelmaan Unta Reputan",
+  "subtitles.entity.parched.ambient": "Keringan bergemeretak",
+  "subtitles.entity.parched.death": "Keringan mati",
+  "subtitles.entity.parched.hurt": "Keringan tercedera",
+  "subtitles.entity.camel_husk.ambient": "Unta Reputan mendengus",
+  "subtitles.entity.camel_husk.dash": "Unta Reputan melantun",
+  "subtitles.entity.camel_husk.dash_ready": "Unta Reputan mengimbang diri",
+  "subtitles.entity.camel_husk.death": "Unta Reputan mati",
+  "subtitles.entity.camel_husk.eat": "Unta Reputan memakan",
+  "subtitles.entity.camel_husk.hurt": "Unta Reputan tercedera",
+  "subtitles.entity.camel_husk.saddle": "Pelana dilengkapi",
+  "subtitles.entity.camel_husk.sit": "Unta Reputan duduk",
+  "subtitles.entity.camel_husk.stand": "Unta Reputan berdiri",
+  "subtitles.entity.parrot.imitate.parched": "Burung Nuri bergemeretak",
+  "subtitles.entity.parrot.imitate.camel_husk": "Burung Nuri mendengus"
+}

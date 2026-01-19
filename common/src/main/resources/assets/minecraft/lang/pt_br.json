@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Ressecado",
+  "entity.minecraft.camel_husk": "Camelo-Múmia",
+  "item.minecraft.parched_spawn_egg": "Ovo Gerador de Ressecado",
+  "item.minecraft.camel_husk_spawn_egg": "Ovo Gerador de Camelo-Múmia",
+  "subtitles.entity.parched.ambient": "Ressecado chacoalha",
+  "subtitles.entity.parched.death": "Ressecado morre",
+  "subtitles.entity.parched.hurt": "Ressecado ferido",
+  "subtitles.entity.camel_husk.ambient": "Camelo-Múmia grunhe",
+  "subtitles.entity.camel_husk.dash": "Camelo-Múmia avança",
+  "subtitles.entity.camel_husk.dash_ready": "Camelo-Múmia pronto",
+  "subtitles.entity.camel_husk.death": "Camelo-Múmia morre",
+  "subtitles.entity.camel_husk.eat": "Camelo-Múmia come",
+  "subtitles.entity.camel_husk.hurt": "Camelo-Múmia ferido",
+  "subtitles.entity.camel_husk.saddle": "Sela equipada",
+  "subtitles.entity.camel_husk.sit": "Camelo-Múmia se senta",
+  "subtitles.entity.camel_husk.stand": "Camelo-Múmia se levanta",
+  "subtitles.entity.parrot.imitate.parched": "Papagaio imita um Ressecado",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papagaio imita um Camelo-Múmia"
+}

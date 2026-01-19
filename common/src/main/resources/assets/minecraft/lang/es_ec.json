@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Momificado",
+  "entity.minecraft.camel_husk": "Camello disecado",
+  "item.minecraft.parched_spawn_egg": "Generar momificado",
+  "item.minecraft.camel_husk_spawn_egg": "Generar camello disecado",
+  "subtitles.entity.parched.ambient": "Momificado traquetea",
+  "subtitles.entity.parched.death": "Momificado muere",
+  "subtitles.entity.parched.hurt": "Momificado herido",
+  "subtitles.entity.camel_husk.ambient": "Camello disecado gruñe",
+  "subtitles.entity.camel_husk.dash": "Camello disecado se lanza",
+  "subtitles.entity.camel_husk.dash_ready": "Camello disecado se recupera",
+  "subtitles.entity.camel_husk.death": "Camello disecado muere",
+  "subtitles.entity.camel_husk.eat": "Camello disecado come",
+  "subtitles.entity.camel_husk.hurt": "Camello disecado herido",
+  "subtitles.entity.camel_husk.saddle": "Montura equipada",
+  "subtitles.entity.camel_husk.sit": "Camello disecado se sienta",
+  "subtitles.entity.camel_husk.stand": "Camello disecado se levanta",
+  "subtitles.entity.parrot.imitate.parched": "Loro imita a un momificado",
+  "subtitles.entity.parrot.imitate.camel_husk": "Loro imita a un camello disecado"
+}

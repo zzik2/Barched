@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Esqueleto momia",
+  "entity.minecraft.camel_husk": "Camelo momia",
+  "item.minecraft.parched_spawn_egg": "Ovo de invocación de esqueleto momia",
+  "item.minecraft.camel_husk_spawn_egg": "Ovo de invocación de camelo momia",
+  "subtitles.entity.parched.ambient": "Esqueleto momia chocalla",
+  "subtitles.entity.parched.death": "Esqueleto momia morre",
+  "subtitles.entity.parched.hurt": "Esqueleto momia ferido",
+  "subtitles.entity.camel_husk.ambient": "Camelo momia gruñe",
+  "subtitles.entity.camel_husk.dash": "Camelo momia lánzase",
+  "subtitles.entity.camel_husk.dash_ready": "Camelo momia recupérase",
+  "subtitles.entity.camel_husk.death": "Camelo momia morre",
+  "subtitles.entity.camel_husk.eat": "Camelo momia come",
+  "subtitles.entity.camel_husk.hurt": "Camelo momia ferido",
+  "subtitles.entity.camel_husk.saddle": "Sela equipada",
+  "subtitles.entity.camel_husk.sit": "Camelo momia séntase",
+  "subtitles.entity.camel_husk.stand": "Camelo momia levántase",
+  "subtitles.entity.parrot.imitate.parched": "Papagaio imita un esqueleto momia",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papagaio imita un camelo momia"
+}

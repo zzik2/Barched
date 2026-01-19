@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Kẻ khô độc",
+  "entity.minecraft.camel_husk": "Lạc đà khô tàn",
+  "item.minecraft.parched_spawn_egg": "Trứng sinh ra Kẻ khô độc",
+  "item.minecraft.camel_husk_spawn_egg": "Trứng sinh ra Lạc đà khô tàn",
+  "subtitles.entity.parched.ambient": "Kẻ khô độc kêu tanh tách",
+  "subtitles.entity.parched.death": "Kẻ khô độc chết",
+  "subtitles.entity.parched.hurt": "Kẻ khô độc bị thương",
+  "subtitles.entity.camel_husk.ambient": "Lạc đà khô tàn gầm gừ",
+  "subtitles.entity.camel_husk.dash": "Lạc đà khô tàn lao tới",
+  "subtitles.entity.camel_husk.dash_ready": "Lạc đà khô tàn phục hồi",
+  "subtitles.entity.camel_husk.death": "Lạc đà khô tàn chết",
+  "subtitles.entity.camel_husk.eat": "Lạc đà khô tàn ăn",
+  "subtitles.entity.camel_husk.hurt": "Lạc đà khô tàn bị thương",
+  "subtitles.entity.camel_husk.saddle": "Yên cưỡi được trang bị",
+  "subtitles.entity.camel_husk.sit": "Lạc đà khô tàn nằm xuống",
+  "subtitles.entity.camel_husk.stand": "Lạc đà khô tàn đứng lên",
+  "subtitles.entity.parrot.imitate.parched": "Vẹt giả tiếng kêu tanh tách",
+  "subtitles.entity.parrot.imitate.camel_husk": "Vẹt giả tiếng gầm gừ"
+}

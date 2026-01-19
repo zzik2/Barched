@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Cухляк",
+  "entity.minecraft.camel_husk": "Вярблюд-здыхляк",
+  "item.minecraft.parched_spawn_egg": "Яйка выкліку — Сухляк",
+  "item.minecraft.camel_husk_spawn_egg": "Яйка выкліку — Вярблюд-здыхляк",
+  "subtitles.entity.parched.ambient": "Сухляк бразгоча касцямі",
+  "subtitles.entity.parched.death": "Сухляк гіне",
+  "subtitles.entity.parched.hurt": "Сухляк паранены",
+  "subtitles.entity.camel_husk.ambient": "Вярблюд-здыхляк буркоча",
+  "subtitles.entity.camel_husk.dash": "Вярблюд-здыхляк пераскоквае",
+  "subtitles.entity.camel_husk.dash_ready": "Вярблюд-здыхляк набіраецца сіл",
+  "subtitles.entity.camel_husk.death": "Вярблюд-здыхляк гіне",
+  "subtitles.entity.camel_husk.eat": "Вярблюд-здыхляк есць",
+  "subtitles.entity.camel_husk.hurt": "Вярблюд-здыхляк паранены",
+  "subtitles.entity.camel_husk.saddle": "Вярблюд-здыхляк асядланы",
+  "subtitles.entity.camel_husk.sit": "Вярблюд-здыхляк сядае",
+  "subtitles.entity.camel_husk.stand": "Вярблюд-здыхляк устае",
+  "subtitles.entity.parrot.imitate.parched": "Папугай пераймае сухляка",
+  "subtitles.entity.parrot.imitate.camel_husk": "Папугай пераймае вярблюда-здыхляка"
+}

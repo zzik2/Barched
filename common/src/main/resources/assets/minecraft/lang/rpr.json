@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Пустынникъ",
+  "entity.minecraft.camel_husk": "Верблюдъ-кадавръ",
+  "item.minecraft.parched_spawn_egg": "Яйцо призыва пустынника",
+  "item.minecraft.camel_husk_spawn_egg": "Яйцо призыва верблюда-кадавра",
+  "subtitles.entity.parched.ambient": "Пустынникъ стучитъ костями",
+  "subtitles.entity.parched.death": "Пустынникъ погибаетъ",
+  "subtitles.entity.parched.hurt": "Пустынникъ раненъ",
+  "subtitles.entity.camel_husk.ambient": "Верблюдъ-кадавръ хрипитъ",
+  "subtitles.entity.camel_husk.dash": "Рывокъ верблюда-кадавра",
+  "subtitles.entity.camel_husk.dash_ready": "Верблюдъ-кадавръ отдохнулъ",
+  "subtitles.entity.camel_husk.death": "Верблюдъ-кадавръ погибаетъ",
+  "subtitles.entity.camel_husk.eat": "Верблюдъ-кадавръ ѣстъ",
+  "subtitles.entity.camel_husk.hurt": "Верблюдъ-кадавръ раненъ",
+  "subtitles.entity.camel_husk.saddle": "Верблюдъ-кадавръ осѣдланъ",
+  "subtitles.entity.camel_husk.sit": "Верблюдъ-кадавръ садится",
+  "subtitles.entity.camel_husk.stand": "Верблюдъ-кадавръ встаётъ",
+  "subtitles.entity.parrot.imitate.parched": "Попугай подражаетъ пустыннику",
+  "subtitles.entity.parrot.imitate.camel_husk": "Попугай хрипитъ какъ верблюдъ-кадавръ"
+}

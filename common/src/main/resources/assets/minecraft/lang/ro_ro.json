@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Uscat",
+  "entity.minecraft.camel_husk": "Cămilă-momâie",
+  "item.minecraft.parched_spawn_egg": "Ou generator de uscat",
+  "item.minecraft.camel_husk_spawn_egg": "Ou generator de cămilă-momâie",
+  "subtitles.entity.parched.ambient": "Uscatul zornăie",
+  "subtitles.entity.parched.death": "Uscatul moare",
+  "subtitles.entity.parched.hurt": "Uscatul este rănit",
+  "subtitles.entity.camel_husk.ambient": "Cămila-momâie mârâie",
+  "subtitles.entity.camel_husk.dash": "Cămila-momâie se lansează",
+  "subtitles.entity.camel_husk.dash_ready": "Cămila-momâie își revine",
+  "subtitles.entity.camel_husk.death": "Cămila-momâie moare",
+  "subtitles.entity.camel_husk.eat": "Cămila-momâie mănâncă",
+  "subtitles.entity.camel_husk.hurt": "Cămila-momâie este rănită",
+  "subtitles.entity.camel_husk.saddle": "Șaua se echipează",
+  "subtitles.entity.camel_husk.sit": "Cămila-momâie se așează",
+  "subtitles.entity.camel_husk.stand": "Cămila-momâie se ridică",
+  "subtitles.entity.parrot.imitate.parched": "Papagul imită un uscat",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papagalul imită o cămilă-momâie"
+}

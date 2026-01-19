@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Tahenenu",
+  "entity.minecraft.camel_husk": "Kaamelikuivik",
+  "item.minecraft.parched_spawn_egg": "Tahenenu sünnimuna",
+  "item.minecraft.camel_husk_spawn_egg": "Kaamelikuiviku sünnimuna",
+  "subtitles.entity.parched.ambient": "Tahenenu pragiseb",
+  "subtitles.entity.parched.death": "Tahenenu sureb",
+  "subtitles.entity.parched.hurt": "Tahenenu valutab",
+  "subtitles.entity.camel_husk.ambient": "Kaamelikuivik nuriseb",
+  "subtitles.entity.camel_husk.dash": "Kaamelikuivik silkab",
+  "subtitles.entity.camel_husk.dash_ready": "Kaamelikuivik taastub",
+  "subtitles.entity.camel_husk.death": "Kaamelikuivik sureb",
+  "subtitles.entity.camel_husk.eat": "Kaamelikuivik sööb",
+  "subtitles.entity.camel_husk.hurt": "Kaamelikuivikul valutab",
+  "subtitles.entity.camel_husk.saddle": "Sadul läheb selga",
+  "subtitles.entity.camel_husk.sit": "Kaamelikuivik istub maha",
+  "subtitles.entity.camel_husk.stand": "Kaamelikuivik tõuseb üles",
+  "subtitles.entity.parrot.imitate.parched": "Papagoi pragiseb",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papagoi nuriseb"
+}

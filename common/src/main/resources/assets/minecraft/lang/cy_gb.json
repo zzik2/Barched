@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Sychedig",
+  "entity.minecraft.camel_husk": "Cibyn Camel",
+  "item.minecraft.parched_spawn_egg": "Wy Geni Sychedig",
+  "item.minecraft.camel_husk_spawn_egg": "Wy Geni Cibyn Camel",
+  "subtitles.entity.parched.ambient": "Sychedig yn craclo",
+  "subtitles.entity.parched.death": "Sychedig yn marw",
+  "subtitles.entity.parched.hurt": "Sychedig yn brifo",
+  "subtitles.entity.camel_husk.ambient": "Cibyn Camel yn cwyno",
+  "subtitles.entity.camel_husk.dash": "Cibyn Camel yn taflu",
+  "subtitles.entity.camel_husk.dash_ready": "Cibyn Camel yn adfer",
+  "subtitles.entity.camel_husk.death": "Cibyn Camel yn marw",
+  "subtitles.entity.camel_husk.eat": "Cibyn Camel yn bwyta",
+  "subtitles.entity.camel_husk.hurt": "Cibyn Camel yn brifo",
+  "subtitles.entity.camel_husk.saddle": "Cyfrwy wedi'i roi",
+  "subtitles.entity.camel_husk.sit": "Cibyn Camel yn eistedd",
+  "subtitles.entity.camel_husk.stand": "Cibyn Camel yn sefyll",
+  "subtitles.entity.parrot.imitate.parched": "Parot yn craclo",
+  "subtitles.entity.parrot.imitate.camel_husk": "Parot yn cwyno"
+}

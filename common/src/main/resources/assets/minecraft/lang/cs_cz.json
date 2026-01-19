@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "sušinka",
+  "entity.minecraft.camel_husk": "zombloud",
+  "item.minecraft.parched_spawn_egg": "Vajíčko se sušinkou",
+  "item.minecraft.camel_husk_spawn_egg": "Vajíčko se zombloudem",
+  "subtitles.entity.parched.ambient": "chrastění sušinky",
+  "subtitles.entity.parched.death": "sušinka zemřel",
+  "subtitles.entity.parched.hurt": "sušinka byl zraněn",
+  "subtitles.entity.camel_husk.ambient": "zombloud mručí",
+  "subtitles.entity.camel_husk.dash": "zombloud vystřelil vpřed",
+  "subtitles.entity.camel_husk.dash_ready": "zombloud nabírá síly",
+  "subtitles.entity.camel_husk.death": "zombloud zahynul",
+  "subtitles.entity.camel_husk.eat": "zombloud žere",
+  "subtitles.entity.camel_husk.hurt": "zombloud byl zraněn",
+  "subtitles.entity.camel_husk.saddle": "sedlo nasazeno",
+  "subtitles.entity.camel_husk.sit": "zombloud si sedá",
+  "subtitles.entity.camel_husk.stand": "zombloud vstává",
+  "subtitles.entity.parrot.imitate.parched": "papoušek chrastí jako sušinka",
+  "subtitles.entity.parrot.imitate.camel_husk": "papoušek mručí jako zombloud"
+}

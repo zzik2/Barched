@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Seared",
+  "entity.minecraft.camel_husk": "Olvend Husk",
+  "item.minecraft.parched_spawn_egg": "Seared Making Ey",
+  "item.minecraft.camel_husk_spawn_egg": "Olvend Husk Making Ey",
+  "subtitles.entity.parched.ambient": "Seared crackles",
+  "subtitles.entity.parched.death": "Seared dies",
+  "subtitles.entity.parched.hurt": "Seared wounds",
+  "subtitles.entity.camel_husk.ambient": "Olvend Husk grunts",
+  "subtitles.entity.camel_husk.dash": "Olvend Husk yeets",
+  "subtitles.entity.camel_husk.dash_ready": "Olvend Husk wurps",
+  "subtitles.entity.camel_husk.death": "Olvend Husk dies",
+  "subtitles.entity.camel_husk.eat": "Olvend Husk eats",
+  "subtitles.entity.camel_husk.hurt": "Olvend Husk wounds",
+  "subtitles.entity.camel_husk.saddle": "Saddle yares",
+  "subtitles.entity.camel_husk.sit": "Olvend Husk sits down",
+  "subtitles.entity.camel_husk.stand": "Olvend Husk stands up",
+  "subtitles.entity.parrot.imitate.parched": "Bleefowl crackles",
+  "subtitles.entity.parrot.imitate.camel_husk": "Bleefowl grunts"
+}

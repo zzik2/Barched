@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Uttorkat skelett",
+  "entity.minecraft.camel_husk": "Uttorkad kamel",
+  "item.minecraft.parched_spawn_egg": "Skapelseägg för uttorkat skelett",
+  "item.minecraft.camel_husk_spawn_egg": "Skapelseägg för uttorkad kamel",
+  "subtitles.entity.parched.ambient": "Uttorkat skelett skallrar",
+  "subtitles.entity.parched.death": "Uttorkat skelett dör",
+  "subtitles.entity.parched.hurt": "Uttorkat skelett skadas",
+  "subtitles.entity.camel_husk.ambient": "Uttorkad kamel grumsar",
+  "subtitles.entity.camel_husk.dash": "Uttorkad kamel hoppar",
+  "subtitles.entity.camel_husk.dash_ready": "Uttorkad kamel återhämtar sig",
+  "subtitles.entity.camel_husk.death": "Uttorkad kamel dör",
+  "subtitles.entity.camel_husk.eat": "Uttorkad kamel äter",
+  "subtitles.entity.camel_husk.hurt": "Uttorkad kamel skadas",
+  "subtitles.entity.camel_husk.saddle": "Sadel sätts på",
+  "subtitles.entity.camel_husk.sit": "Uttorkad kamel lägger sig ner",
+  "subtitles.entity.camel_husk.stand": "Uttorkad kamel reser sig upp",
+  "subtitles.entity.parrot.imitate.parched": "Papegoja skallrar",
+  "subtitles.entity.parrot.imitate.camel_husk": "Papegoja grumsar"
+}

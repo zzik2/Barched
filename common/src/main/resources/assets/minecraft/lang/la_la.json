@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "Torridus",
+  "entity.minecraft.camel_husk": "Cassus cameli",
+  "item.minecraft.parched_spawn_egg": "Ovum creationis torridi",
+  "item.minecraft.camel_husk_spawn_egg": "Ovum creationis cassi cameli",
+  "subtitles.entity.parched.ambient": "Torridus crepat",
+  "subtitles.entity.parched.death": "Torridus moritur",
+  "subtitles.entity.parched.hurt": "Torridus dolet",
+  "subtitles.entity.camel_husk.ambient": "Cassus cameli grunnit",
+  "subtitles.entity.camel_husk.dash": "Cassus cameli iacit",
+  "subtitles.entity.camel_husk.dash_ready": "Cassus cameli recuperat",
+  "subtitles.entity.camel_husk.death": "Cassus cameli moritur",
+  "subtitles.entity.camel_husk.eat": "Cassus cameli edit",
+  "subtitles.entity.camel_husk.hurt": "Cassus cameli dolet",
+  "subtitles.entity.camel_husk.saddle": "Sagma cingitur",
+  "subtitles.entity.camel_husk.sit": "Cassus cameli sedet",
+  "subtitles.entity.camel_husk.stand": "Cassus cameli exsurgit",
+  "subtitles.entity.parrot.imitate.parched": "Psittacus crepat",
+  "subtitles.entity.parrot.imitate.camel_husk": "Psittacus grunnit"
+}

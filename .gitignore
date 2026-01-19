@@ -1,5 +1,7 @@
 # User-specific stuff
 .idea/
+translation/langs
+translation/output
 
 *.iml
 *.ipr

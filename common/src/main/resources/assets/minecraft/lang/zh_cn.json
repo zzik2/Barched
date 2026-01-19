@@ -1,0 +1,20 @@
+{
+  "entity.minecraft.parched": "焦骸",
+  "entity.minecraft.camel_husk": "骆驼尸壳",
+  "item.minecraft.parched_spawn_egg": "焦骸刷怪蛋",
+  "item.minecraft.camel_husk_spawn_egg": "骆驼尸壳刷怪蛋",
+  "subtitles.entity.parched.ambient": "焦骸：咯咯声",
+  "subtitles.entity.parched.death": "焦骸：死亡",
+  "subtitles.entity.parched.hurt": "焦骸：受伤",
+  "subtitles.entity.camel_husk.ambient": "骆驼尸壳：咕哝",
+  "subtitles.entity.camel_husk.dash": "骆驼尸壳：冲刺",
+  "subtitles.entity.camel_husk.dash_ready": "骆驼尸壳：恢复体力",
+  "subtitles.entity.camel_husk.death": "骆驼尸壳：死亡",
+  "subtitles.entity.camel_husk.eat": "骆驼尸壳：进食",
+  "subtitles.entity.camel_husk.hurt": "骆驼尸壳：受伤",
+  "subtitles.entity.camel_husk.saddle": "鞍：装备",
+  "subtitles.entity.camel_husk.sit": "骆驼尸壳：坐下",
+  "subtitles.entity.camel_husk.stand": "骆驼尸壳：站起",
+  "subtitles.entity.parrot.imitate.parched": "鹦鹉：咯咯声",
+  "subtitles.entity.parrot.imitate.camel_husk": "鹦鹉：咕哝"
+}
