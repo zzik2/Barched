@@ -6,7 +6,8 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import zzik2.barched.Barched;
-import zzik2.barched.reflection.ReflectionUtils;
+import zzik2.zreflex.reflection.ZReflectionTool;
+
 
 @Mixin(SpawnPlacements.class)
 public abstract class SpawnPlacementsMixin {
@@ -18,10 +19,10 @@ public abstract class SpawnPlacementsMixin {
 
     static {
         register(Barched.EntityType.PARCHED, SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ((entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource) -> {
-            return ReflectionUtils.invokeStaticMethod(Monster.class, "checkSurfaceMonstersSpawnRules", entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource);
+            return ZReflectionTool.invokeStaticMethod(Monster.class, "checkSurfaceMonstersSpawnRules", entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource);
         }));
         register(Barched.EntityType.CAMEL_HUSK, SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, ((entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource) -> {
-            return ReflectionUtils.invokeStaticMethod(Monster.class, "checkSurfaceMonstersSpawnRules", entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource);
+            return ZReflectionTool.invokeStaticMethod(Monster.class, "checkSurfaceMonstersSpawnRules", entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource);
         }));
     }
 }

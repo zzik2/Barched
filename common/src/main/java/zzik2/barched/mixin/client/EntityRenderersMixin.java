@@ -9,7 +9,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import zzik2.barched.reflection.ReflectionUtils;
+import zzik2.zreflex.reflection.ZReflectionTool;
+
 
 @Mixin(EntityRenderers.class)
 public abstract class EntityRenderersMixin {
@@ -19,7 +20,7 @@ public abstract class EntityRenderersMixin {
     }
 
     static {
-        register(ReflectionUtils.getStaticFieldValue(net.minecraft.world.entity.EntityType.class, "PARCHED"), ParchedRenderer::new);
-        register(ReflectionUtils.getStaticFieldValue(net.minecraft.world.entity.EntityType.class, "CAMEL_HUSK"), context -> new CamelHuskRenderer(context, ModelLayers.CAMEL));
+        register(ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.EntityType.class, "PARCHED"), ParchedRenderer::new);
+        register(ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.EntityType.class, "CAMEL_HUSK"), context -> new CamelHuskRenderer(context, ModelLayers.CAMEL));
     }
 }

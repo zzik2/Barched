@@ -33,6 +33,8 @@ dependencies {
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
+
+    shadowBundle implementation("kr.zzik2:zreflex:0.0.1")
 }
 
 processResources {
@@ -45,7 +47,6 @@ processResources {
 
 shadowJar {
     configurations = [project.configurations.shadowBundle]
-    archiveClassifier = 'dev-shadow'
     relocate 'net.minecraft.client.renderer.entity.CamelHuskRenderer', 'zzik2.barched.minecraft.client.renderer.entity.CamelHuskRenderer'
     relocate 'net.minecraft.client.renderer.entity.ParchedRenderer', 'zzik2.barched.minecraft.client.renderer.entity.ParchedRenderer'
     relocate 'net.minecraft.util.datafix.schemas.V4656', 'zzik2.barched.minecraft.util.datafix.schemas.V4656'

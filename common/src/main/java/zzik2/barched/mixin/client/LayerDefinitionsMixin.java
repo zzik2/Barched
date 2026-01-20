@@ -17,7 +17,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import zzik2.barched.reflection.ReflectionUtils;
+import zzik2.zreflex.reflection.ZReflectionTool;
+
 
 import java.util.Map;
 
@@ -41,9 +42,9 @@ public class LayerDefinitionsMixin {
         LayerDefinition layerDefinition2 = LayerDefinition.create(HumanoidArmorModel.createBodyLayer(OUTER_ARMOR_DEFORMATION), 64, 32);
         LayerDefinition layerDefinition4 = LayerDefinition.create(HumanoidArmorModel.createBodyLayer(INNER_ARMOR_DEFORMATION), 64, 32);
 
-        barched$builder.put(ReflectionUtils.getStaticFieldValue(ModelLayers.class, "PARCHED"), ReflectionUtils.invokeStaticMethod(SkeletonModel.class, "createSingleModelDualBodyLayer"));
-        barched$builder.put(ReflectionUtils.getStaticFieldValue(ModelLayers.class, "PARCHED_INNER_ARMOR"), layerDefinition4);
-        barched$builder.put(ReflectionUtils.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_ARMOR"), layerDefinition2);
-        barched$builder.put(ReflectionUtils.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_LAYER"), LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.25F), 0.0F), 64, 32));
+        barched$builder.put(ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED"), ZReflectionTool.invokeStaticMethod(SkeletonModel.class, "createSingleModelDualBodyLayer"));
+        barched$builder.put(ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_INNER_ARMOR"), layerDefinition4);
+        barched$builder.put(ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_ARMOR"), layerDefinition2);
+        barched$builder.put(ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_LAYER"), LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.25F), 0.0F), 64, 32));
     }
 }

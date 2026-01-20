@@ -30,11 +30,14 @@ subprojects {
         // See https://docs.gradle.org/current/userguide/declaring_repositories.html
         // for more information about repositories.
         mavenCentral()
+        mavenLocal()
     }
 
     dependencies {
         minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
         mappings loom.officialMojangMappings()
+
+        implementation("kr.zzik2:zreflex:0.0.1")
     }
 
     java {

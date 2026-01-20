@@ -6,7 +6,8 @@ import net.minecraft.client.model.geom.builders.*;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
-import zzik2.barched.modifier.ModifyAccess;
+import zzik2.zreflex.mixin.ModifyAccess;
+
 
 @Mixin(SkeletonModel.class)
 public class SkeletonModelMixin {

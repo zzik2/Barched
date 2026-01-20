@@ -7,7 +7,8 @@ import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Parched;
 import org.jetbrains.annotations.NotNull;
-import zzik2.barched.reflection.ReflectionUtils;
+import zzik2.zreflex.reflection.ZReflectionTool;
+
 
 @Environment(EnvType.CLIENT)
 public class ParchedRenderer extends SkeletonRenderer<Parched> {
@@ -15,10 +16,10 @@ public class ParchedRenderer extends SkeletonRenderer<Parched> {
     private static final ResourceLocation PARCHED_SKELETON_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/skeleton/parched.png");
 //    private static final ResourceLocation PARCHED_CLOTHES_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/skeleton/parched_overlay.png");
 
-    private static final ModelLayerLocation PARCHED = ReflectionUtils.getStaticFieldValue(ModelLayers .class, "PARCHED");
-    private static final ModelLayerLocation PARCHED_INNER_ARMOR = ReflectionUtils.getStaticFieldValue(ModelLayers.class, "PARCHED_INNER_ARMOR");;
-    private static final ModelLayerLocation PARCHED_OUTER_ARMOR = ReflectionUtils.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_ARMOR");;
-    private static final ModelLayerLocation PARCHED_OUTER_LAYER = ReflectionUtils.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_LAYER");;
+    private static final ModelLayerLocation PARCHED = ZReflectionTool.getStaticFieldValue(ModelLayers .class, "PARCHED");
+    private static final ModelLayerLocation PARCHED_INNER_ARMOR = ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_INNER_ARMOR");;
+    private static final ModelLayerLocation PARCHED_OUTER_ARMOR = ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_ARMOR");;
+    private static final ModelLayerLocation PARCHED_OUTER_LAYER = ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_LAYER");;
 
     public ParchedRenderer(EntityRendererProvider.Context context) {
         super(context, PARCHED, PARCHED_INNER_ARMOR, PARCHED_OUTER_ARMOR);

@@ -1,6 +1,6 @@
 {
   "required": true,
-  "plugin": "zzik2.barched.modifier.ModifyAccessTransformer",
+  "plugin": "zzik2.zreflex.mixin.ModifyAccessTransformer",
   "package": "zzik2.barched.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",

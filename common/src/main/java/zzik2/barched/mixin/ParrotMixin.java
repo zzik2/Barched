@@ -11,7 +11,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.barched.Barched;
-import zzik2.barched.modifier.ModifyAccess;
+import zzik2.zreflex.mixin.ModifyAccess;
+
 
 import java.util.Map;
 

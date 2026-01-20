@@ -5,7 +5,8 @@ import net.minecraft.client.model.geom.ModelLayers;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import zzik2.barched.modifier.ModifyAccess;
+import zzik2.zreflex.mixin.ModifyAccess;
+
 
 @Mixin(ModelLayers.class)
 public abstract class ModelLayersMixin {
