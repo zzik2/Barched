@@ -1,5 +1,7 @@
 package zzik2.barched;
 
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
@@ -14,6 +16,11 @@ public final class Barched {
     public static final String MOD_ID = "barched";
 
     public static void init() {
+        AutoConfig.register(BarchedConfig.class, GsonConfigSerializer::new);
+    }
+
+    public static BarchedConfig getConfig() {
+        return AutoConfig.getConfigHolder(BarchedConfig.class).getConfig();
     }
 
     public static class SoundEvents {

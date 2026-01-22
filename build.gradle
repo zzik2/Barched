@@ -31,6 +31,7 @@ subprojects {
         // for more information about repositories.
         mavenCentral()
         mavenLocal()
+        maven { url "https://maven.shedaniel.me/" }
     }
 
     dependencies {

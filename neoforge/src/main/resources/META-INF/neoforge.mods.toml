@@ -9,7 +9,7 @@ version = "${version}"
 displayName = "Barched"
 authors = "zzik2"
 description = '''
-
+Bringing Parched, Camel Husk and Spears from 1.21.11 to 1.21.1!
 '''
 logoFile = "assets/barched/icon.png"
 
@@ -31,6 +31,13 @@ side = "BOTH"
 modId = "architectury"
 type = "required"
 versionRange = "[13.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.barched]]
+modId = "cloth_config"
+type = "required"
+versionRange = "[15.0.140,)"
 ordering = "AFTER"
 side = "BOTH"
 

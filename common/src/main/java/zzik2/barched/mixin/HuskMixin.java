@@ -45,7 +45,7 @@ public class HuskMixin extends Zombie {
                 BlockPos blockPos = this.blockPosition();
                 if (serverLevelAccessor.noCollision(Barched.EntityType.CAMEL_HUSK.getSpawnAABB((double)blockPos.getX() + (double)0.5F, (double)blockPos.getY(), (double)blockPos.getZ() + (double)0.5F))) {
                     huskGroupData.triedToSpawnCamelHusk = true;
-                    if (randomSource.nextFloat() < 0.1F) {
+                    if (randomSource.nextFloat() < Barched.getConfig().getCamelHuskSpawnChanceAsFloat()) {
 //                        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SPEAR)); TODO
                         CamelHusk camelHusk = (CamelHusk)Barched.EntityType.CAMEL_HUSK.create(this.level());
                         if (camelHusk != null) {
