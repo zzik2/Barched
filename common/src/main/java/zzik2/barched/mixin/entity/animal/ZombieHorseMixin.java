@@ -1,7 +1,9 @@
 package zzik2.barched.mixin.entity.animal;
 
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.Container;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -13,6 +15,8 @@ import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.animal.horse.ZombieHorse;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.AnimalArmorItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -95,6 +99,37 @@ public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBr
     }
 
     @Override
+    public void containerChanged(Container container) {
+        ItemStack itemStack = this.getBodyArmorItem();
+        super.containerChanged(container);
+        ItemStack itemStack2 = this.getBodyArmorItem();
+        if (this.tickCount > 20 && this.isBodyArmorItem(itemStack2) && itemStack != itemStack2) {
+            this.playSound(SoundEvents.HORSE_ARMOR, 0.5F, 1.0F);
+        }
+
+    }
+
+    @Override
+    public boolean canUseSlot(EquipmentSlot equipmentSlot) {
+        return true;
+    }
+
+    @Override
+    public boolean isBodyArmorItem(ItemStack itemStack) {
+        Item var3 = itemStack.getItem();
+        boolean var10000;
+        if (var3 instanceof AnimalArmorItem animalArmorItem) {
+            if (animalArmorItem.getBodyType() == AnimalArmorItem.BodyType.EQUESTRIAN) {
+                var10000 = true;
+                return var10000;
+            }
+        }
+
+        var10000 = false;
+        return var10000;
+    }
+
+    @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor serverLevelAccessor, DifficultyInstance difficultyInstance, MobSpawnType mobSpawnType, @Nullable SpawnGroupData spawnGroupData) {
         if (mobSpawnType == MobSpawnType.NATURAL) {
             Zombie zombie = (Zombie)EntityType.ZOMBIE.create(this.level());
@@ -129,11 +164,6 @@ public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBr
         } else {
             return super.mobInteract(player, interactionHand);
         }
-    }
-
-    @Override
-    public boolean canUseSlot(EquipmentSlot equipmentSlot) {
-        return true;
     }
 
     @Override

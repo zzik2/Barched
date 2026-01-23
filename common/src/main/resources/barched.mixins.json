@@ -8,7 +8,8 @@
     "client.model.SkeletonModelMixin",
     "client.model.geom.LayerDefinitionsMixin",
     "client.model.geom.ModelLayersMixin",
-    "client.renderer.entity.EntityRenderersMixin"
+    "client.renderer.entity.EntityRenderersMixin",
+    "client.renderer.entity.UndeadHorseRendererMixin"
   ],
   "mixins": [
     "block.entity.AbstractFurnaceBlockEntityMixin",
