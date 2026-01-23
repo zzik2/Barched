@@ -61,7 +61,6 @@ public class Parched extends AbstractSkeleton implements EntityBridge {
         return false;
     }
 
-
     @Override
     protected int getHardAttackInterval() {
         return 50;

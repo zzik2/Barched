@@ -161,14 +161,7 @@
             }
           }
         }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:music_disc_lava_chicken"
-        }
-      ],
-      "rolls": 1.0
+      ]
     }
   ],
   "random_sequence": "minecraft:entities/zombie"
