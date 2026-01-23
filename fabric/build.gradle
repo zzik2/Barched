@@ -47,11 +47,6 @@ processResources {
 
 shadowJar {
     configurations = [project.configurations.shadowBundle]
-    relocate 'net.minecraft.client.renderer.entity.CamelHuskRenderer', 'zzik2.barched.minecraft.client.renderer.entity.CamelHuskRenderer'
-    relocate 'net.minecraft.client.renderer.entity.ParchedRenderer', 'zzik2.barched.minecraft.client.renderer.entity.ParchedRenderer'
-    relocate 'net.minecraft.util.datafix.schemas.V4656', 'zzik2.barched.minecraft.util.datafix.schemas.V4656'
-    relocate 'net.minecraft.world.entity.animal.CamelHusk', 'zzik2.barched.minecraft.world.entity.animal.CamelHusk'
-    relocate 'net.minecraft.world.entity.monster.Parched', 'zzik2.barched.minecraft.world.entity.monster.Parched'
 }
 
 remapJar {
