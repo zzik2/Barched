@@ -137,7 +137,7 @@ public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBr
                 ((EntityBridge) zombie).barched$snapTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
                 zombie.finalizeSpawn(serverLevelAccessor, difficultyInstance, mobSpawnType, (SpawnGroupData)null);
                 zombie.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Barched.Items.IRON_SPEAR));
-                zombie.startRiding(this, false);
+                zombie.startRiding((ZombieHorse) (Object) this, false);
             }
         }
 
