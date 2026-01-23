@@ -13,12 +13,10 @@ import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.animal.horse.ZombieHorse;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.pathfinder.PathType;
-import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -29,7 +27,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.AbstractHorseBridge;
 import zzik2.barched.bridge.EntityBridge;
-import zzik2.barched.bridge.MobBridge;import zzik2.zreflex.mixin.ModifyName;
+import zzik2.barched.bridge.MobBridge;
+import zzik2.zreflex.mixin.ModifyName;
 
 import java.util.Objects;
 import java.util.function.DoubleSupplier;
@@ -154,22 +153,7 @@ public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBr
 
     @Override
     public void aiStep() {
-        if (this.isAlive() && this.isSunBurnTick()) {
-            EquipmentSlot equipmentSlot = this.sunProtectionSlot();
-            ItemStack itemStack = this.getItemBySlot(equipmentSlot);
-            if (!itemStack.isEmpty()) {
-                if (itemStack.isDamageableItem()) {
-                    Item item = itemStack.getItem();
-                    itemStack.setDamageValue(itemStack.getDamageValue() + this.random.nextInt(2));
-                    if (itemStack.getDamageValue() >= itemStack.getMaxDamage()) {
-                        this.onEquippedItemBroken(item, equipmentSlot);
-                        this.setItemSlot(equipmentSlot, ItemStack.EMPTY);
-                    }
-                }
-
-            } else {
-                this.igniteForSeconds(8.0F);
-            }
-        }
+        super.aiStep();
+        this.burnUndead();
     }
 }

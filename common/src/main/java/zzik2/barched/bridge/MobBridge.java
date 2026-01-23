@@ -7,4 +7,7 @@ public interface MobBridge {
     default EquipmentSlot sunProtectionSlot() {
         return null;
     }
+
+    default void burnUndead() {
+    }
 }
