@@ -36,12 +36,12 @@ dependencies {
 
     modImplementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
 
-    modApi("me.shedaniel.cloth:cloth-config-neoforge:15.0.140")
+    modApi("me.shedaniel.cloth:cloth-config-neoforge:$rootProject.cloth_config_version")
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 
-    shadowBundle implementation("kr.zzik2:zreflex:0.0.1")
+    shadowBundle implementation("kr.zzik2:zreflex:$rootProject.zreflex_version")
 }
 
 processResources {
