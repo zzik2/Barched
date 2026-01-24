@@ -19,7 +19,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import zzik2.zreflex.reflection.ZReflectionTool;
 
-
 import java.util.Map;
 
 @Mixin(LayerDefinitions.class)

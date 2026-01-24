@@ -1,4 +1,4 @@
-package zzik2.barched.bridge;
+package zzik2.barched.bridge.entity;
 
 public interface AbstractHorseBridge {
 

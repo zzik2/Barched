@@ -78,4 +78,14 @@ public abstract class SoundEventsMixin {
 
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final SoundEvent ZOMBIE_HORSE_EAT = register("entity.zombie_horse.eat");
+
+    private static final Holder<SoundEvent> LUNGE_1 = registerForHolder("item.spear.lunge_1");
+    private static final Holder<SoundEvent> LUNGE_2 = registerForHolder("item.spear.lunge_2");
+    private static final Holder<SoundEvent> LUNGE_3 = registerForHolder("item.spear.lunge_3");
+    private static final Holder<SoundEvent> SPEAR_USE = registerForHolder("item.spear.use");
+    private static final Holder<SoundEvent> SPEAR_HIT = registerForHolder("item.spear.hit");
+    private static final Holder<SoundEvent> SPEAR_ATTACK = registerForHolder("item.spear.attack");
+    private static final Holder<SoundEvent> SPEAR_WOOD_USE = registerForHolder("item.spear_wood.use");
+    private static final Holder<SoundEvent> SPEAR_WOOD_HIT = registerForHolder("item.spear_wood.hit");
+    private static final Holder<SoundEvent> SPEAR_WOOD_ATTACK = registerForHolder("item.spear_wood.attack");
 }

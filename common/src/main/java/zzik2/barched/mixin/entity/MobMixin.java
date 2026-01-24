@@ -2,10 +2,7 @@ package zzik2.barched.mixin.entity;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -13,7 +10,10 @@ import net.minecraft.world.level.Level;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import zzik2.barched.bridge.MobBridge;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import zzik2.barched.bridge.entity.MobBridge;
 import zzik2.zreflex.mixin.ModifyAccess;
 
 @Mixin(Mob.class)
@@ -30,6 +30,11 @@ public abstract class MobMixin extends LivingEntity implements MobBridge {
     }
 
     @Shadow protected abstract boolean isSunBurnTick();
+
+    @Inject(method = "doHurtTarget", at = @At("TAIL"))
+    private void barched$doHurtTarget(Entity entity, CallbackInfoReturnable<Boolean> cir) {
+        this.lungeForwardMaybe();
+    }
 
     @Override
     public EquipmentSlot sunProtectionSlot() {

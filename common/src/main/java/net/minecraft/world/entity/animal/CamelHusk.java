@@ -18,11 +18,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import zzik2.barched.Barched;
-import zzik2.barched.bridge.AbstractHorseBridge;
-import zzik2.barched.bridge.CamelBridge;
+import zzik2.barched.bridge.entity.CamelBridge;
 import zzik2.zreflex.mixin.ModifyName;
 
-public class CamelHusk extends Camel implements AbstractHorseBridge, CamelBridge {
+public class CamelHusk extends Camel implements CamelBridge {
 
     public CamelHusk(EntityType<? extends Camel> entityType, Level level) {
         super(entityType, level);

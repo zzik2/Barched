@@ -29,9 +29,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import zzik2.barched.Barched;
-import zzik2.barched.bridge.AbstractHorseBridge;
-import zzik2.barched.bridge.EntityBridge;
-import zzik2.barched.bridge.MobBridge;
+import zzik2.barched.bridge.entity.AbstractHorseBridge;
+import zzik2.barched.bridge.entity.EntityBridge;
+import zzik2.barched.bridge.entity.MobBridge;
 import zzik2.zreflex.mixin.ModifyName;
 
 import java.util.Objects;

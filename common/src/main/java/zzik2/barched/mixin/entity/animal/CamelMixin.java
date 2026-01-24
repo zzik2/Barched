@@ -1,14 +1,12 @@
 package zzik2.barched.mixin.entity.animal;
 
-import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.animal.camel.Camel;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
-import zzik2.barched.Barched;
-import zzik2.barched.bridge.CamelBridge;
+import zzik2.barched.bridge.entity.CamelBridge;
 
 @Mixin(Camel.class)
 public abstract class CamelMixin implements CamelBridge {

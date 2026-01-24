@@ -25,4 +25,7 @@ public abstract class ItemTagsMixin {
 
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final TagKey<Item> SPEARS = bind("spears");
+
+    @ModifyAccess(access = Opcodes.ACC_PUBLIC)
+    private static final TagKey<Item> LUNGE_ENCHANTABLE = bind("enchantable/lunge");
 }

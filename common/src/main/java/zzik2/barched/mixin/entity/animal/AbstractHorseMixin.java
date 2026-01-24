@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import zzik2.barched.Barched;
-import zzik2.barched.bridge.AbstractHorseBridge;
+import zzik2.barched.bridge.entity.AbstractHorseBridge;
 
 @Mixin(AbstractHorse.class)
 public abstract class AbstractHorseMixin implements AbstractHorseBridge {

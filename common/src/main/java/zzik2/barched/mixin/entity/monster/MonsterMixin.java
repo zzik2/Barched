@@ -14,7 +14,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import zzik2.zreflex.mixin.ModifyAccess;
 
-
 import static net.minecraft.world.entity.Mob.checkMobSpawnRules;
 
 @Mixin(Monster.class)

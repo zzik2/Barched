@@ -5,7 +5,7 @@ import net.minecraft.world.entity.ai.behavior.AnimalPanic;
 import net.minecraft.world.entity.animal.camel.Camel;
 import net.minecraft.world.entity.animal.camel.CamelAi;
 import org.spongepowered.asm.mixin.Mixin;
-import zzik2.barched.bridge.AbstractHorseBridge;
+import zzik2.barched.bridge.entity.AbstractHorseBridge;
 
 @Mixin(CamelAi.CamelPanic.class)
 public abstract class CamelAi$CamelPanicMixin extends AnimalPanic<Camel> {

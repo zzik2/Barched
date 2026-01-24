@@ -1,8 +1,8 @@
-package zzik2.barched.bridge;
+package zzik2.barched.bridge.entity;
 
 import net.minecraft.world.entity.EquipmentSlot;
 
-public interface MobBridge {
+public interface MobBridge extends LivingEntityBridge {
 
     default EquipmentSlot sunProtectionSlot() {
         return null;

@@ -2,6 +2,12 @@ package zzik2.barched;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
@@ -11,13 +17,22 @@ import net.minecraft.world.entity.animal.CamelHusk;
 import net.minecraft.world.entity.monster.Parched;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.AttackRange;
+import net.minecraft.world.item.component.PiercingWeapon;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.enchantment.ConditionalEffect;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
+import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.level.block.Block;
-import zzik2.barched.bridge.AbstractHorseBridge;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import zzik2.barched.bridge.entity.AbstractHorseBridge;
 import zzik2.zreflex.enumeration.ZEnumTool;
 import zzik2.zreflex.reflection.ZReflectionTool;
 
+import java.util.List;
 import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 
 public final class Barched {
 
@@ -51,6 +66,15 @@ public final class Barched {
         public static final SoundEvent CAMEL_HUSK_STEP_SAND = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "CAMEL_HUSK_STEP_SAND");
         public static final SoundEvent ZOMBIE_HORSE_ANGRY = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "ZOMBIE_HORSE_ANGRY");
         public static final SoundEvent ZOMBIE_HORSE_EAT = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "ZOMBIE_HORSE_EAT");
+        public static final Holder<SoundEvent> LUNGE_1 = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "LUNGE_1");
+        public static final Holder<SoundEvent> LUNGE_2 = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "LUNGE_2");
+        public static final Holder<SoundEvent> LUNGE_3 = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "LUNGE_3");
+        public static final Holder<SoundEvent> SPEAR_USE = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "SPEAR_USE");
+        public static final Holder<SoundEvent> SPEAR_HIT = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "SPEAR_HIT");
+        public static final Holder<SoundEvent> SPEAR_ATTACK = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "SPEAR_ATTACK");
+        public static final Holder<SoundEvent> SPEAR_WOOD_USE = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "SPEAR_WOOD_USE");
+        public static final Holder<SoundEvent> SPEAR_WOOD_HIT = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "SPEAR_WOOD_HIT");
+        public static final Holder<SoundEvent> SPEAR_WOOD_ATTACK = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "SPEAR_WOOD_ATTACK");
 
 
 //        public static final SoundEvent TEMPLATE = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "");
@@ -91,6 +115,23 @@ public final class Barched {
         public static final Item NETHERITE_SPEAR = ZReflectionTool.getStaticFieldValue(net.minecraft.world.item.Items.class, "NETHERITE_SPEAR");
     }
 
+    public static class Enchantments {
+        public static final ResourceKey<Enchantment> LUNGE = ZReflectionTool.getStaticFieldValue(net.minecraft.world.item.enchantment.Enchantments.class, "LUNGE");
+    }
+
+    public static class EnchantmentEffectComponents {
+
+        public static final DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK = register("post_piercing_attack", (builder) -> {
+            return builder.persistent(ConditionalEffect.codec(EnchantmentEntityEffect.CODEC, LootContextParamSets.ENCHANTED_DAMAGE).listOf());
+        });;
+
+        private static <T> DataComponentType<T> register(String id, UnaryOperator<DataComponentType.Builder<T>> op) {
+            DataComponentType<T> type = op.apply(DataComponentType.<T>builder()).build();
+            Registry.<DataComponentType<?>>register(BuiltInRegistries.ENCHANTMENT_EFFECT_COMPONENT_TYPE, id, type);
+            return type;
+        }
+    }
+
     public static class SmithingTemplateItem {
         public static final ResourceLocation EMPTY_SLOT_SPEAR = ZReflectionTool.getStaticFieldValue(net.minecraft.world.item.SmithingTemplateItem.class, "EMPTY_SLOT_SPEAR");
     }
@@ -109,6 +150,7 @@ public final class Barched {
         public static final TagKey<Item> CAMEL_HUSK_FOOD = ZReflectionTool.getStaticFieldValue(net.minecraft.tags.ItemTags.class, "CAMEL_HUSK_FOOD");
         public static final TagKey<Item> ZOMBIE_HORSE_FOOD = ZReflectionTool.getStaticFieldValue(net.minecraft.tags.ItemTags.class, "ZOMBIE_HORSE_FOOD");
         public static final TagKey<Item> SPEARS = ZReflectionTool.getStaticFieldValue(net.minecraft.tags.ItemTags.class, "SPEARS");
+        public static final TagKey<Item> LUNGE_ENCHANTABLE = ZReflectionTool.getStaticFieldValue(net.minecraft.tags.ItemTags.class, "LUNGE_ENCHANTABLE");
     }
 
     public static class BlockTags {
@@ -121,6 +163,18 @@ public final class Barched {
         public HuskGroupData(Zombie.ZombieGroupData zombieGroupData) {
             super(zombieGroupData.isBaby, zombieGroupData.canSpawnJockey);
         }
+    }
+
+    public static class ServerboundPlayerActionPacket$Action {
+        public static final ServerboundPlayerActionPacket.Action STAB = ZEnumTool.addConstant(ServerboundPlayerActionPacket.Action.class, "STAB");
+    }
+
+    public static class DataComponents {
+        public static final DataComponentType<Float> MINIMUM_ATTACK_CHARGE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "MINIMUM_ATTACK_CHARGE");
+
+        public static final DataComponentType<PiercingWeapon> PIERCING_WEAPON = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "PIERCING_WEAPON");
+
+        public static final DataComponentType<AttackRange> ATTACK_RANGE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "ATTACK_RANGE");
     }
 
 }

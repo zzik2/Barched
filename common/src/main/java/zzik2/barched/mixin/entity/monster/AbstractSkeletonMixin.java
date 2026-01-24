@@ -4,6 +4,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.AbstractSkeleton;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -32,5 +33,10 @@ public abstract class AbstractSkeletonMixin extends Monster {
             return false;
         }
         return this.isSunBurnTick();
+    }
+
+    @Override
+    public boolean wantsToPickUp(ItemStack itemStack) {
+        return itemStack.is(Barched.ItemTags.SPEARS) ? false : super.wantsToPickUp(itemStack);
     }
 }
