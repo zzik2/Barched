@@ -21095,6 +21095,14 @@
     ],
     "subtitle": "subtitles.item.spear.lunge"
   },
+  "item.spear.lunge": {
+    "sounds": [
+      "item/spear/lunge1",
+      "item/spear/lunge2",
+      "item/spear/lunge3"
+    ],
+    "subtitle": "subtitles.item.spear.lunge"
+  },
   "item.spear.use": {
     "sounds": [
       "item/spear/use"

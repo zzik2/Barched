@@ -32,7 +32,7 @@ public abstract class PlaySoundEffectMixin implements EnchantmentEntityEffect {
 
     @Inject(method = "apply", at =  @At("HEAD"), cancellable = true)
     private void barched$apply(ServerLevel serverLevel, int i, EnchantedItemInUse enchantedItemInUse, Entity entity, Vec3 vec3, CallbackInfo ci) {
-        if (this.soundEvent == Barched.SoundEvents.LUNGE_1) {
+        if (this.soundEvent == Barched.SoundEvents.LUNGE) {
             RandomSource randomSource = entity.getRandom();
             if (!entity.isSilent()) {
                 int j = Mth.clamp(i - 1, 0, SPEAR_SOUDNS.size() - 1);

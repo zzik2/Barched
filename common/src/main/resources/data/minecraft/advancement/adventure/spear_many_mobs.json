@@ -12,7 +12,7 @@
     "description": {
       "translate": "advancements.adventure.spear_many_mobs.description"
     },
-    "frame": "goal",
+    "frame": "challenge",
     "icon": {
       "count": 1,
       "id": "minecraft:iron_spear"

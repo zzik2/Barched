@@ -2,6 +2,8 @@ package zzik2.barched;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.criterion.SpearMobsTrigger;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
@@ -39,6 +41,9 @@ public final class Barched {
     public static final String MOD_ID = "barched";
 
     public static void init() {
+        //why the hell field is not loaded?!@?!#?!@?!?#
+        Object o = EnchantmentEffectComponents.POST_PIERCING_ATTACK;
+
         AutoConfig.register(BarchedConfig.class, GsonConfigSerializer::new);
     }
 
@@ -66,6 +71,7 @@ public final class Barched {
         public static final SoundEvent CAMEL_HUSK_STEP_SAND = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "CAMEL_HUSK_STEP_SAND");
         public static final SoundEvent ZOMBIE_HORSE_ANGRY = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "ZOMBIE_HORSE_ANGRY");
         public static final SoundEvent ZOMBIE_HORSE_EAT = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "ZOMBIE_HORSE_EAT");
+        public static final Holder<SoundEvent> LUNGE = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "LUNGE");
         public static final Holder<SoundEvent> LUNGE_1 = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "LUNGE_1");
         public static final Holder<SoundEvent> LUNGE_2 = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "LUNGE_2");
         public static final Holder<SoundEvent> LUNGE_3 = ZReflectionTool.getStaticFieldValue(net.minecraft.sounds.SoundEvents.class, "LUNGE_3");
@@ -121,15 +127,7 @@ public final class Barched {
 
     public static class EnchantmentEffectComponents {
 
-        public static final DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK = register("post_piercing_attack", (builder) -> {
-            return builder.persistent(ConditionalEffect.codec(EnchantmentEntityEffect.CODEC, LootContextParamSets.ENCHANTED_DAMAGE).listOf());
-        });;
-
-        private static <T> DataComponentType<T> register(String id, UnaryOperator<DataComponentType.Builder<T>> op) {
-            DataComponentType<T> type = op.apply(DataComponentType.<T>builder()).build();
-            Registry.<DataComponentType<?>>register(BuiltInRegistries.ENCHANTMENT_EFFECT_COMPONENT_TYPE, id, type);
-            return type;
-        }
+        public static final DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK = ZReflectionTool.invokeStaticMethod(net.minecraft.world.item.enchantment.EnchantmentEffectComponents.class, "register", "post_piercing_attack", (UnaryOperator<DataComponentType.Builder<List<ConditionalEffect<EnchantmentEntityEffect>>>>) (builder) -> builder.persistent(ConditionalEffect.codec(EnchantmentEntityEffect.CODEC, LootContextParamSets.ENCHANTED_DAMAGE).listOf()));
     }
 
     public static class SmithingTemplateItem {
@@ -175,6 +173,10 @@ public final class Barched {
         public static final DataComponentType<PiercingWeapon> PIERCING_WEAPON = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "PIERCING_WEAPON");
 
         public static final DataComponentType<AttackRange> ATTACK_RANGE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "ATTACK_RANGE");
+    }
+
+    public static class CriteriaTriggers {
+        public static final SpearMobsTrigger SPEAR_MOBS_TRIGGER = ZReflectionTool.getStaticFieldValue(net.minecraft.advancements.CriteriaTriggers.class, "SPEAR_MOBS_TRIGGER");
     }
 
 }

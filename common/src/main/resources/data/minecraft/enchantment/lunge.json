@@ -42,11 +42,7 @@
             {
               "type": "minecraft:play_sound",
               "pitch": 1.0,
-              "sound": [
-                "minecraft:item.spear.lunge_1",
-                "minecraft:item.spear.lunge_2",
-                "minecraft:item.spear.lunge_3"
-              ],
+              "sound": "minecraft:item.spear.lunge",
               "volume": 1.0
             }
           ]

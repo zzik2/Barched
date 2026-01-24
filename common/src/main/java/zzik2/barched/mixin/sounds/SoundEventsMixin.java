@@ -79,6 +79,7 @@ public abstract class SoundEventsMixin {
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final SoundEvent ZOMBIE_HORSE_EAT = register("entity.zombie_horse.eat");
 
+    private static final Holder<SoundEvent> LUNGE = registerForHolder("item.spear.lunge");
     private static final Holder<SoundEvent> LUNGE_1 = registerForHolder("item.spear.lunge_1");
     private static final Holder<SoundEvent> LUNGE_2 = registerForHolder("item.spear.lunge_2");
     private static final Holder<SoundEvent> LUNGE_3 = registerForHolder("item.spear.lunge_3");

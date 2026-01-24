@@ -16,6 +16,7 @@
   "mixins": [
     "DirectionMixin",
     "InteractionHandMixin",
+    "advancements.CriteriaTriggersMixin",
     "block.entity.AbstractFurnaceBlockEntityMixin",
     "client.GuiMixin",
     "component.DataComponentsMixin",
