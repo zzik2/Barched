@@ -10,6 +10,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 public interface HumanoidModelAccessor {
 
     @Invoker("getArm")
-    ModelPart getArm(HumanoidArm humanoidArm);
+    ModelPart getGetArm(HumanoidArm humanoidArm);
 
 }

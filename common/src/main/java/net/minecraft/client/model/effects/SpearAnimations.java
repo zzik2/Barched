@@ -80,7 +80,7 @@ public class SpearAnimations {
       float g = Ease.inOutSine(progress(f, 0.0F, 0.05F));
       float h = Ease.inQuad(progress(f, 0.05F, 0.2F));
       float i = Ease.inOutExpo(progress(f, 0.4F, 1.0F));
-      var10000 = ((HumanoidModelAccessor) humanoidModel).getArm(humanoidArm);
+      var10000 = ((HumanoidModelAccessor) humanoidModel).getGetArm(humanoidArm);
       var10000.xRot += (90.0F * g - 120.0F * h + 30.0F * i) * 0.017453292F;
    }
 
