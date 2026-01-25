@@ -61,4 +61,9 @@ public abstract class MobMixin extends LivingEntity implements MobBridge {
             }
         }
     }
+
+    @Override
+    public float chargeSpeedModifier() {
+        return 1.0F;
+    }
 }

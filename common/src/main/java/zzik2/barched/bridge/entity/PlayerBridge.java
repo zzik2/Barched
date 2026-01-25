@@ -47,4 +47,8 @@ public interface PlayerBridge extends LivingEntityBridge {
 
     default void playServerSideSound(SoundEvent soundEvent) {
     }
+
+    default DamageSource createAttackSource(ItemStack itemStack) {
+        return null;
+    }
 }

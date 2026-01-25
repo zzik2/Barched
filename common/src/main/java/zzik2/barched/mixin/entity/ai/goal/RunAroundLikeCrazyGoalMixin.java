@@ -1,4 +1,4 @@
-package zzik2.barched.mixin.entity.goal;
+package zzik2.barched.mixin.entity.ai.goal;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.world.entity.ai.goal.RunAroundLikeCrazyGoal;

@@ -33,6 +33,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.InteractionHandBridge;
 import zzik2.barched.bridge.entity.PlayerBridge;
+import zzik2.barched.bridge.item.ItemStackBridge;
 import zzik2.barched.bridge.level.LevelBridge;
 
 @Mixin(Player.class)
@@ -145,7 +146,7 @@ public abstract class PlayerMixin extends LivingEntity implements PlayerBridge {
             return false;
         } else {
             ItemStack itemStack = this.getItemBySlot(equipmentSlot);
-            DamageSource damageSource = this.damageSources().playerAttack((Player) (Object) this);
+            DamageSource damageSource = this.createAttackSource(itemStack);
             float g = this.getEnchantedDamage(entity, f, damageSource) - f;
             if (!this.isUsingItem() || ((InteractionHandBridge) (Object) this.getUsedItemHand()).asEquipmentSlot() != equipmentSlot) {
                 g *= this.getAttackStrengthScale(0.5F);
@@ -277,5 +278,12 @@ public abstract class PlayerMixin extends LivingEntity implements PlayerBridge {
             }
         }
 
+    }
+
+    @Override
+    public DamageSource createAttackSource(ItemStack itemStack) {
+        return ((ItemStackBridge) (Object) itemStack).getDamageSource(this, () -> {
+            return this.damageSources().playerAttack((Player) (Object) this);
+        });
     }
 }

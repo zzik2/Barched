@@ -10,4 +10,8 @@ public interface MobBridge extends LivingEntityBridge {
 
     default void burnUndead() {
     }
+
+    default float chargeSpeedModifier() {
+        return 0.0F;
+    }
 }

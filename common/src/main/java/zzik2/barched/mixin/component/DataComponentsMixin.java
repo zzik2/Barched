@@ -1,14 +1,24 @@
 package zzik2.barched.mixin.component;
 
+import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.util.ExtraCodecs;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.item.EitherHolder;
 import net.minecraft.world.item.component.AttackRange;
+import net.minecraft.world.item.component.KineticWeapon;
 import net.minecraft.world.item.component.PiercingWeapon;
+import net.minecraft.world.item.component.SwingAnimation;
 import org.objectweb.asm.Opcodes;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.zreflex.mixin.ModifyAccess;
 import zzik2.zreflex.reflection.ZReflectionTool;
 
@@ -21,6 +31,21 @@ public abstract class DataComponentsMixin {
     private static <T> DataComponentType<T> register(String string, UnaryOperator<DataComponentType.Builder<T>> unaryOperator) {
         return null;
     }
+
+    @ModifyAccess(access = Opcodes.ACC_PUBLIC, removeFinal = true)
+    @Shadow public static DataComponentMap COMMON_ITEM_COMPONENTS;
+
+    @Inject(method = "<clinit>", at = @At("TAIL"))
+    private static void barched$clinit(CallbackInfo ci) {
+        DataComponentMap originalMap = COMMON_ITEM_COMPONENTS;
+        DataComponentMap newMap = DataComponentMap.builder().addAll(originalMap).set(SWING_ANIMATION, SwingAnimation.DEFAULT).build();
+        COMMON_ITEM_COMPONENTS = newMap;
+    }
+
+    @ModifyAccess(access = Opcodes.ACC_PUBLIC)
+    private static final DataComponentType<EitherHolder<DamageType>> DAMAGE_TYPE = register("damage_type", (builder) -> {
+        return builder.persistent(EitherHolder.codec(Registries.DAMAGE_TYPE, DamageType.CODEC)).networkSynchronized(EitherHolder.streamCodec(Registries.DAMAGE_TYPE, DamageType.STREAM_CODEC));
+    });
 
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final DataComponentType<Float> MINIMUM_ATTACK_CHARGE = register("minimum_attack_charge", (builder) -> {
@@ -35,5 +60,15 @@ public abstract class DataComponentsMixin {
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final DataComponentType<AttackRange> ATTACK_RANGE = register("attack_range", (builder) -> {
         return builder.persistent(AttackRange.CODEC).networkSynchronized(AttackRange.STREAM_CODEC).cacheEncoding();
+    });
+
+    @ModifyAccess(access = Opcodes.ACC_PUBLIC)
+    private static final DataComponentType<KineticWeapon> KINETIC_WEAPON = register("kinetic_weapon", (builder) -> {
+        return builder.persistent(KineticWeapon.CODEC).networkSynchronized(KineticWeapon.STREAM_CODEC).cacheEncoding();
+    });
+
+    @ModifyAccess(access = Opcodes.ACC_PUBLIC)
+    private static final DataComponentType<SwingAnimation> SWING_ANIMATION = register("swing_animation", (builder) -> {
+        return builder.persistent(SwingAnimation.CODEC).networkSynchronized(SwingAnimation.STREAM_CODEC);
     });
 }

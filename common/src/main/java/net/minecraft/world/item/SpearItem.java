@@ -9,6 +9,6 @@ public class SpearItem extends TieredItem {
     }
 
     public static ItemAttributeModifiers createAttributes(Tier arg, float f, float g, float h, float i, float j, float k, float l, float m, float n) {
-        return null; // TODO
+        return null;
     }
 }

@@ -31,14 +31,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.AbstractHorseBridge;
 import zzik2.barched.bridge.entity.EntityBridge;
-import zzik2.barched.bridge.entity.MobBridge;
 import zzik2.zreflex.mixin.ModifyName;
 
 import java.util.Objects;
 import java.util.function.DoubleSupplier;
 
 @Mixin(ZombieHorse.class)
-public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBridge, AbstractHorseBridge, MobBridge {
+public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBridge, AbstractHorseBridge {
 
     protected ZombieHorseMixin(EntityType<? extends AbstractHorse> entityType, Level level) {
         super(entityType, level);
@@ -134,7 +133,7 @@ public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBr
         if (mobSpawnType == MobSpawnType.NATURAL) {
             Zombie zombie = (Zombie)EntityType.ZOMBIE.create(this.level());
             if (zombie != null) {
-                ((EntityBridge) zombie).barched$snapTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                ((EntityBridge) zombie).snapTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
                 zombie.finalizeSpawn(serverLevelAccessor, difficultyInstance, mobSpawnType, (SpawnGroupData)null);
                 zombie.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Barched.Items.IRON_SPEAR));
                 zombie.startRiding((ZombieHorse) (Object) this, false);
@@ -185,5 +184,10 @@ public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBr
     public void aiStep() {
         super.aiStep();
         this.burnUndead();
+    }
+
+    @Override
+    public float chargeSpeedModifier() {
+        return 1.4F;
     }
 }

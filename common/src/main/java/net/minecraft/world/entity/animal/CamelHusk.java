@@ -124,6 +124,7 @@ public class CamelHusk extends Camel implements CamelBridge {
     }
 
     // TODO
+    @Override
     public float chargeSpeedModifier() {
         return 4.0F;
     }
