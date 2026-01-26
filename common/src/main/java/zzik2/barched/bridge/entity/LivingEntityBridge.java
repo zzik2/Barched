@@ -72,10 +72,6 @@ public interface LivingEntityBridge extends EntityBridge {
         return 0.0F;
     }
 
-    default void super$applyInput() {}
-
-    default void applyInput() {}
-
     //ArmedEntityRenderState-Like
     default ItemStack barched$getMainHandItemStack() {
         return null;

@@ -2,7 +2,6 @@ package zzik2.barched.mixin.entity;
 
 import it.unimi.dsi.fastutil.objects.Object2LongMap;
 import it.unimi.dsi.fastutil.objects.Object2LongOpenHashMap;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
@@ -10,7 +9,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.AttackRange;
 import net.minecraft.world.item.component.KineticWeapon;
@@ -98,12 +96,7 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
             ci.cancel();
         }
     }
-
-    @Inject(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/profiling/ProfilerFiller;push(Ljava/lang/String;)V", ordinal = 0))
-    private void barched$aiStep(CallbackInfo ci) {
-        this.applyInput();
-    }
-
+    
     @Override
     public void lungeForwardMaybe() {
         this.super$lungeForwardMaybe();
@@ -277,17 +270,6 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
     @Override
     public float barched$ticksUsingItem(HumanoidArm humanoidArm) {
         return this.isUsingItem() && this.getUsedItemHand() == InteractionHand.MAIN_HAND == (humanoidArm == this.getMainArm()) ? this.getTicksUsingItem() : 0.0F;
-    }
-
-    @Override
-    public void applyInput() {
-        this.super$applyInput();
-    }
-
-    @Override
-    public void super$applyInput() {
-//        this.xxa = 0.98F;
-//        this.zza = 0.98F;
     }
 
     @Unique
