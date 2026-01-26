@@ -21,7 +21,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
@@ -76,11 +78,8 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
 
     @Inject(method = "startUsingItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;gameEvent(Lnet/minecraft/core/Holder;)V", shift = At.Shift.AFTER))
     private void barched$startUsingItem(InteractionHand interactionHand, CallbackInfo ci) {
-        ItemStack itemStack = this.getItemInHand(interactionHand);
-        if (!itemStack.isEmpty() && !this.isUsingItem()) {
-            if (this.useItem.has(Barched.DataComponents.KINETIC_WEAPON)) {
-                this.recentKineticEnemies = new Object2LongOpenHashMap();
-            }
+        if (this.useItem.has(Barched.DataComponents.KINETIC_WEAPON)) {
+            this.recentKineticEnemies = new Object2LongOpenHashMap();
         }
     }
 
@@ -95,6 +94,13 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
             this.onKineticHit();
             ci.cancel();
         }
+    }
+
+    @ModifyConstant(method = "getCurrentSwingDuration", constant = @Constant(intValue = 6))
+    private int barched$getCurrentSwingDuration(int constant) {
+        ItemStack itemStack = this.getItemInHand(InteractionHand.MAIN_HAND);
+        int i = ((ItemStackBridge) (Object) itemStack).getSwingAnimation().duration();
+        return i;
     }
     
     @Override
