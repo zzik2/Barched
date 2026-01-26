@@ -208,8 +208,8 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
     public void causeExtraKnockback(Entity entity, float f, Vec3 vec3) {
         if (f > 0.0F && entity instanceof LivingEntity) {
             LivingEntity livingEntity = (LivingEntity)entity;
-            double sin = ZReflectionTool.invokeStaticMethod(Mth.class, "sin", (double)(this.getYRot() * 0.017453292F));
-            double cos = ZReflectionTool.invokeStaticMethod(Mth.class, "cos", (double)(this.getYRot() * 0.017453292F));
+            float sin = ZReflectionTool.invokeStaticMethod(Mth.class, "sin", (double)(this.getYRot() * 0.017453292F));
+            float cos = ZReflectionTool.invokeStaticMethod(Mth.class, "cos", (double)(this.getYRot() * 0.017453292F));
             livingEntity.knockback((double)f, (double) sin, (double)(-cos));
             this.setDeltaMovement(this.getDeltaMovement().multiply(0.6D, 1.0D, 0.6D));
         }

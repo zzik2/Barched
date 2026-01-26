@@ -25,10 +25,12 @@ public class ServerGamePacketListenerImplMixin {
         ServerboundPlayerActionPacket.Action action = serverboundPlayerActionPacket.getAction();
         if (action.name().equals("STAB")) {
             if (this.player.isSpectator()) {
+                ci.cancel();
                 return;
             } else {
                 ItemStack itemStack = this.player.getItemInHand(InteractionHand.MAIN_HAND);
                 if (((PlayerBridge) this.player).cannotAttackWithItem(itemStack, 5)) {
+                    ci.cancel();
                     return;
                 }
 
@@ -37,6 +39,7 @@ public class ServerGamePacketListenerImplMixin {
                     piercingWeapon.attack(this.player, EquipmentSlot.MAINHAND);
                 }
 
+                ci.cancel();
                 return;
             }
         }
