@@ -11,11 +11,10 @@ import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import zzik2.barched.bridge.level.LevelBridge;
 import zzik2.barched.bridge.level.ServerLevelBridge;
 
 @Mixin(Level.class)
-public abstract class LevelMixin implements LevelBridge, ServerLevelBridge {
+public abstract class LevelMixin implements ServerLevelBridge {
 
     @Shadow @Final @Deprecated private RandomSource threadSafeRandom;
 
