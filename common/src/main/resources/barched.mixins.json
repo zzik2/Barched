@@ -16,6 +16,7 @@
     "client.model.ZombieVillagerModelMixin",
     "client.model.geom.LayerDefinitionsMixin",
     "client.model.geom.ModelLayersMixin",
+    "client.multiplayer.ClientLevelMixin",
     "client.multiplayer.MultiPlayerGameModeMixin",
     "client.player.LocalPlayerMixin",
     "client.renderer.ItemInHandRendererMixin",

@@ -36,7 +36,7 @@ public abstract class PlaySoundEffectMixin implements EnchantmentEntityEffect {
             RandomSource randomSource = entity.getRandom();
             if (!entity.isSilent()) {
                 int j = Mth.clamp(i - 1, 0, SPEAR_SOUDNS.size() - 1);
-                ((LevelBridge) serverLevel).playSound((Entity)null, vec3.x(), vec3.y(), vec3.z(), SPEAR_SOUDNS.get(j), entity.getSoundSource(), this.volume.sample(randomSource), this.pitch.sample(randomSource));
+                ((LevelBridge) serverLevel).playSound(null, vec3.x(), vec3.y(), vec3.z(), SPEAR_SOUDNS.get(j), entity.getSoundSource(), this.volume.sample(randomSource), this.pitch.sample(randomSource));
                 ci.cancel();
             }
         }
