@@ -15,7 +15,9 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.ai.behavior.SpearAttack;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
+import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.animal.CamelHusk;
 import net.minecraft.world.entity.monster.Parched;
 import net.minecraft.world.entity.monster.Zombie;
@@ -31,6 +33,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.phys.Vec3;
 import org.intellij.lang.annotations.Identifier;
 import zzik2.barched.bridge.entity.AbstractHorseBridge;
 import zzik2.zreflex.enumeration.ZEnumTool;
@@ -231,6 +234,14 @@ public final class Barched {
     public static class DamageTypes {
         public static final ResourceKey<DamageType> SPEAR = ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.withDefaultNamespace("spear"));
         public static final ResourceKey<DamageType> MACE_SMASH = ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.withDefaultNamespace("mace_smash"));
+    }
+
+    public static class MemoryModuleType {
+        public static final net.minecraft.world.entity.ai.memory.MemoryModuleType<Integer> SPEAR_FLEEING_TIME = ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.class, "SPEAR_FLEEING_TIME");
+        public static final net.minecraft.world.entity.ai.memory.MemoryModuleType<Vec3> SPEAR_FLEEING_POSITION = ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.class, "SPEAR_FLEEING_POSITION");
+        public static final net.minecraft.world.entity.ai.memory.MemoryModuleType<Vec3> SPEAR_CHARGE_POSITION = ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.class, "SPEAR_CHARGE_POSITION");
+        public static final net.minecraft.world.entity.ai.memory.MemoryModuleType<Integer> SPEAR_ENGAGE_TIME = ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.class, "SPEAR_ENGAGE_TIME");
+        public static final net.minecraft.world.entity.ai.memory.MemoryModuleType<SpearAttack.SpearStatus> SPEAR_STATUS = ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.class, "SPEAR_STATUS");
     }
 
 }
