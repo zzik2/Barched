@@ -11,7 +11,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
 
@@ -38,6 +37,8 @@ public abstract class LocalPlayerMixin extends AbstractClientPlayer implements L
 
     @Shadow public float xBobO;
 
+    @Shadow protected int sprintTriggerTime;
+
     @ModifyExpressionValue(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;canStartSprinting()Z"))
     private boolean barched$aiStep(boolean original) {
         return original && !this.isSlowDueToUsingItem();
@@ -48,11 +49,10 @@ public abstract class LocalPlayerMixin extends AbstractClientPlayer implements L
         return original && this.isSlowDueToUsingItem();
     }
 
-    @Redirect(method = "aiStep", at = @At(value = "FIELD", target = "Lnet/minecraft/client/player/Input;shiftKeyDown:Z"))
-    private boolean barched$aiStep(Input input) {
-        return input.shiftKeyDown || this.isSlowDueToUsingItem() && !this.isPassenger() || this.input.down;
+    @ModifyExpressionValue(method = "canStartSprinting", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;isUsingItem()Z"))
+    private boolean barched$canStartSprinting(boolean original) {
+        return original && this.isSlowDueToUsingItem();
     }
-
 
     @Unique
     private boolean isSlowDueToUsingItem() {
