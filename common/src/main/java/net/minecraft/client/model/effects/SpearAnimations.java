@@ -14,8 +14,6 @@ import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.KineticWeapon;
-import org.joml.Quaternionf;
-import org.joml.Quaternionfc;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
 import zzik2.barched.mixin.accessor.LivingEntityAccessor;

@@ -8,7 +8,6 @@ import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import org.objectweb.asm.Opcodes;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;

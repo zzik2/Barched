@@ -16,7 +16,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.barched.Barched;
-import zzik2.zreflex.mixin.ModifyAccess;
 
 @Mixin(Zombie.class)
 public class ZombieMixin extends Monster {
