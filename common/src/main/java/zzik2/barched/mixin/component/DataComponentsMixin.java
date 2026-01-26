@@ -8,10 +8,7 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.EitherHolder;
-import net.minecraft.world.item.component.AttackRange;
-import net.minecraft.world.item.component.KineticWeapon;
-import net.minecraft.world.item.component.PiercingWeapon;
-import net.minecraft.world.item.component.SwingAnimation;
+import net.minecraft.world.item.component.*;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -38,9 +35,14 @@ public abstract class DataComponentsMixin {
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void barched$clinit(CallbackInfo ci) {
         DataComponentMap originalMap = COMMON_ITEM_COMPONENTS;
-        DataComponentMap newMap = DataComponentMap.builder().addAll(originalMap).set(SWING_ANIMATION, SwingAnimation.DEFAULT).build();
+        DataComponentMap newMap = DataComponentMap.builder().addAll(originalMap).set(SWING_ANIMATION, SwingAnimation.DEFAULT).set(USE_EFFECTS, UseEffects.DEFAULT).build();
         COMMON_ITEM_COMPONENTS = newMap;
     }
+
+    @ModifyAccess(access = Opcodes.ACC_PUBLIC)
+    private static final DataComponentType<UseEffects> USE_EFFECTS = register("use_effects", (builder) -> {
+        return builder.persistent(UseEffects.CODEC).networkSynchronized(UseEffects.STREAM_CODEC);
+    });
 
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final DataComponentType<EitherHolder<DamageType>> DAMAGE_TYPE = register("damage_type", (builder) -> {

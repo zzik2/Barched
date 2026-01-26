@@ -23,10 +23,7 @@ import net.minecraft.world.entity.monster.Parched;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.item.EitherHolder;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.component.AttackRange;
-import net.minecraft.world.item.component.KineticWeapon;
-import net.minecraft.world.item.component.PiercingWeapon;
-import net.minecraft.world.item.component.SwingAnimation;
+import net.minecraft.world.item.component.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.ConditionalEffect;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -183,6 +180,8 @@ public final class Barched {
     }
 
     public static class DataComponents {
+        public static final DataComponentType<UseEffects> USE_EFFECTS = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "USE_EFFECTS");
+
         public static final DataComponentType<EitherHolder<DamageType>> DAMAGE_TYPE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "DAMAGE_TYPE");
 
         public static final DataComponentType<Float> MINIMUM_ATTACK_CHARGE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "MINIMUM_ATTACK_CHARGE");

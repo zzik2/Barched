@@ -59,6 +59,10 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
 
     @Shadow @Final protected static EntityDataAccessor<Byte> DATA_LIVING_ENTITY_FLAGS;
 
+    @Shadow public float xxa;
+
+    @Shadow public float zza;
+
 
     @Nullable protected Object2LongMap<Entity> recentKineticEnemies;
     private long lastKineticHitFeedbackTime;
@@ -93,6 +97,11 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
             this.onKineticHit();
             ci.cancel();
         }
+    }
+
+    @Inject(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/profiling/ProfilerFiller;push(Ljava/lang/String;)V", ordinal = 0))
+    private void barched$aiStep(CallbackInfo ci) {
+        this.applyInput();
     }
 
     @Override
@@ -268,6 +277,17 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
     @Override
     public float barched$ticksUsingItem(HumanoidArm humanoidArm) {
         return this.isUsingItem() && this.getUsedItemHand() == InteractionHand.MAIN_HAND == (humanoidArm == this.getMainArm()) ? this.getTicksUsingItem() : 0.0F;
+    }
+
+    @Override
+    public void applyInput() {
+        this.super$applyInput();
+    }
+
+    @Override
+    public void super$applyInput() {
+//        this.xxa = 0.98F;
+//        this.zza = 0.98F;
     }
 
     @Unique

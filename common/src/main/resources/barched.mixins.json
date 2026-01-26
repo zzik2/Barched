@@ -17,6 +17,7 @@
     "client.model.geom.LayerDefinitionsMixin",
     "client.model.geom.ModelLayersMixin",
     "client.multiplayer.MultiPlayerGameModeMixin",
+    "client.player.LocalPlayerMixin",
     "client.renderer.ItemInHandRendererMixin",
     "client.renderer.entity.EntityRenderersMixin",
     "client.renderer.entity.LivingEntityRendererMixin",
