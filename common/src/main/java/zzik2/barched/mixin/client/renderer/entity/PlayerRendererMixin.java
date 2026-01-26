@@ -39,8 +39,11 @@ public abstract class PlayerRendererMixin extends LivingEntityRenderer<AbstractC
         SwingAnimation swingAnimation = (SwingAnimation)itemStack.get(Barched.DataComponents.SWING_ANIMATION);
         if (swingAnimation != null && swingAnimation.type() == SwingAnimationType.STAB && abstractClientPlayer.swinging) {
             cir.setReturnValue(BarchedClient.ArmPose.SPEAR);
-        } else {
-            cir.setReturnValue(itemStack.is(Barched.ItemTags.SPEARS) ? BarchedClient.ArmPose.SPEAR : HumanoidModel.ArmPose.ITEM);
+            return;
+        }
+
+        if (itemStack.is(Barched.ItemTags.SPEARS)) {
+            cir.setReturnValue(BarchedClient.ArmPose.SPEAR);
         }
     }
 }
