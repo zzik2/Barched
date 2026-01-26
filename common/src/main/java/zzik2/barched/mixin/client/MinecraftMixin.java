@@ -20,6 +20,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.client.MultiPlayerGameModeBridge;
@@ -35,6 +36,8 @@ public class MinecraftMixin {
     @Shadow @Nullable public MultiPlayerGameMode gameMode;
 
     @Shadow @Nullable public HitResult hitResult;
+
+    @Shadow protected int missTime;
 
     @Inject(method = "startAttack", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;getItemInHand(Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/item/ItemStack;"), cancellable = true)
     private void barched$startAttack(CallbackInfoReturnable<Boolean> cir) {
@@ -62,9 +65,17 @@ public class MinecraftMixin {
         }
     }
 
-    @ModifyExpressionValue(method = "continueAttack", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;isUsingItem()Z", ordinal = 0))
-    private boolean barched$continueAttack(boolean original) {
-        ItemStack itemStack = this.player.getItemInHand(InteractionHand.MAIN_HAND);
-        return original && !itemStack.has(Barched.DataComponents.PIERCING_WEAPON);
+    @Inject(method = "continueAttack", at = @At("HEAD"), cancellable = true)
+    private void barched$continueAttack(boolean bl, CallbackInfo ci) {
+        LocalPlayer player = Minecraft.getInstance().player;
+        if (player != null) {
+            ItemStack itemStack = player.getItemInHand(InteractionHand.MAIN_HAND);
+            if (itemStack.has(Barched.DataComponents.PIERCING_WEAPON)) {
+                if (!bl) {
+                    this.missTime = 0;
+                }
+                ci.cancel();
+            }
+        }
     }
 }
