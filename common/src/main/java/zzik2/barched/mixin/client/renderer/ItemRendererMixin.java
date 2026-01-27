@@ -95,7 +95,7 @@ public class ItemRendererMixin {
 
     @ModifyExpressionValue(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z", ordinal = 2))
     private boolean barched$render(boolean original) {
-        return original && (!barched$itemStack.is(Barched.Items.WOODEN_SPEAR)) && (!barched$itemStack.is(Barched.Items.STONE_SPEAR)) && (!barched$itemStack.is(Barched.Items.COPPER_SPEAR)) && (!barched$itemStack.is(Barched.Items.IRON_SPEAR)) && (!barched$itemStack.is(Barched.Items.GOLDEN_SPEAR)) && (!barched$itemStack.is(Barched.Items.DIAMOND_SPEAR)) && (!barched$itemStack.is(Barched.Items.NETHERITE_SPEAR));
+        return original && !barched$itemStack.is(Barched.ItemTags.SPEARS);
     }
 
     @Redirect(method = "getModel", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/ItemModelShaper;getItemModel(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/client/resources/model/BakedModel;"))
