@@ -59,15 +59,7 @@ public interface LivingEntityBridge extends EntityBridge {
     default InteractionHand getUsedItemHand() {
         return null;
     }
-
-    default int getUseItemRemainingTicks() {
-        return 0;
-    }
-
-    default int getTicksUsingItem() {
-        return 0;
-    }
-
+    
     default float getTicksUsingItem(float f) {
         return 0.0F;
     }

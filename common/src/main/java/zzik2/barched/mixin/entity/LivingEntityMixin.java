@@ -63,6 +63,7 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
 
     @Shadow public float zza;
 
+    @Shadow public abstract int getTicksUsingItem();
 
     @Nullable protected Object2LongMap<Entity> recentKineticEnemies;
     private long lastKineticHitFeedbackTime;
@@ -236,16 +237,6 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
     @Override
     public InteractionHand getUsedItemHand() {
         return ((Byte)this.entityData.get(DATA_LIVING_ENTITY_FLAGS) & 2) > 0 ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND;
-    }
-
-    @Override
-    public int getUseItemRemainingTicks() {
-        return this.useItemRemaining;
-    }
-
-    @Override
-    public int getTicksUsingItem() {
-        return this.isUsingItem() ? this.useItem.getUseDuration((LivingEntity) (Object) this) - this.getUseItemRemainingTicks() : 0;
     }
 
     @Override
