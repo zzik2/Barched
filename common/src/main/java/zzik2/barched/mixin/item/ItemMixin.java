@@ -7,6 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.component.KineticWeapon;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
@@ -28,6 +29,13 @@ public abstract class ItemMixin implements ItemBridge {
             player.startUsingItem(interactionHand);
             kineticWeapon.makeSound(player);
             cir.setReturnValue(InteractionResultHolder.consume(itemStack));
+        }
+    }
+
+    @Inject(method = "getUseAnimation", at = @At("HEAD"), cancellable = true)
+    private void barched$getUseAnimation(ItemStack itemStack, CallbackInfoReturnable<UseAnim> cir) {
+        if (itemStack.has(Barched.DataComponents.KINETIC_WEAPON)) {
+            cir.setReturnValue(Barched.UseAnim.BARCHED$SPEAR);
         }
     }
 

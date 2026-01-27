@@ -6,6 +6,8 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import zzik2.zreflex.enumeration.ZEnumTool;
 import zzik2.zreflex.reflection.ZReflectionTool;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 public class BarchedClient {
 
     public static void init() {
@@ -26,5 +28,9 @@ public class BarchedClient {
         public static final ModelResourceLocation GOLDEN_SPEAR_IN_HAND_MODEL = ZReflectionTool.getStaticFieldValue(net.minecraft.client.renderer.entity.ItemRenderer.class, "GOLDEN_SPEAR_IN_HAND_MODEL");
         public static final ModelResourceLocation DIAMOND_SPEAR_IN_HAND_MODEL = ZReflectionTool.getStaticFieldValue(net.minecraft.client.renderer.entity.ItemRenderer.class, "DIAMOND_SPEAR_IN_HAND_MODEL");
         public static final ModelResourceLocation NETHERITE_SPEAR_IN_HAND_MODEL = ZReflectionTool.getStaticFieldValue(net.minecraft.client.renderer.entity.ItemRenderer.class, "NETHERITE_SPEAR_IN_HAND_MODEL");
+    }
+
+    public static class ItemInHandRenderer {
+        public static AtomicBoolean barched$isStab = new AtomicBoolean(false);
     }
 }

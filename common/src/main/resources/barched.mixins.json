@@ -17,6 +17,7 @@
     "client.model.ZombieVillagerModelMixin",
     "client.model.geom.LayerDefinitionsMixin",
     "client.model.geom.ModelLayersMixin",
+    "client.mojang.PoseStackMixin",
     "client.multiplayer.ClientLevelMixin",
     "client.multiplayer.MultiPlayerGameModeMixin",
     "client.player.LocalPlayerMixin",
