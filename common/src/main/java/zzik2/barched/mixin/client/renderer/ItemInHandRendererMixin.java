@@ -4,6 +4,7 @@ import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.effects.SpearAnimations;
 import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.world.InteractionHand;
@@ -18,6 +19,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
+import zzik2.barched.bridge.entity.PlayerBridge;
 import zzik2.barched.bridge.item.ItemStackBridge;
 
 @Mixin(ItemInHandRenderer.class)
@@ -52,5 +54,10 @@ public abstract class ItemInHandRendererMixin {
         } else {
             this.applyItemArmAttackTransform(poseStack, humanoidArm, h);
         }
+    }
+
+    @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;getAttackStrengthScale(F)F"))
+    private float barched$tick(LocalPlayer instance, float v) {
+        return ((PlayerBridge) instance).getItemSwapScale(v);
     }
 }
