@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Coup de lance",
   "subtitles.item.spear.hit": "Lance qui touche",
   "subtitles.item.spear.lunge": "Lance qui propulse",
-  "subtitles.item.spear.use": "Charge avec une lance"
+  "subtitles.item.spear.use": "Charge avec une lance",
+  "enchantment.minecraft.lunge": "Propulsion"
 }

@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Ietis duria",
   "subtitles.item.spear.hit": "Ietis trenkia",
   "subtitles.item.spear.lunge": "Ieties veržiasi",
-  "subtitles.item.spear.use": "Užsikrauna su ietimi"
+  "subtitles.item.spear.use": "Užsikrauna su ietimi",
+  "enchantment.minecraft.lunge": "Veržimasis"
 }

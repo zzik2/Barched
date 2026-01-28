@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "槊刺",
   "subtitles.item.spear.hit": "槊擊",
   "subtitles.item.spear.lunge": "槊揕",
-  "subtitles.item.spear.use": "槊衝"
+  "subtitles.item.spear.use": "槊衝",
+  "enchantment.minecraft.lunge": "揕"
 }

@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Lándzsa döf",
   "subtitles.item.spear.hit": "Lándzsa üt",
   "subtitles.item.spear.lunge": "Lándzsa szúr",
-  "subtitles.item.spear.use": "Lándzsatámadás"
+  "subtitles.item.spear.use": "Lándzsatámadás",
+  "enchantment.minecraft.lunge": "Döfés"
 }

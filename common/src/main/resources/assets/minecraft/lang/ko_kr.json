@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "창으로 찌름",
   "subtitles.item.spear.hit": "창이 적중함",
   "subtitles.item.spear.lunge": "창으로 돌진함",
-  "subtitles.item.spear.use": "창을 겨눔"
+  "subtitles.item.spear.use": "창을 겨눔",
+  "enchantment.minecraft.lunge": "돌진"
 }

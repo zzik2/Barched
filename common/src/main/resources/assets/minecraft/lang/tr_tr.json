@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Mızrak sapladı",
   "subtitles.item.spear.hit": "Mızrak vurdu",
   "subtitles.item.spear.lunge": "Mızrak atıldı",
-  "subtitles.item.spear.use": "Mızrak ile hücum ediyor"
+  "subtitles.item.spear.use": "Mızrak ile hücum ediyor",
+  "enchantment.minecraft.lunge": "Atılma"
 }

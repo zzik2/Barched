@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Speer steekt",
   "subtitles.item.spear.hit": "Speer raakt",
   "subtitles.item.spear.lunge": "Speer stoot",
-  "subtitles.item.spear.use": "Charge met speer"
+  "subtitles.item.spear.use": "Charge met speer",
+  "enchantment.minecraft.lunge": "Stoot"
 }

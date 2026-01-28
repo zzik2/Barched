@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Lancia infilza",
   "subtitles.item.spear.hit": "Lancia colpisce",
   "subtitles.item.spear.lunge": "Lancia affonda",
-  "subtitles.item.spear.use": "Carica con lancia"
+  "subtitles.item.spear.use": "Carica con lancia",
+  "enchantment.minecraft.lunge": "Affondo"
 }

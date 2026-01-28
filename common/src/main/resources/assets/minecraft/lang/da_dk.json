@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Spyd stikker",
   "subtitles.item.spear.hit": "Spyd ramte",
   "subtitles.item.spear.lunge": "Spydstød",
-  "subtitles.item.spear.use": "Stormer frem med spyd"
+  "subtitles.item.spear.use": "Stormer frem med spyd",
+  "enchantment.minecraft.lunge": "Fremstød"
 }

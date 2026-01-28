@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Spjot styng",
   "subtitles.item.spear.hit": "Spjot høver",
   "subtitles.item.spear.lunge": "Spjot flyg",
-  "subtitles.item.spear.use": "Fyk fram med spjot"
+  "subtitles.item.spear.use": "Fyk fram med spjot",
+  "enchantment.minecraft.lunge": "Lunge"
 }

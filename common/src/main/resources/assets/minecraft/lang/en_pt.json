@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Harpoon be jabbin'",
   "subtitles.item.spear.hit": "Harpoon hits",
   "subtitles.item.spear.lunge": "Harpoon be launchin'",
-  "subtitles.item.spear.use": "Ready wit' yer harpoon"
+  "subtitles.item.spear.use": "Ready wit' yer harpoon",
+  "enchantment.minecraft.lunge": "Launch"
 }

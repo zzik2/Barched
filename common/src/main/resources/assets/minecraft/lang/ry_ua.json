@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Дюґ піков",
   "subtitles.item.spear.hit": "Траф піков",
   "subtitles.item.spear.lunge": "Выпад піков",
-  "subtitles.item.spear.use": "Атака піков"
+  "subtitles.item.spear.use": "Атака піков",
+  "enchantment.minecraft.lunge": "Выпад"
 }

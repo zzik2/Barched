@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Spear sticks",
   "subtitles.item.spear.hit": "Spear strikes",
   "subtitles.item.spear.lunge": "Spear thrutches",
-  "subtitles.item.spear.use": "Reasing"
+  "subtitles.item.spear.use": "Reasing",
+  "enchantment.minecraft.lunge": "Thrutch"
 }

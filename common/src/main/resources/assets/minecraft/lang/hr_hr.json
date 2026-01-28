@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Koplje zamahuje",
   "subtitles.item.spear.hit": "Koplje udara",
   "subtitles.item.spear.lunge": "Koplje juriša",
-  "subtitles.item.spear.use": "Naleta kopljem"
+  "subtitles.item.spear.use": "Naleta kopljem",
+  "enchantment.minecraft.lunge": "Nalet"
 }

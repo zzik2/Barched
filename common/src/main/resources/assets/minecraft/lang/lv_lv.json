@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Šķēpa dūriens",
   "subtitles.item.spear.hit": "Šķēpa sitieni",
   "subtitles.item.spear.lunge": "Šķēpa izklupiens",
-  "subtitles.item.spear.use": "Šķēps Gatavībā"
+  "subtitles.item.spear.use": "Šķēps Gatavībā",
+  "enchantment.minecraft.lunge": "Izklupiens"
 }

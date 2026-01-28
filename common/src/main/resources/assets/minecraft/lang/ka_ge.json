@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "შუბი სტყორცნის",
   "subtitles.item.spear.hit": "შუბის დარტყმა",
   "subtitles.item.spear.lunge": "შუბი კვეთს",
-  "subtitles.item.spear.use": "Charges with Spear"
+  "subtitles.item.spear.use": "Charges with Spear",
+  "enchantment.minecraft.lunge": "კვეთება"
 }

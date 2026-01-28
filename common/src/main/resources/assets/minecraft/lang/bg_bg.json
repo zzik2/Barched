@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Копие се забива",
   "subtitles.item.spear.hit": "Удар с копие",
   "subtitles.item.spear.lunge": "Пробождане с копие",
-  "subtitles.item.spear.use": "Попадения с копие"
+  "subtitles.item.spear.use": "Попадения с копие",
+  "enchantment.minecraft.lunge": "Нахвърляне"
 }

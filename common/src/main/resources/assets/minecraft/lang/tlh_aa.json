@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "'urgh naQjej",
   "subtitles.item.spear.hit": "qIp naQjej",
   "subtitles.item.spear.lunge": "jop naQjej QachwI'",
-  "subtitles.item.spear.use": "naQjej QachtaHvIS yov"
+  "subtitles.item.spear.use": "naQjej QachtaHvIS yov",
+  "enchantment.minecraft.lunge": "jop"
 }

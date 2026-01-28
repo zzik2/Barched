@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Pinchazos de lanza",
   "subtitles.item.spear.hit": "Golpes de lanza",
   "subtitles.item.spear.lunge": "Estocadas con lanza",
-  "subtitles.item.spear.use": "Carga con lanza"
+  "subtitles.item.spear.use": "Carga con lanza",
+  "enchantment.minecraft.lunge": "Estocada"
 }

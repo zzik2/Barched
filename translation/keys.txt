@@ -36,3 +36,4 @@ subtitles.item.spear.attack
 subtitles.item.spear.hit
 subtitles.item.spear.lunge
 subtitles.item.spear.use
+enchantment.minecraft.lunge

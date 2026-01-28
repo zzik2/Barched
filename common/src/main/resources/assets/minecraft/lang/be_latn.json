@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Dzida kole",
   "subtitles.item.spear.hit": "Dzida łučyć",
   "subtitles.item.spear.lunge": "Vypad dzidaj",
-  "subtitles.item.spear.use": "Ataka dzidaj"
+  "subtitles.item.spear.use": "Ataka dzidaj",
+  "enchantment.minecraft.lunge": "Vypad"
 }

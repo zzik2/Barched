@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "หอกจ้วงแทง",
   "subtitles.item.spear.hit": "หอกตี",
   "subtitles.item.spear.lunge": "หอกพุ่งแทง",
-  "subtitles.item.spear.use": "ชาร์จด้วยหอก"
+  "subtitles.item.spear.use": "ชาร์จด้วยหอก",
+  "enchantment.minecraft.lunge": "พุ่งแทง"
 }

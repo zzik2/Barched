@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "矛戳刺聲",
   "subtitles.item.spear.hit": "矛擊中聲",
   "subtitles.item.spear.lunge": "矛突刺聲",
-  "subtitles.item.spear.use": "架矛"
+  "subtitles.item.spear.use": "架矛",
+  "enchantment.minecraft.lunge": "突刺"
 }

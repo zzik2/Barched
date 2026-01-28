@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Clavat de llança",
   "subtitles.item.spear.hit": "Cop de llança",
   "subtitles.item.spear.lunge": "Estocada de llança",
-  "subtitles.item.spear.use": "Carrega amb la llança"
+  "subtitles.item.spear.use": "Carrega amb la llança",
+  "enchantment.minecraft.lunge": "Estocada"
 }

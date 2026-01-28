@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Копє вколює",
   "subtitles.item.spear.hit": "Копє попадає",
   "subtitles.item.spear.lunge": "Випад копєм",
-  "subtitles.item.spear.use": "Розмах копєм"
+  "subtitles.item.spear.use": "Розмах копєм",
+  "enchantment.minecraft.lunge": "Випад"
 }

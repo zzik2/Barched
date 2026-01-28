@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Speer sticht",
   "subtitles.item.spear.hit": "Speer trifft",
   "subtitles.item.spear.lunge": "Speer stößt vor",
-  "subtitles.item.spear.use": "Anlauf mit Speer"
+  "subtitles.item.spear.use": "Anlauf mit Speer",
+  "enchantment.minecraft.lunge": "Ausfallschritt"
 }

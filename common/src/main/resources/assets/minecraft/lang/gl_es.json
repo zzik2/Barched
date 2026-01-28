@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Lanza fura",
   "subtitles.item.spear.hit": "Lanza atinxe",
   "subtitles.item.spear.lunge": "Lanza estoca",
-  "subtitles.item.spear.use": "Carga con lanza"
+  "subtitles.item.spear.use": "Carga con lanza",
+  "enchantment.minecraft.lunge": "Estocada"
 }

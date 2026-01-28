@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Тычокъ копьёмъ",
   "subtitles.item.spear.hit": "Ударъ копьёмъ",
   "subtitles.item.spear.lunge": "Выпадъ копьёмъ",
-  "subtitles.item.spear.use": "Выставленіе копья"
+  "subtitles.item.spear.use": "Выставленіе копья",
+  "enchantment.minecraft.lunge": "Рывокъ"
 }

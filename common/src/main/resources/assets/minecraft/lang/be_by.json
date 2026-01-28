@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Дзіда коле",
   "subtitles.item.spear.hit": "Дзіда лучыць",
   "subtitles.item.spear.lunge": "Выпад дзідай",
-  "subtitles.item.spear.use": "Атака дзідай"
+  "subtitles.item.spear.use": "Атака дзідай",
+  "enchantment.minecraft.lunge": "Выпад"
 }

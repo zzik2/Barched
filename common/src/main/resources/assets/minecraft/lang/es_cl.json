@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Lanza ataca",
   "subtitles.item.spear.hit": "Lanza impacta",
   "subtitles.item.spear.lunge": "Lanza embiste",
-  "subtitles.item.spear.use": "Carga con lanza"
+  "subtitles.item.spear.use": "Carga con lanza",
+  "enchantment.minecraft.lunge": "Embestida"
 }

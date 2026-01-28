@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Спис штрикає",
   "subtitles.item.spear.hit": "Спис влучає",
   "subtitles.item.spear.lunge": "Випад списом",
-  "subtitles.item.spear.use": "Таран списом"
+  "subtitles.item.spear.use": "Таран списом",
+  "enchantment.minecraft.lunge": "Випад"
 }

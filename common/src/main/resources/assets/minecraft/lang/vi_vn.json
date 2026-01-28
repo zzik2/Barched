@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Giáo đâm mạnh",
   "subtitles.item.spear.hit": "Giáo đâm trúng",
   "subtitles.item.spear.lunge": "Giáo lao tới",
-  "subtitles.item.spear.use": "Nạp giáo"
+  "subtitles.item.spear.use": "Nạp giáo",
+  "enchantment.minecraft.lunge": "Lao tới"
 }

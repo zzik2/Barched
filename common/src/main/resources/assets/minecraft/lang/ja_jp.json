@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "槍で突く",
   "subtitles.item.spear.hit": "槍が当たる",
   "subtitles.item.spear.lunge": "槍で突進する",
-  "subtitles.item.spear.use": "槍を構える"
+  "subtitles.item.spear.use": "槍を構える",
+  "enchantment.minecraft.lunge": "突進"
 }

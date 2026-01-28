@@ -36,5 +36,6 @@
   "subtitles.item.spear.attack": "Keihäs pistää",
   "subtitles.item.spear.hit": "Keihäs osuu",
   "subtitles.item.spear.lunge": "Keihäs syöksyy",
-  "subtitles.item.spear.use": "Keihäs on tanassa"
+  "subtitles.item.spear.use": "Keihäs on tanassa",
+  "enchantment.minecraft.lunge": "Syöksy"
 }
