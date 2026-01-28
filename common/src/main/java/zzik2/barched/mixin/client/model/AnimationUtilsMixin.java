@@ -28,7 +28,6 @@ public abstract class AnimationUtilsMixin {
 
         if (bl2) {
             animateZombieArms(modelPart, modelPart2, bl, f, g);
-            return;
         }
 
         bobArms(modelPart2, modelPart, g);
