@@ -14,9 +14,8 @@ Config file: `config/barched.json`
 |-----------------------------------|---------|----------------------------------------------------------------------|
 | `camelHuskSpawnChance`            | 10      | Chance (0-100%) for a Camel husk jockey                              |
 | `zombifiedPiglinSpearSpawnChance` | 5       | Chance (0-100%) for a Zombified Piglin's Spear Equipped Spawn Chance |
-| `piglinSpearSpawnChance`          | 10      | Chance (0-100%) for a Piglin's Spear Equipped Spawn Chance           |
-| `zombieOverrideSpearSpawnChance`  | 0       | Chance (0-100%) for a Zombie's Spear Equipped Spawn override chance  |
-| `zombieHorseSpawnWeight`          | 1       | Chance (0-100%) for a Zombie Horse Spawn Weight                      |
+| `piglinOverrideSpearSpawnChance`  | 0       | Chance (0-100%) for a Override Piglin's Spear Equipped Spawn Chance  |
+| `zombieOverrideSpearSpawnChance`  | 0       | Chance (0-100%) for a Override Zombie's Spear Equipped Spawn Chance  |
 
 ## Dependencies
 Architectury([CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/all?page=1&pageSize=20&version=1.21.1&showAlphaFiles=hide), [Modrinth](https://modrinth.com/mod/architectury-api/versions?g=1.21.1))

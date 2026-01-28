@@ -17,15 +17,11 @@ public class BarchedConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int piglinSpearSpawnChance = 10;
+    public int piglinOverrideSpearSpawnChance = 0;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
     public int zombieOverrideSpearSpawnChance = 0;
-
-    @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int zombieHorseSpawnWeight = 1;
 
     public float getCamelHuskSpawnChanceAsFloat() {
         return camelHuskSpawnChance / 100.0F;
@@ -35,15 +31,11 @@ public class BarchedConfig implements ConfigData {
         return zombifiedPiglinSpearSpawnChance / 100.0F;
     }
 
-    public float getPiglinSpearSpawnChanceAsFloat() {
-        return piglinSpearSpawnChance / 100.0F;
+    public float getPiglinOverrideSpearSpawnChanceAsFloat() {
+        return piglinOverrideSpearSpawnChance / 100.0F;
     }
 
     public float getZombieOverrideSpearSpawnChanceAsFloat() {
         return zombieOverrideSpearSpawnChance / 100.0F;
-    }
-
-    public int getZombieHorseSpawnWeight() {
-        return zombieHorseSpawnWeight;
     }
 }
