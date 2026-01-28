@@ -75,17 +75,15 @@ subprojects {
 
     pluginManager.withPlugin('com.github.johnrengelman.shadow') {
         shadowJar {
-            def relocations = [
-                'client.renderer.entity.CamelHuskRenderer',
-                'client.renderer.entity.ParchedRenderer',
-                'util.datafix.schemas.V4656',
-                'world.entity.animal.CamelHusk',
-                'world.entity.monster.Parched',
-                'world.item.SpearItem',
-                'client.renderer.entity.layers.UndeadHorseArmorLayer'
-            ]
-            relocations.each { cls ->
-                relocate "net.minecraft.$cls", "zzik2.barched.minecraft.$cls"
+            def netMinecraftDir = rootProject.file('common/src/main/java/net/minecraft')
+            if (netMinecraftDir.exists()) {
+                netMinecraftDir.eachFileRecurse(groovy.io.FileType.FILES) { file ->
+                    if (file.name.endsWith('.java')) {
+                        def relativePath = netMinecraftDir.toPath().relativize(file.toPath()).toString()
+                        def className = relativePath.replace(File.separator, '.').replace('.java', '')
+                        relocate "net.minecraft.$className", "zzik2.barched.minecraft.$className"
+                    }
+                }
             }
         }
     }
