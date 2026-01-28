@@ -34,12 +34,12 @@ public abstract class Vec3Mixin implements Vec3Bridge, Position {
 
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static Vec3 applyLocalCoordinatesToRotation(Vec2 vec2, Vec3 vec3) {
-        float f = ZReflectionTool.invokeStaticMethod(Mth.class, "cos", (double)((vec2.y + 90.0F) * 0.017453292F));
-        float g = ZReflectionTool.invokeStaticMethod(Mth.class, "sin", (double)((vec2.y + 90.0F) * 0.017453292F));
-        float h = ZReflectionTool.invokeStaticMethod(Mth.class, "cos", (double)(-vec2.x * 0.017453292F));
-        float i = ZReflectionTool.invokeStaticMethod(Mth.class, "sin", (double)(-vec2.x * 0.017453292F));
-        float j = ZReflectionTool.invokeStaticMethod(Mth.class, "cos", (double)((-vec2.x + 90.0F) * 0.017453292F));
-        float k = ZReflectionTool.invokeStaticMethod(Mth.class, "sin", (double)((-vec2.x + 90.0F) * 0.017453292F));
+        float f = Mth.cos(((vec2.y + 90.0F) * 0.017453292F));
+        float g = Mth.sin(((vec2.y + 90.0F) * 0.017453292F));
+        float h = Mth.cos((-vec2.x * 0.017453292F));
+        float i = Mth.sin((-vec2.x * 0.017453292F));
+        float j = Mth.cos(((-vec2.x + 90.0F) * 0.017453292F));
+        float k = Mth.sin(((-vec2.x + 90.0F) * 0.017453292F));
         Vec3 vec32 = new Vec3((double)(f * h), (double)i, (double)(g * h));
         Vec3 vec33 = new Vec3((double)(f * j), (double)k, (double)(g * j));
         Vec3 vec34 = vec32.cross(vec33).scale(-1.0D);

@@ -16,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.phys.*;
+import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.EntityBridge;
 import zzik2.zreflex.reflection.ZReflectionTool;
 
@@ -49,7 +50,7 @@ public record AttackRange(float minRange, float maxRange, float minCreativeRange
    }
 
    public HitResult getClosesetHit(Entity entity, float f, Predicate<Entity> predicate) {
-      Either<BlockHitResult, Collection<EntityHitResult>> either = ZReflectionTool.invokeStaticMethod(ProjectileUtil.class, "getHitEntitiesAlong", entity, this, predicate, ClipContext.Block.OUTLINE);
+      Either<BlockHitResult, Collection<EntityHitResult>> either = Barched.ProjectileUtil.getHitEntitiesAlong(entity, this, predicate, ClipContext.Block.OUTLINE);
       if (either.left().isPresent()) {
          return (HitResult)either.left().get();
       } else {

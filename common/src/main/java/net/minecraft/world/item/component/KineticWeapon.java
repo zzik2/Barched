@@ -91,17 +91,13 @@ public record KineticWeapon(int contactCooldownTicks, int delayTicks, Optional<C
          AttackRange attackRange = ((LivingEntityBridge) livingEntity).entityAttackRange();
          double e = livingEntity.getAttributeBaseValue(Attributes.ATTACK_DAMAGE);
          boolean bl = false;
-
-         Either<BlockHitResult, Collection<EntityHitResult>> hitResult = ZReflectionTool.invokeStaticMethodExact(
-                 ProjectileUtil.class, "getHitEntitiesAlong",
-                 new Class<?>[] { Entity.class, AttackRange.class, Predicate.class, ClipContext.Block.class },
-                 livingEntity, attackRange, (Predicate<Entity>) (entityx) -> PiercingWeapon.canHitEntity(livingEntity, entityx), ClipContext.Block.COLLIDER
-         );
-
-         Iterator<EntityHitResult> var14 = ((Collection<EntityHitResult>) hitResult.map(
-                 (blockHitResult) -> List.of(),
-                 (collection) -> collection
-         )).iterator();
+         Iterator var14 = ((Collection) Barched.ProjectileUtil.getHitEntitiesAlong(livingEntity, attackRange, (entityx) -> {
+            return PiercingWeapon.canHitEntity(livingEntity, entityx);
+         }, ClipContext.Block.COLLIDER).map((blockHitResult) -> {
+            return List.of();
+         }, (collection) -> {
+            return collection;
+         })).iterator();
 
          while(true) {
             Object entity;

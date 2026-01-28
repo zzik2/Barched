@@ -42,7 +42,7 @@ public class Ease {
    }
 
    public static float inSine(float f) {
-      float r = ZReflectionTool.invokeStaticMethod(Mth.class, "cos", (double)(f * 1.5707964F));
+      float r = Mth.cos(f * 1.5707964F);
       return 1.0F - r;
    }
 
@@ -104,12 +104,12 @@ public class Ease {
    }
 
    public static float outSine(float f) {
-      float r = ZReflectionTool.invokeStaticMethod(Mth.class, "sin", (double)(f * 1.5707964F));
+      float r = Mth.sin(f * 1.5707964F);
       return r;
    }
 
    public static float inOutSine(float f) {
-      float r = ZReflectionTool.invokeStaticMethod(Mth.class, "cos", (double)(3.1415927F * f));
+      float r = Mth.cos(3.1415927F * f);
       return -(r - 1.0F) / 2.0F;
    }
 

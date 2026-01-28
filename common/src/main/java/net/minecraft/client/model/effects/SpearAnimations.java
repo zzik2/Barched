@@ -156,8 +156,8 @@ public class SpearAnimations {
          float r = Ease.outCubic(Ease.inOutElastic(SpearAnimations.progress(f - 20.0F, (float)m, (float)l)));
          float s = SpearAnimations.progress(f, (float)(n - 5), (float)n);
          float t = 2.0F * Ease.outCirc(q) - 2.0F * Ease.inCirc(s);
-         float u = (float) ZReflectionTool.invokeStaticMethod(Mth.class, "sin", (double)(f * 19.0F * 0.017453292F)) * t;
-         float v = (float) ZReflectionTool.invokeStaticMethod(Mth.class, "sin", (double)(f * 30.0F * 0.017453292F)) * t;
+         float u = Mth.sin(f * 19.0F * 0.017453292F) * t;
+         float v = Mth.sin(f * 30.0F * 0.017453292F) * t;
          return new SpearAnimations.UseParams(g, h, o, p, q, r, s, t, u, v);
       }
 

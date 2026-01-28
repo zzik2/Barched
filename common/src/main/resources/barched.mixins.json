@@ -72,7 +72,6 @@
     "entity.monster.piglin.PiglinAiMixin",
     "entity.monster.piglin.PiglinMixin",
     "entity.player.PlayerMixin",
-    "entity.projectile.ProjectileUtilMixin",
     "entity.vehicle.AbstractMinecartMixin",
     "item.CreativeModeTabsMixin",
     "item.Item$PropertiesMixin",

@@ -19,6 +19,7 @@ import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
+import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
 import zzik2.barched.bridge.level.LevelBridge;
 import zzik2.zreflex.reflection.ZReflectionTool;
@@ -83,14 +84,15 @@ public record PiercingWeapon(boolean dealsKnockback, boolean dismounts, Optional
       AttackRange attackRange = ((LivingEntityBridge) livingEntity).entityAttackRange();
       boolean bl = false;
 
-      Predicate<Entity> predicate = (entity) -> canHitEntity(livingEntity, entity);
-      Either<BlockHitResult, Collection<EntityHitResult>> hitResult = ZReflectionTool.invokeStaticMethodExact(ProjectileUtil.class, "getHitEntitiesAlong", new Class<?>[] { Entity.class, AttackRange.class, Predicate.class, ClipContext.Block.class }, livingEntity, attackRange, predicate, ClipContext.Block.COLLIDER);
-
       EntityHitResult entityHitResult;
-      for (Iterator<EntityHitResult> var6 = ((Collection<EntityHitResult>) hitResult.map((blockHitResult) -> List.of(), (collection) -> collection)).iterator();
-           var6.hasNext();
-           bl |= ((LivingEntityBridge) livingEntity).stabAttack(equipmentSlot, entityHitResult.getEntity(), f, true, this.dealsKnockback, this.dismounts)) {
-         entityHitResult = var6.next();
+      for(Iterator var6 = ((Collection) Barched.ProjectileUtil.getHitEntitiesAlong(livingEntity, attackRange, (entity) -> {
+         return canHitEntity(livingEntity, entity);
+      }, ClipContext.Block.COLLIDER).map((blockHitResult) -> {
+         return List.of();
+      }, (collection) -> {
+         return collection;
+      })).iterator(); var6.hasNext(); bl |= ((LivingEntityBridge) livingEntity).stabAttack(equipmentSlot, entityHitResult.getEntity(), f, true, this.dealsKnockback, this.dismounts)) {
+         entityHitResult = (EntityHitResult)var6.next();
       }
 
       ((LivingEntityBridge) livingEntity).onAttack();
