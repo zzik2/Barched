@@ -20,7 +20,7 @@ public class ServerGamePacketListenerImplMixin {
 
     @Shadow public ServerPlayer player;
 
-    @Inject(method = "handlePlayerAction", at =@At("HEAD"), cancellable = true)
+    @Inject(method = "handlePlayerAction", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerPlayer;resetLastActionTime()V", shift = At.Shift.AFTER), cancellable = true)
     private void barched$handlePlayerAction(ServerboundPlayerActionPacket serverboundPlayerActionPacket, CallbackInfo ci) {
         ServerboundPlayerActionPacket.Action action = serverboundPlayerActionPacket.getAction();
         if (action.name().equals("STAB")) {
