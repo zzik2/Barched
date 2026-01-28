@@ -1,6 +1,8 @@
 package zzik2.barched;
 
 import com.mojang.datafixers.util.Function9;
+import com.mojang.logging.LogUtils;
+import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.minecraft.advancements.criterion.SpearMobsTrigger;
@@ -13,6 +15,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.behavior.SpearAttack;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
@@ -21,10 +25,10 @@ import net.minecraft.world.entity.monster.Parched;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.item.EitherHolder;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.*;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.enchantment.ConditionalEffect;
-import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.*;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
@@ -33,6 +37,7 @@ import zzik2.barched.bridge.entity.AbstractHorseBridge;
 import zzik2.zreflex.enumeration.ZEnumTool;
 import zzik2.zreflex.reflection.ZReflectionTool;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -129,7 +134,28 @@ public final class Barched {
 
     public static class EnchantmentEffectComponents {
 
-        public static final DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK = ZReflectionTool.invokeStaticMethod(net.minecraft.world.item.enchantment.EnchantmentEffectComponents.class, "register", "post_piercing_attack", (UnaryOperator<DataComponentType.Builder<List<ConditionalEffect<EnchantmentEntityEffect>>>>) (builder) -> builder.persistent(ConditionalEffect.codec(EnchantmentEntityEffect.CODEC, LootContextParamSets.ENCHANTED_DAMAGE).listOf()));
+        public static final DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK = barched$resolveMapping();
+
+        private static DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> barched$resolveMapping() {
+            String[] mapping = {"register", "method_60078", "m_338438_", "a"};
+            DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> var = null;
+
+            for (String map : mapping) {
+                try {
+                    var = ZReflectionTool.invokeStaticMethod(net.minecraft.world.item.enchantment.EnchantmentEffectComponents.class, map, "post_piercing_attack", (UnaryOperator<DataComponentType.Builder<List<ConditionalEffect<EnchantmentEntityEffect>>>>) (builder) -> builder.persistent(ConditionalEffect.codec(EnchantmentEntityEffect.CODEC, LootContextParamSets.ENCHANTED_DAMAGE).listOf()));
+
+                    if (var != null) {
+                        LogUtils.getLogger().info("[Barched] Found Mappings. name: {}", map);
+                        return var;
+                    }
+                } catch (Exception e) {
+                    LogUtils.getLogger().info("[Barched] Mapping is not available! name: {}", map);
+                }
+
+            }
+
+            throw new RuntimeException("[Barched] Cannot resolve Mappings!");
+        }
     }
 
     public static class SmithingTemplateItem {
@@ -238,6 +264,49 @@ public final class Barched {
         public static final net.minecraft.world.entity.ai.memory.MemoryModuleType<Vec3> SPEAR_CHARGE_POSITION = ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.class, "SPEAR_CHARGE_POSITION");
         public static final net.minecraft.world.entity.ai.memory.MemoryModuleType<Integer> SPEAR_ENGAGE_TIME = ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.class, "SPEAR_ENGAGE_TIME");
         public static final net.minecraft.world.entity.ai.memory.MemoryModuleType<SpearAttack.SpearStatus> SPEAR_STATUS = ZReflectionTool.getStaticFieldValue(net.minecraft.world.entity.ai.memory.MemoryModuleType.class, "SPEAR_STATUS");
+    }
+
+    public static class EnchantmentHelper {
+
+        public static void runIterationOnItem(ItemStack itemStack, EnchantmentHelper.EnchantmentVisitor enchantmentVisitor) {
+            ItemEnchantments itemEnchantments = (ItemEnchantments)itemStack.getOrDefault(net.minecraft.core.component.DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
+            Iterator var3 = itemEnchantments.entrySet().iterator();
+
+            while(var3.hasNext()) {
+                Object2IntMap.Entry<Holder<Enchantment>> entry = (Object2IntMap.Entry)var3.next();
+                enchantmentVisitor.accept((Holder)entry.getKey(), entry.getIntValue());
+            }
+
+        }
+
+        public static void runIterationOnItem(ItemStack itemStack, EquipmentSlot equipmentSlot, LivingEntity livingEntity, EnchantmentHelper.EnchantmentInSlotVisitor enchantmentInSlotVisitor) {
+            if (!itemStack.isEmpty()) {
+                ItemEnchantments itemEnchantments = (ItemEnchantments)itemStack.get(net.minecraft.core.component.DataComponents.ENCHANTMENTS);
+                if (itemEnchantments != null && !itemEnchantments.isEmpty()) {
+                    EnchantedItemInUse enchantedItemInUse = new EnchantedItemInUse(itemStack, equipmentSlot, livingEntity);
+                    Iterator var6 = itemEnchantments.entrySet().iterator();
+
+                    while(var6.hasNext()) {
+                        Object2IntMap.Entry<Holder<Enchantment>> entry = (Object2IntMap.Entry)var6.next();
+                        Holder<Enchantment> holder = (Holder)entry.getKey();
+                        if (((Enchantment)holder.value()).matchingSlot(equipmentSlot)) {
+                            enchantmentInSlotVisitor.accept(holder, entry.getIntValue(), enchantedItemInUse);
+                        }
+                    }
+
+                }
+            }
+        }
+
+        @FunctionalInterface
+        public interface EnchantmentVisitor {
+            void accept(Holder<Enchantment> holder, int i);
+        }
+
+        @FunctionalInterface
+        public interface EnchantmentInSlotVisitor {
+            void accept(Holder<Enchantment> holder, int i, EnchantedItemInUse enchantedItemInUse);
+        }
     }
 
 }

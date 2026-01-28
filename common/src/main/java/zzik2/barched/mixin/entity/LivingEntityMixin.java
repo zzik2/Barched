@@ -106,15 +106,19 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
     
     @Override
     public void lungeForwardMaybe() {
-        this.super$lungeForwardMaybe();
+        barched$lungeForwardMaybe();
     }
 
     @Override
     public void super$lungeForwardMaybe() {
+        barched$lungeForwardMaybe();
+    }
+
+    @Unique
+    public void barched$lungeForwardMaybe() {
         Level var2 = this.level();
         if (var2 instanceof ServerLevel) {
             ServerLevel serverLevel = (ServerLevel)var2;
-            //TODO: find better than this way
             ZReflectionTool.invokeStaticMethod(EnchantmentHelper.class, "doLungeEffects", serverLevel, (LivingEntity) (Object) this);
         }
     }
