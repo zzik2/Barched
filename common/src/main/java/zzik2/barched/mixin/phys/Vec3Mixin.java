@@ -11,7 +11,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import zzik2.barched.bridge.Vec3Bridge;
 import zzik2.zreflex.mixin.ModifyAccess;
-import zzik2.zreflex.reflection.ZReflectionTool;
 
 @Mixin(Vec3.class)
 public abstract class Vec3Mixin implements Vec3Bridge, Position {

@@ -1,7 +1,5 @@
 package net.minecraft.util;
 
-import zzik2.zreflex.reflection.ZReflectionTool;
-
 public class Ease {
 
    public static float inBack(float f) {

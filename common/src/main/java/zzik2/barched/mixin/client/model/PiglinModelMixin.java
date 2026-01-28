@@ -1,6 +1,5 @@
 package zzik2.barched.mixin.client.model;
 
-import net.minecraft.client.model.AnimationUtils;
 import net.minecraft.client.model.PiglinModel;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -12,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import zzik2.zreflex.reflection.ZReflectionTool;
+import zzik2.barched.BarchedClient;
 
 @Mixin(PiglinModel.class)
 public abstract class PiglinModelMixin<T extends Mob> extends PlayerModel<T> {
@@ -32,6 +31,6 @@ public abstract class PiglinModelMixin<T extends Mob> extends PlayerModel<T> {
 
     @Redirect(method = "setupAnim(Lnet/minecraft/world/entity/Mob;FFFFF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/model/AnimationUtils;animateZombieArms(Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;ZFF)V"))
     private void barched$setupAnim(ModelPart h, ModelPart i, boolean j, float arg, float arg2) {
-        ZReflectionTool.invokeStaticMethod(AnimationUtils.class, "animateZombieArms", this.leftArm, this.rightArm, barched$mob.isAggressive(), this.attackTime, barched$h, (LivingEntity) barched$mob);
+        BarchedClient.AnimationUtils.animateZombieArms(this.leftArm, this.rightArm, barched$mob.isAggressive(), this.attackTime, barched$h, (LivingEntity) barched$mob);
     }
 }

@@ -10,9 +10,9 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import zzik2.barched.Barched;
 import zzik2.barched.bridge.level.CollisionGetterBridge;
 import zzik2.barched.bridge.level.WorldBorderBridge;
-import zzik2.zreflex.reflection.ZReflectionTool;
 
 @Mixin(CollisionGetter.class)
 public interface CollisionGetterMixin extends BlockGetter, CollisionGetterBridge {
@@ -25,7 +25,7 @@ public interface CollisionGetterMixin extends BlockGetter, CollisionGetterBridge
         WorldBorder worldBorder = this.getWorldBorder();
         if (worldBorder.isWithinBounds(clipContext.getFrom()) && !worldBorder.isWithinBounds(blockHitResult.getLocation())) {
             Vec3 vec3 = blockHitResult.getLocation().subtract(clipContext.getFrom());
-            Direction direction = ZReflectionTool.invokeStaticMethod(Direction.class, "getApproximateNearest", vec3.x, vec3.y, vec3.z);
+            Direction direction = Barched.Direction.getApproximateNearest(vec3.x, vec3.y, vec3.z);
             Vec3 vec32 = ((WorldBorderBridge) worldBorder).clampVec3ToBound(blockHitResult.getLocation());
             return new BlockHitResult(vec32, direction, BlockPos.containing(vec32), false);
         } else {

@@ -3,23 +3,26 @@ package zzik2.barched;
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Function9;
 import com.mojang.logging.LogUtils;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.minecraft.advancements.criterion.SpearMobsTrigger;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.damagesource.DamageType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.behavior.SpearAttack;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.animal.CamelHusk;
@@ -30,13 +33,18 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.*;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.item.enchantment.ConditionalEffect;
+import net.minecraft.world.item.enchantment.EnchantedItemInUse;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.phys.*;
+import zzik2.barched.bridge.EnchantmentBridge;
 import zzik2.barched.bridge.entity.AbstractHorseBridge;
 import zzik2.barched.bridge.entity.EntityBridge;
 import zzik2.barched.bridge.level.LevelBridge;
@@ -48,6 +56,9 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
+
+import static net.minecraft.core.Direction.NORTH;
+import static net.minecraft.world.entity.Mob.checkMobSpawnRules;
 
 public final class Barched {
 
@@ -274,6 +285,15 @@ public final class Barched {
 
     public static class EnchantmentHelper {
 
+        public static void doLungeEffects(ServerLevel serverLevel, Entity entity) {
+            if (entity instanceof LivingEntity) {
+                LivingEntity livingEntity = (LivingEntity)entity;
+                Barched.EnchantmentHelper.runIterationOnItem(entity.getWeaponItem(), EquipmentSlot.MAINHAND, livingEntity, (holder, i, enchantedItemInUse) -> {
+                    ((EnchantmentBridge) (Object) holder.value()).doLunge(serverLevel, i, enchantedItemInUse, entity);
+                });
+            }
+        }
+
         public static void runIterationOnItem(ItemStack itemStack, EnchantmentHelper.EnchantmentVisitor enchantmentVisitor) {
             ItemEnchantments itemEnchantments = (ItemEnchantments)itemStack.getOrDefault(net.minecraft.core.component.DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
             Iterator var3 = itemEnchantments.entrySet().iterator();
@@ -376,6 +396,64 @@ public final class Barched {
 
                 return list;
             }
+        }
+    }
+
+    public static class Direction {
+
+        public static final net.minecraft.core.Direction[] VALUES = net.minecraft.core.Direction.values();
+
+        public static net.minecraft.core.Direction getApproximateNearest(double d, double e, double f) {
+            return getApproximateNearest((float)d, (float)e, (float)f);
+        }
+
+        public static net.minecraft.core.Direction getApproximateNearest(float f, float g, float h) {
+            net.minecraft.core.Direction direction = NORTH;
+            float i = Float.MIN_VALUE;
+            net.minecraft.core.Direction[] var5 = VALUES;
+            int var6 = var5.length;
+
+            for(int var7 = 0; var7 < var6; ++var7) {
+                net.minecraft.core.Direction direction2 = var5[var7];
+                float j = f * (float)direction2.getNormal().getX() + g * (float)direction2.getNormal().getY() + h * (float)direction2.getNormal().getZ();
+                if (j > i) {
+                    i = j;
+                    direction = direction2;
+                }
+            }
+
+            return direction;
+        }
+
+        public static net.minecraft.core.Direction getApproximateNearest(Vec3 vec3) {
+            return getApproximateNearest(vec3.x, vec3.y, vec3.z);
+        }
+    }
+
+    public static class Monster {
+        public static boolean checkMonsterSpawnRules0(net.minecraft.world.entity.EntityType<? extends Mob> arg, ServerLevelAccessor arg2, MobSpawnType arg3, BlockPos arg4, RandomSource arg5) {
+            return arg2.getDifficulty() != Difficulty.PEACEFUL && (MobSpawnType.ignoresLightRequirements(arg3) || net.minecraft.world.entity.monster.Monster.isDarkEnoughToSpawn(arg2, arg4, arg5)) && checkMobSpawnRules(arg, arg2, arg3, arg4, arg5);
+        }
+
+        public static boolean checkSurfaceMonstersSpawnRules(net.minecraft.world.entity.EntityType<? extends Mob> entityType, ServerLevelAccessor serverLevelAccessor, MobSpawnType entitySpawnReason, BlockPos blockPos, RandomSource randomSource) {
+            return checkMonsterSpawnRules(entityType, serverLevelAccessor, entitySpawnReason, blockPos, randomSource) && (MobSpawnType.isSpawner(entitySpawnReason) || serverLevelAccessor.canSeeSky(blockPos));
+        }
+
+        public static boolean checkMonsterSpawnRules(net.minecraft.world.entity.EntityType<? extends Mob> entityType, ServerLevelAccessor serverLevelAccessor, MobSpawnType entitySpawnReason, BlockPos blockPos, RandomSource randomSource) {
+            return serverLevelAccessor.getDifficulty() != Difficulty.PEACEFUL && (MobSpawnType.ignoresLightRequirements(entitySpawnReason) || net.minecraft.world.entity.monster.Monster.isDarkEnoughToSpawn(serverLevelAccessor, blockPos, randomSource)) && checkMobSpawnRules(entityType, serverLevelAccessor, entitySpawnReason, blockPos, randomSource);
+        }
+    }
+
+    public static class ExtraCodecs {
+
+        public static Codec<Float> floatRange(float f, float g) {
+            return floatRangeMinExclusiveWithMessage(f, g, (float_) -> {
+                return "Value must be within range [" + f + ";" + g + "]: " + float_;
+            });
+        }
+
+        private static Codec<Float> floatRangeMinExclusiveWithMessage(float f, float g, Function<Float, String> function) {
+            return Codec.FLOAT.validate((float_) -> float_.compareTo(f) > 0 && float_.compareTo(g) <= 0 ? DataResult.success(float_) : DataResult.error(() -> (String)function.apply(float_)));
         }
     }
 }

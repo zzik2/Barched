@@ -8,12 +8,10 @@
     "accessor.client.HumanoidModelAccessor",
     "client.HumanoidModel$ArmPoseMixin",
     "client.MinecraftMixin",
-    "client.model.AnimationUtilsMixin",
     "client.model.HumanoidModelMixin",
     "client.model.IllagerModelMixin",
     "client.model.ModelBakeryMixin",
     "client.model.PiglinModelMixin",
-    "client.model.SkeletonModelMixin",
     "client.model.ZombieVillagerModelMixin",
     "client.model.geom.LayerDefinitionsMixin",
     "client.model.geom.ModelLayersMixin",
@@ -29,7 +27,6 @@
     "client.renderer.entity.layers.ItemInHandLayerMixin"
   ],
   "mixins": [
-    "DirectionMixin",
     "InteractionHandMixin",
     "accessor.LivingEntityAccessor",
     "advancements.CriteriaTriggersMixin",
@@ -66,7 +63,6 @@
     "entity.monster.AbstractSkeletonMixin",
     "entity.monster.DrownedMixin",
     "entity.monster.HuskMixin",
-    "entity.monster.MonsterMixin",
     "entity.monster.ZombieMixin",
     "entity.monster.ZombifiedPiglinMixin",
     "entity.monster.piglin.PiglinAiMixin",
@@ -82,7 +78,6 @@
     "item.SmithingTemplateItemMixin",
     "item.UseAnimMixin",
     "item.enchantment.EnchantmentEffectComponentsMixin",
-    "item.enchantment.EnchantmentHelperMixin",
     "item.enchantment.EnchantmentMixin",
     "item.enchantment.EnchantmentsMixin",
     "item.enchantment.effects.EnchantmentEntityEffectMixin",
@@ -98,7 +93,6 @@
     "sounds.SoundEventsMixin",
     "tags.BlockTagsMixin",
     "tags.ItemTagsMixin",
-    "util.ExtraCodecsMixin",
     "util.datafix.DataFixersMixin"
   ],
   "injectors": {

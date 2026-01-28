@@ -18,7 +18,6 @@ import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
 import zzik2.barched.mixin.accessor.LivingEntityAccessor;
 import zzik2.barched.mixin.accessor.client.HumanoidModelAccessor;
-import zzik2.zreflex.reflection.ZReflectionTool;
 
 @Environment(EnvType.CLIENT)
 public class SpearAnimations {

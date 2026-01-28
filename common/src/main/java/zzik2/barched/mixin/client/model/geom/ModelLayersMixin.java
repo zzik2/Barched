@@ -5,6 +5,7 @@ import net.minecraft.client.model.geom.ModelLayers;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import zzik2.zreflex.mixin.ModifyAccess;
 
 
@@ -31,15 +32,19 @@ public abstract class ModelLayersMixin {
         return null;
     }
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final ModelLayerLocation PARCHED = register("parched");
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final ModelLayerLocation PARCHED_INNER_ARMOR = registerInnerArmor("parched");
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final ModelLayerLocation PARCHED_OUTER_ARMOR = registerOuterArmor("parched");
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final ModelLayerLocation PARCHED_OUTER_LAYER = register("parched", "outer");
 }

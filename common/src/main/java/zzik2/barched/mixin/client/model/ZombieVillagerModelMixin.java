@@ -1,6 +1,5 @@
 package zzik2.barched.mixin.client.model;
 
-import net.minecraft.client.model.AnimationUtils;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.VillagerHeadModel;
 import net.minecraft.client.model.ZombieVillagerModel;
@@ -13,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import zzik2.zreflex.reflection.ZReflectionTool;
+import zzik2.barched.BarchedClient;
 
 @Mixin(ZombieVillagerModel.class)
 public abstract class ZombieVillagerModelMixin<T extends Zombie> extends HumanoidModel<T> implements VillagerHeadModel {
@@ -33,6 +32,6 @@ public abstract class ZombieVillagerModelMixin<T extends Zombie> extends Humanoi
 
     @Redirect(method = "setupAnim(Lnet/minecraft/world/entity/monster/Zombie;FFFFF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/model/AnimationUtils;animateZombieArms(Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;ZFF)V"))
     private void barched$setupAnim(ModelPart h, ModelPart i, boolean j, float arg, float arg2) {
-        ZReflectionTool.invokeStaticMethod(AnimationUtils.class, "animateZombieArms", this.leftArm, this.rightArm, barched$zombie.isAggressive(), this.attackTime, barched$h, (LivingEntity) barched$zombie);
+        BarchedClient.AnimationUtils.animateZombieArms(this.leftArm, this.rightArm, barched$zombie.isAggressive(), this.attackTime, barched$h, (LivingEntity) barched$zombie);
     }
 }

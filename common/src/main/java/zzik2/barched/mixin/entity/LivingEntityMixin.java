@@ -28,7 +28,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
 import zzik2.barched.bridge.item.ItemStackBridge;
-import zzik2.zreflex.reflection.ZReflectionTool;
 
 import java.util.function.Predicate;
 
@@ -119,7 +118,7 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
         Level var2 = this.level();
         if (var2 instanceof ServerLevel) {
             ServerLevel serverLevel = (ServerLevel)var2;
-            ZReflectionTool.invokeStaticMethod(EnchantmentHelper.class, "doLungeEffects", serverLevel, (LivingEntity) (Object) this);
+            Barched.EnchantmentHelper.doLungeEffects(serverLevel, this);
         }
     }
 

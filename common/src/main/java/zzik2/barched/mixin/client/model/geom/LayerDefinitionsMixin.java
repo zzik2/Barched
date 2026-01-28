@@ -3,10 +3,8 @@ package zzik2.barched.mixin.client.model.geom;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.model.HumanoidArmorModel;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.model.SkeletonModel;
 import net.minecraft.client.model.geom.LayerDefinitions;
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import org.spongepowered.asm.mixin.Final;
@@ -17,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import zzik2.zreflex.reflection.ZReflectionTool;
+import zzik2.barched.BarchedClient;
 
 import java.util.Map;
 
@@ -41,9 +39,9 @@ public class LayerDefinitionsMixin {
         LayerDefinition layerDefinition2 = LayerDefinition.create(HumanoidArmorModel.createBodyLayer(OUTER_ARMOR_DEFORMATION), 64, 32);
         LayerDefinition layerDefinition4 = LayerDefinition.create(HumanoidArmorModel.createBodyLayer(INNER_ARMOR_DEFORMATION), 64, 32);
 
-        barched$builder.put(ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED"), ZReflectionTool.invokeStaticMethod(SkeletonModel.class, "createSingleModelDualBodyLayer"));
-        barched$builder.put(ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_INNER_ARMOR"), layerDefinition4);
-        barched$builder.put(ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_ARMOR"), layerDefinition2);
-        barched$builder.put(ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_LAYER"), LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.25F), 0.0F), 64, 32));
+        barched$builder.put(BarchedClient.ModelLayers.PARCHED, BarchedClient.SkeletonModel.createSingleModelDualBodyLayer());
+        barched$builder.put(BarchedClient.ModelLayers.PARCHED_INNER_ARMOR, layerDefinition4);
+        barched$builder.put(BarchedClient.ModelLayers.PARCHED_OUTER_ARMOR, layerDefinition2);
+        barched$builder.put(BarchedClient.ModelLayers.PARCHED_OUTER_LAYER, LayerDefinition.create(HumanoidModel.createMesh(new CubeDeformation(0.25F), 0.0F), 64, 32));
     }
 }
