@@ -29,7 +29,11 @@ public abstract class ItemInHandRendererMixin {
     protected abstract void applyItemArmAttackTransform(PoseStack arg, HumanoidArm arg2, float g);
 
     @Inject(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getUseAnimation()Lnet/minecraft/world/item/UseAnim;", ordinal = 0, shift = At.Shift.BEFORE))
-    private void barched$renderArmWithItemUse(AbstractClientPlayer abstractClientPlayer, float f, float g, InteractionHand interactionHand, float h, ItemStack itemStack, float i, PoseStack poseStack, MultiBufferSource multiBufferSource, int j, CallbackInfo ci, @Local(name = "humanoidArm") HumanoidArm humanoidArm, @Local(name = "q") int q) {
+    private void barched$renderArmWithItemUse(AbstractClientPlayer abstractClientPlayer, float f, float g, InteractionHand interactionHand, float h, ItemStack itemStack, float i, PoseStack poseStack, MultiBufferSource multiBufferSource, int j, CallbackInfo ci) {
+        boolean bl = interactionHand == InteractionHand.MAIN_HAND;
+        HumanoidArm humanoidArm = bl ? abstractClientPlayer.getMainArm() : abstractClientPlayer.getMainArm().getOpposite();
+        boolean bl2 = humanoidArm == HumanoidArm.RIGHT;
+        int q = bl2 ? 1 : -1;
         if (itemStack.getUseAnimation() == Barched.UseAnim.BARCHED$SPEAR) {
             poseStack.translate((float)q * 0.56F, -0.52F, -0.72F);
             float l = (float)itemStack.getUseDuration(abstractClientPlayer) - ((float)abstractClientPlayer.getUseItemRemainingTicks() - f + 1.0F);

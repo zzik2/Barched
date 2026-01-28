@@ -44,7 +44,7 @@ public class ZombieMixin extends Monster {
     }
 
     @Inject(method = "populateDefaultEquipmentSlots", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/util/RandomSource;nextInt(I)I"))
-    private void barched$setItemSlot(RandomSource randomSource, DifficultyInstance difficultyInstance, CallbackInfo ci, @Local(name = "i") int i) {
+    private void barched$setItemSlot(RandomSource randomSource, DifficultyInstance difficultyInstance, CallbackInfo ci, @Local(ordinal = 0) int i) {
         if (i == 1) {
             this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Barched.Items.IRON_SPEAR));
         }

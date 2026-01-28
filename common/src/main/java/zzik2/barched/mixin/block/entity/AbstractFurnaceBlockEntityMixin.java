@@ -19,7 +19,7 @@ public abstract class AbstractFurnaceBlockEntityMixin {
     @Shadow private static void add(Map<Item, Integer> map, ItemLike arg, int i) {}
 
     @Inject(method = "getFuel", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;add(Ljava/util/Map;Lnet/minecraft/world/level/ItemLike;I)V", ordinal = 0, shift = At.Shift.BEFORE))
-    private static void barched$getFuel(CallbackInfoReturnable<Map<Item, Integer>> cir, @Local(name = "map2") Map<Item, Integer> map2) {
+    private static void barched$getFuel(CallbackInfoReturnable<Map<Item, Integer>> cir, @Local(ordinal = 1) Map<Item, Integer> map2) {
         add(map2, Barched.Items.WOODEN_SPEAR, 200);
     }
 }

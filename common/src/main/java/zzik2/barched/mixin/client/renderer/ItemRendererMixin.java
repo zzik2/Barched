@@ -64,15 +64,18 @@ public class ItemRendererMixin {
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final ModelResourceLocation NETHERITE_SPEAR_IN_HAND_MODEL = barched$spear_in_hand("netherite");
 
+    @Unique private ItemDisplayContext barched$itemDisplayContext;
     @Unique private ItemStack barched$itemStack;
 
     @Inject(method = "render", at = @At("HEAD"))
     private void barched$captureItemStack(ItemStack itemStack, ItemDisplayContext itemDisplayContext, boolean bl, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, BakedModel bakedModel, CallbackInfo ci) {
         this.barched$itemStack = itemStack;
+        this.barched$itemDisplayContext = itemDisplayContext;
     }
 
     @ModifyVariable(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/resources/model/BakedModel;getTransforms()Lnet/minecraft/client/renderer/block/model/ItemTransforms;", ordinal = 0, shift = At.Shift.BEFORE), argsOnly = true, index = 8)
-    private BakedModel barched$render(BakedModel bakedModel, @Local(name = "bl2") boolean bl2) {
+    private BakedModel barched$render(BakedModel bakedModel) {
+        boolean bl2 = barched$itemDisplayContext == ItemDisplayContext.GUI || barched$itemDisplayContext == ItemDisplayContext.GROUND || barched$itemDisplayContext == ItemDisplayContext.FIXED;
         if (bl2) {
             if (barched$itemStack.is(Barched.Items.WOODEN_SPEAR)) {
                 return this.itemModelShaper.getModelManager().getModel(WOODEN_SPEAR_MODEL);
