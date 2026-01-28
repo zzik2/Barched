@@ -99,7 +99,6 @@
     "tags.BlockTagsMixin",
     "tags.ItemTagsMixin",
     "util.ExtraCodecsMixin",
-    "util.MthMixin",
     "util.datafix.DataFixersMixin"
   ],
   "injectors": {

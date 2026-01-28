@@ -8,6 +8,7 @@ import net.minecraft.world.item.SwingAnimationType;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import zzik2.barched.bridge.item.ItemStackBridge;
 import zzik2.zreflex.mixin.ModifyAccess;
 
@@ -20,6 +21,7 @@ public abstract class AnimationUtilsMixin {
     @Shadow
     public static void bobArms(ModelPart arg, ModelPart arg2, float f) {}
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static <T extends LivingEntity> void animateZombieArms(ModelPart modelPart, ModelPart modelPart2, boolean bl, float f, float g, T livingEntity) {
         ItemStack itemStack = livingEntity.getMainHandItem();

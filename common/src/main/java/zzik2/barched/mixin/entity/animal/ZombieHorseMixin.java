@@ -24,6 +24,7 @@ import net.minecraft.world.level.pathfinder.PathType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -79,10 +80,12 @@ public abstract class ZombieHorseMixin extends AbstractHorse implements EntityBr
         var10000.setBaseValue(generateZombieHorseSpeed(randomSource::nextDouble));
     }
 
+    @Unique
     private static double generateZombieHorseJumpStrength(DoubleSupplier doubleSupplier) {
         return 0.5D + doubleSupplier.getAsDouble() * 0.06666666666666667D + doubleSupplier.getAsDouble() * 0.06666666666666667D + doubleSupplier.getAsDouble() * 0.06666666666666667D;
     }
 
+    @Unique
     private static double generateZombieHorseSpeed(DoubleSupplier doubleSupplier) {
         return (9.0D + doubleSupplier.getAsDouble() * 1.0D + doubleSupplier.getAsDouble() * 1.0D + doubleSupplier.getAsDouble() * 1.0D) / 42.15999984741211D;
     }

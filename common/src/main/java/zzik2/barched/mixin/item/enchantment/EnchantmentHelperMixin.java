@@ -11,6 +11,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import zzik2.barched.Barched;
 import zzik2.barched.bridge.EnchantmentBridge;
 import zzik2.zreflex.mixin.ModifyAccess;
@@ -21,6 +22,7 @@ import java.lang.reflect.InvocationHandler;
 @Mixin(EnchantmentHelper.class)
 public abstract class EnchantmentHelperMixin {
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static void doLungeEffects(ServerLevel serverLevel, Entity entity) {
         if (entity instanceof LivingEntity) {

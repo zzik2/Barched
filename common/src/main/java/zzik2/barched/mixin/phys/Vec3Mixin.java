@@ -8,6 +8,7 @@ import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import zzik2.barched.bridge.Vec3Bridge;
 import zzik2.zreflex.mixin.ModifyAccess;
 import zzik2.zreflex.reflection.ZReflectionTool;
@@ -26,12 +27,14 @@ public abstract class Vec3Mixin implements Vec3Bridge, Position {
         return applyLocalCoordinatesToRotation(this.rotation(), vec3);
     }
 
+    @Unique
     public Vec2 rotation() {
         float f = (float)Math.atan2(-this.x, this.z) * 57.295776F;
         float g = (float)Math.asin(-this.y / Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z)) * 57.295776F;
         return new Vec2(g, f);
     }
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static Vec3 applyLocalCoordinatesToRotation(Vec2 vec2, Vec3 vec3) {
         float f = Mth.cos(((vec2.y + 90.0F) * 0.017453292F));

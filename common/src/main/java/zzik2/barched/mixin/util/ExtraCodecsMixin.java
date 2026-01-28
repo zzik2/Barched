@@ -5,6 +5,7 @@ import net.minecraft.util.ExtraCodecs;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import zzik2.zreflex.mixin.ModifyAccess;
 
 import java.util.function.Function;
@@ -17,6 +18,7 @@ public abstract class ExtraCodecsMixin {
         return null;
     }
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static Codec<Float> floatRange(float f, float g) {
         return floatRangeMinExclusiveWithMessage(f, g, (float_) -> {

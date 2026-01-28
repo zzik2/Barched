@@ -8,6 +8,7 @@ import net.minecraft.world.entity.monster.Parched;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.Slice;
@@ -27,9 +28,11 @@ public abstract class EntityTypeMixin {
         return MobCategory.MONSTER;
     }
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final EntityType<Parched> PARCHED = register("parched", EntityType.Builder.of(Parched::new, MobCategory.MONSTER).sized(0.6F, 1.99F).eyeHeight(1.74F).ridingOffset(-0.7F).clientTrackingRange(8));
 
+    @Unique
     @ModifyAccess(access = Opcodes.ACC_PUBLIC)
     private static final EntityType<CamelHusk> CAMEL_HUSK = register("camel_husk", EntityType.Builder.of(CamelHusk::new, MobCategory.MONSTER).sized(1.7F, 2.375F).eyeHeight(2.275F).clientTrackingRange(10));
 }
