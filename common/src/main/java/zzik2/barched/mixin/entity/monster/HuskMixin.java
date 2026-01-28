@@ -54,7 +54,7 @@ public class HuskMixin extends Zombie {
                             serverLevelAccessor.addFreshEntity(camelHusk);
                             Parched parched = (Parched)Barched.EntityType.PARCHED.create(this.level());
                             if (parched != null) {
-                                parched.snapTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+                                parched.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
                                 parched.finalizeSpawn(serverLevelAccessor, difficultyInstance, mobSpawnType, (SpawnGroupData)null);
                                 parched.startRiding(camelHusk, false);
                                 serverLevelAccessor.addFreshEntityWithPassengers(parched);

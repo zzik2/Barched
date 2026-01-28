@@ -70,15 +70,6 @@ public abstract class EntityMixin implements EntityBridge {
     }
 
     @Override
-    public void snapTo(double d, double e, double f, float g, float h) {
-        this.setPosRaw(d, e, f);
-        this.setYRot(g);
-        this.setXRot(h);
-        this.setOldPosAndRot();
-        this.reapplyPosition();
-    }
-
-    @Override
     public Vec3 getHeadLookAngle() {
         return this.calculateViewVector(this.getXRot(), this.getYHeadRot());
     }
