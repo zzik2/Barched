@@ -54,6 +54,11 @@ public abstract class EntityMixin implements EntityBridge {
         this.lastKnownPosition = null;
     }
 
+    @Inject(method = "baseTick", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/profiling/ProfilerFiller;push(Ljava/lang/String;)V", shift = At.Shift.AFTER, ordinal = 0))
+    private void barched$baseTick(CallbackInfo ci) {
+        this.computeSpeed();
+    }
+
     @Override
     public void computeSpeed() {
         if (this.lastKnownPosition == null) {
