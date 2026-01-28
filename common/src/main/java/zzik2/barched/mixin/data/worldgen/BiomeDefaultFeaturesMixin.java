@@ -20,8 +20,9 @@ public class BiomeDefaultFeaturesMixin {
 
     @Inject(method = "monsters", at = @At("TAIL"))
     private static void barched$monsters(MobSpawnSettings.Builder builder, int i, int j, int k, boolean bl, CallbackInfo ci) {
-        if (k > 0) {
-            builder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE_HORSE, k, 1, 1));
+        int zombieHorseWeight = Barched.getConfig().getZombieHorseSpawnWeight();
+        if (zombieHorseWeight > 0) {
+            builder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE_HORSE, zombieHorseWeight, 1, 1));
         }
     }
 }

@@ -10,9 +10,13 @@ and namespace is ``minecraft:``. so even if you upgrade your Minecraft version, 
 ## Configuration
 Config file: `config/barched.json`
 
-| Option | Default | Description                             |
-|--------|---------|-----------------------------------------|
-| `camelHuskSpawnChance` | 10 | Chance (0-100%) for a Camel husk jockey |
+| Option                            | Default | Description                                                          |
+|-----------------------------------|---------|----------------------------------------------------------------------|
+| `camelHuskSpawnChance`            | 10      | Chance (0-100%) for a Camel husk jockey                              |
+| `zombifiedPiglinSpearSpawnChance` | 5       | Chance (0-100%) for a Zombified Piglin's Spear Equipped Spawn Chance |
+| `piglinSpearSpawnChance`          | 10      | Chance (0-100%) for a Piglin's Spear Equipped Spawn Chance           |
+| `zombieOverrideSpearSpawnChance`  | 0       | Chance (0-100%) for a Zombie's Spear Equipped Spawn override chance  |
+| `zombieHorseSpawnWeight`          | 1       | Chance (0-100%) for a Zombie Horse Spawn Weight                      |
 
 ## Dependencies
 Architectury([CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/all?page=1&pageSize=20&version=1.21.1&showAlphaFiles=hide), [Modrinth](https://modrinth.com/mod/architectury-api/versions?g=1.21.1))

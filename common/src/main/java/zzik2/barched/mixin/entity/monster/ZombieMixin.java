@@ -49,4 +49,11 @@ public class ZombieMixin extends Monster {
             this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Barched.Items.IRON_SPEAR));
         }
     }
+
+    @Inject(method = "populateDefaultEquipmentSlots", at = @At("TAIL"))
+    private void barched$overrideSpearByConfig(RandomSource randomSource, DifficultyInstance difficultyInstance, CallbackInfo ci) {
+        if (randomSource.nextFloat() < Barched.getConfig().getZombieOverrideSpearSpawnChanceAsFloat()) {
+            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Barched.Items.IRON_SPEAR));
+        }
+    }
 }

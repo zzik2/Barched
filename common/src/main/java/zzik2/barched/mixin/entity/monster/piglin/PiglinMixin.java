@@ -39,6 +39,6 @@ public abstract class PiglinMixin extends AbstractPiglin {
 
     @ModifyArg(method = "createSpawnWeapon", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;<init>(Lnet/minecraft/world/level/ItemLike;)V", ordinal = 1))
     private ItemLike barched$Item(ItemLike arg) {
-        return this.random.nextInt(10) == 0 ? Barched.Items.GOLDEN_SPEAR : arg;
+        return this.random.nextFloat() < Barched.getConfig().getPiglinSpearSpawnChanceAsFloat() ? Barched.Items.GOLDEN_SPEAR : arg;
     }
 }
