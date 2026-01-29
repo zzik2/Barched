@@ -2,7 +2,6 @@ package zzik2.barched;
 
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Function9;
-import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
@@ -42,7 +41,6 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.phys.*;
 import zzik2.barched.bridge.EnchantmentBridge;
 import zzik2.barched.bridge.entity.AbstractHorseBridge;
@@ -55,7 +53,6 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
 
 import static net.minecraft.core.Direction.NORTH;
 import static net.minecraft.world.entity.Mob.checkMobSpawnRules;
@@ -151,28 +148,7 @@ public final class Barched {
 
     public static class EnchantmentEffectComponents {
 
-        public static final DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK = barched$resolveMapping();
-
-        private static DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> barched$resolveMapping() {
-            String[] mapping = {"register", "method_60078", "m_338438_", "a"};
-            DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> var = null;
-
-            for (String map : mapping) {
-                try {
-                    var = ZReflectionTool.invokeStaticMethod(net.minecraft.world.item.enchantment.EnchantmentEffectComponents.class, map, "post_piercing_attack", (UnaryOperator<DataComponentType.Builder<List<ConditionalEffect<EnchantmentEntityEffect>>>>) (builder) -> builder.persistent(ConditionalEffect.codec(EnchantmentEntityEffect.CODEC, LootContextParamSets.ENCHANTED_DAMAGE).listOf()));
-
-                    if (var != null) {
-                        LogUtils.getLogger().info("[Barched] Found Mappings. name: {}", map);
-                        return var;
-                    }
-                } catch (Exception e) {
-                    LogUtils.getLogger().info("[Barched] Mapping is not available! name: {}", map);
-                }
-
-            }
-
-            throw new RuntimeException("[Barched] Cannot resolve Mappings!");
-        }
+        public static DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK;
     }
 
     public static class SmithingTemplateItem {
