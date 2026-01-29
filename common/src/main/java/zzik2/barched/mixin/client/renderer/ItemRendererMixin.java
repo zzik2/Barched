@@ -72,7 +72,8 @@ public class ItemRendererMixin {
         this.barched$itemDisplayContext = itemDisplayContext;
     }
 
-    @ModifyVariable(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/resources/model/BakedModel;getTransforms()Lnet/minecraft/client/renderer/block/model/ItemTransforms;", ordinal = 0, shift = At.Shift.BEFORE), argsOnly = true, index = 8)
+
+    @ModifyVariable(method = "render", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/vertex/PoseStack;pushPose()V", shift = At.Shift.AFTER, ordinal = 0), argsOnly = true, index = 8)
     private BakedModel barched$render(BakedModel bakedModel) {
         boolean bl2 = barched$itemDisplayContext == ItemDisplayContext.GUI || barched$itemDisplayContext == ItemDisplayContext.GROUND || barched$itemDisplayContext == ItemDisplayContext.FIXED;
         if (bl2) {

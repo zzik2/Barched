@@ -21,7 +21,7 @@ import zzik2.barched.bridge.item.ItemBridge;
 @Mixin(Item.class)
 public abstract class ItemMixin implements ItemBridge {
 
-    @Inject(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;get(Lnet/minecraft/core/component/DataComponentType;)Ljava/lang/Object;", shift = At.Shift.AFTER), cancellable = true)
+    @Inject(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;getItemInHand(Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/item/ItemStack;", shift = At.Shift.AFTER, ordinal = 0), cancellable = true)
     private void barched$use(Level level, Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> cir) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         KineticWeapon kineticWeapon = (KineticWeapon)itemStack.get(Barched.DataComponents.KINETIC_WEAPON);
