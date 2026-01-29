@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "plugin": "zzik2.zreflex.mixin.ModifyAccessTransformer",
+  "package": "zzik2.barched.neoforge.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [],
+  "mixins": [
+    "block.entity.NeoAbstractFurnaceBlockEntityMixin",
+    "inventory.AbstractFurnaceMenuMixin",
+    "inventory.FurnaceFuelSlotMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

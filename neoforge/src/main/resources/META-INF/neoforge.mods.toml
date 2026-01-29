@@ -43,3 +43,6 @@ side = "BOTH"
 
 [[mixins]]
 config = "barched.mixins.json"
+
+[[mixins]]
+config = "barched-neoforge.mixins.json"
