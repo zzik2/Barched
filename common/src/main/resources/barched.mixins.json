@@ -20,9 +20,13 @@
     "client.player.LocalPlayerMixin",
     "client.renderer.ItemInHandRendererMixin",
     "client.renderer.ItemRendererMixin",
+    "client.renderer.entity.AbstractZombieRendererMixin",
+    "client.renderer.entity.DrownedRendererMixin",
     "client.renderer.entity.EntityRenderersMixin",
+    "client.renderer.entity.HumanoidMobRendererMixin",
     "client.renderer.entity.LivingEntityRendererMixin",
     "client.renderer.entity.PlayerRendererMixin",
+    "client.renderer.entity.SkeletonRendererMixin",
     "client.renderer.entity.UndeadHorseRendererMixin",
     "client.renderer.entity.layers.ItemInHandLayerMixin"
   ],
