@@ -3,7 +3,7 @@
   "id": "barched",
   "version": "${version}",
   "name": "Barched",
-  "description": "",
+  "description": "Bringing Parched, Camel Husk and Spears from 1.21.11 to 1.21.1!",
   "authors": [
     "zzik2"
   ],
@@ -29,6 +29,7 @@
     "minecraft": "~1.21.1",
     "java": ">=21",
     "architectury": ">=13.0.8",
+    "cloth-config": ">=15.0.140",
     "fabric-api": "*"
   },
   "suggests": {

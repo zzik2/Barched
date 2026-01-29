@@ -14,7 +14,7 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import zzik2.barched.Barched;
-import zzik2.barched.bridge.EntityBridge;
+import zzik2.barched.bridge.entity.EntityBridge;
 
 public class Parched extends AbstractSkeleton implements EntityBridge {
 
@@ -60,7 +60,6 @@ public class Parched extends AbstractSkeleton implements EntityBridge {
     protected boolean shouldDespawnInPeaceful() {
         return false;
     }
-
 
     @Override
     protected int getHardAttackInterval() {

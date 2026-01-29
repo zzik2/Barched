@@ -14,8 +14,6 @@ import zzik2.zreflex.reflection.ZReflectionTool;
 public class ParchedRenderer extends SkeletonRenderer<Parched> {
 
     private static final ResourceLocation PARCHED_SKELETON_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/skeleton/parched.png");
-//    private static final ResourceLocation PARCHED_CLOTHES_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/skeleton/parched_overlay.png");
-
     private static final ModelLayerLocation PARCHED = ZReflectionTool.getStaticFieldValue(ModelLayers .class, "PARCHED");
     private static final ModelLayerLocation PARCHED_INNER_ARMOR = ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_INNER_ARMOR");;
     private static final ModelLayerLocation PARCHED_OUTER_ARMOR = ZReflectionTool.getStaticFieldValue(ModelLayers.class, "PARCHED_OUTER_ARMOR");;
@@ -23,7 +21,6 @@ public class ParchedRenderer extends SkeletonRenderer<Parched> {
 
     public ParchedRenderer(EntityRendererProvider.Context context) {
         super(context, PARCHED, PARCHED_INNER_ARMOR, PARCHED_OUTER_ARMOR);
-//        this.addLayer(new SkeletonClothingLayer<>(this, context.getModelSet(), PARCHED_OUTER_LAYER, PARCHED_CLOTHES_LOCATION));
     }
 
     @Override
