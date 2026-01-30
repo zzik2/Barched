@@ -22,11 +22,11 @@ public abstract class DrownedModelMixin<T extends Zombie> extends ZombieModel<T>
     @Override
     public ArmPose getArmPose(T livingEntity, HumanoidArm humanoidArm, @Nullable ArmPose fallback) {
         ItemStack itemStack = ((LivingEntityBridge) livingEntity).getItemHeldByArm(humanoidArm);
-        return livingEntity.getMainArm() == humanoidArm && livingEntity.isAggressive() && itemStack.is(Items.TRIDENT) ? ArmPose.THROW_SPEAR : super$getArmPose(livingEntity, humanoidArm, getArmPoseFallback());
+        return livingEntity.getMainArm() == humanoidArm && livingEntity.isAggressive() && itemStack.is(Items.TRIDENT) ? ArmPose.THROW_SPEAR : abstractZombie$super$getArmPose(livingEntity, humanoidArm, getArmPoseFallback());
     }
 
     @Override
     public @Nullable ArmPose getArmPoseFallback() {
-        return null;
+        return ArmPose.EMPTY;
     }
 }

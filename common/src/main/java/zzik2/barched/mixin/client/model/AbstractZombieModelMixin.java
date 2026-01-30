@@ -41,19 +41,41 @@ public abstract class AbstractZombieModelMixin<T extends Monster> extends Humano
         this.barched$h = h;
     }
 
-    @Redirect(method = "setupAnim(Lnet/minecraft/world/entity/monster/Monster;FFFFF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/model/AnimationUtils;animateZombieArms(Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;ZFF)V"))
+    @Redirect(method = "setupAnim(Lnet/minecraft/world/entity/monster/Monster;FFFFF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/model/AnimationUtils;animateZombieArms(Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;ZFF)V"), order = 2000)
     private void barched$setupAnim(ModelPart h, ModelPart i, boolean j, float arg, float arg2) {
         BarchedClient.AnimationUtils.animateZombieArms(this.leftArm, this.rightArm, this.isAggressive(barched$monster), this.attackTime, barched$h, (LivingEntity) barched$monster);
     }
 
     @Override
+    public ArmPose abstractZombie$super$getArmPose(T livingEntity, HumanoidArm humanoidArm, @Nullable HumanoidModel.ArmPose fallback) {
+        return barched$getArmPose(livingEntity, humanoidArm, fallback);
+    }
+
+    @Override
     public ArmPose getArmPose(T livingEntity, HumanoidArm humanoidArm, HumanoidModel.ArmPose fallback) {
-        SwingAnimation swingAnimation = (SwingAnimation)((LivingEntityBridge) livingEntity).getItemHeldByArm(humanoidArm.getOpposite()).get(Barched.DataComponents.SWING_ANIMATION);
-        return swingAnimation != null && swingAnimation.type() == SwingAnimationType.STAB ? BarchedClient.ArmPose.SPEAR : super$getArmPose(livingEntity, humanoidArm, getArmPoseFallback());
+        return barched$getArmPose(livingEntity, humanoidArm, fallback);
     }
 
     @Override
     public @Nullable ArmPose getArmPoseFallback() {
         return ArmPose.EMPTY;
+    }
+
+    @Unique
+    public ArmPose barched$getArmPose(T livingEntity, HumanoidArm humanoidArm, HumanoidModel.ArmPose fallback) {
+        boolean aggressive = this.isAggressive(livingEntity);
+
+        if (!aggressive) {
+            SwingAnimation swingAnimation = (SwingAnimation)((LivingEntityBridge) livingEntity).getItemHeldByArm(humanoidArm.getOpposite()).get(Barched.DataComponents.SWING_ANIMATION);
+            if (swingAnimation != null && swingAnimation.type() == SwingAnimationType.STAB) {
+                return BarchedClient.ArmPose.SPEAR;
+            }
+        }
+
+        HumanoidModel.ArmPose superPose = super$getArmPose(livingEntity, humanoidArm, getArmPoseFallback());
+        if (superPose == BarchedClient.ArmPose.SPEAR) {
+            return aggressive ? superPose : getArmPoseFallback();
+        }
+        return superPose;
     }
 }

@@ -19,4 +19,9 @@ public interface HumanoidModelBridge<T extends LivingEntity> {
     default HumanoidModel.ArmPose getArmPoseFallback() {
         throw new RuntimeException("not implemented!");
     }
+
+    // AbstractZombieModel
+    default HumanoidModel.ArmPose abstractZombie$super$getArmPose(T livingEntity, HumanoidArm humanoidArm, @Nullable HumanoidModel.ArmPose fallback) {
+        throw new RuntimeException("not implemented!");
+    }
 }
