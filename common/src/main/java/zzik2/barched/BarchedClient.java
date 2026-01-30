@@ -6,6 +6,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwingAnimationType;
@@ -66,13 +67,24 @@ public class BarchedClient {
     }
 
     public static class AnimationUtils {
-        public static <T extends LivingEntity> void animateZombieArms(ModelPart modelPart, ModelPart modelPart2, boolean bl, float f, float g, T livingEntity) {
+        public static <T extends LivingEntity> void animateZombieArms(ModelPart modelPart, ModelPart modelPart2, boolean bl, float attackTime, float g, T livingEntity) {
             ItemStack itemStack = livingEntity.getMainHandItem();
             SwingAnimationType animationType = ((ItemStackBridge) (Object) itemStack).getSwingAnimation().type();
             boolean bl2 = animationType != SwingAnimationType.STAB;
 
             if (bl2) {
-                net.minecraft.client.model.AnimationUtils.animateZombieArms(modelPart, modelPart2, bl, f, g);
+                float f2 = attackTime;
+                float g2 = -3.1415927F / (bl ? 1.5F : 2.25F);
+                float h = Mth.sin((f2 * 3.1415927F));
+                float i = Mth.sin(((1.0F - (1.0F - f2) * (1.0F - f2)) * 3.1415927F));
+                modelPart2.zRot = 0.0F;
+                modelPart2.yRot = -(0.1F - h * 0.6F);
+                modelPart2.xRot = g2;
+                modelPart2.xRot += h * 1.2F - i * 0.4F;
+                modelPart.zRot = 0.0F;
+                modelPart.yRot = 0.1F - h * 0.6F;
+                modelPart.xRot = g2;
+                modelPart.xRot += h * 1.2F - i * 0.4F;
             }
 
             net.minecraft.client.model.AnimationUtils.bobArms(modelPart2, modelPart, g);
