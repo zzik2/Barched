@@ -73,7 +73,7 @@ public interface LivingEntityBridge extends EntityBridge {
         return null;
     }
 
-    default float barched$ticksUsingItem(HumanoidArm humanoidArm) {
+    default float barched$ticksUsingItem(HumanoidArm humanoidArm, float partialTick) {
         return 0.0F;
     }
 }

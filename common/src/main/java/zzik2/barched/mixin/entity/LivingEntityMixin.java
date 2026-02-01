@@ -268,8 +268,8 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
     }
 
     @Override
-    public float barched$ticksUsingItem(HumanoidArm humanoidArm) {
-        return this.isUsingItem() && this.getUsedItemHand() == InteractionHand.MAIN_HAND == (humanoidArm == this.getMainArm()) ? this.getTicksUsingItem() : 0.0F;
+    public float barched$ticksUsingItem(HumanoidArm humanoidArm, float partialTick) {
+        return this.isUsingItem() && this.getUsedItemHand() == InteractionHand.MAIN_HAND == (humanoidArm == this.getMainArm()) ? this.getTicksUsingItem(partialTick) : 0.0F;
     }
 
     @Unique

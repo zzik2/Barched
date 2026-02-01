@@ -35,7 +35,7 @@ public abstract class ItemInHandLayerMixin<T extends LivingEntity, M extends Ent
             SpearAnimations.thirdPersonAttackItem(livingEntity, poseStack);
         }
 
-        float f = ((LivingEntityBridge) livingEntity).barched$ticksUsingItem(humanoidArm);
+        float f = ((LivingEntityBridge) livingEntity).barched$ticksUsingItem(humanoidArm, tick);
         if (f != 0.0F) {
             //TODO: add condition if is spear
             SpearAnimations.thirdPersonUseItem(livingEntity, poseStack, f, humanoidArm, itemStack);
