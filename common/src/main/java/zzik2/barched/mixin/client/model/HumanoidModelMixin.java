@@ -36,10 +36,16 @@ public abstract class HumanoidModelMixin<T extends LivingEntity> implements Huma
 
     @Inject(method = "prepareMobModel(Lnet/minecraft/world/entity/LivingEntity;FFF)V", at = @At("HEAD"))
     private void barched$prepareMobModel(T livingEntity, float f, float g, float h, CallbackInfo ci) {
-        HumanoidModel.ArmPose rightArm = getArmPose(livingEntity, HumanoidArm.RIGHT, getArmPoseFallback());
-        HumanoidModel.ArmPose leftArm = getArmPose(livingEntity, HumanoidArm.LEFT, getArmPoseFallback());
-        if (rightArm != null) this.rightArmPose = rightArm;
-        if (leftArm != null) this.leftArmPose = leftArm;
+        this.rightArmPose = barched$updateArmPose(livingEntity, HumanoidArm.RIGHT, this.rightArmPose);
+        this.leftArmPose = barched$updateArmPose(livingEntity, HumanoidArm.LEFT, this.leftArmPose);
+    }
+
+    @Unique
+    private HumanoidModel.ArmPose barched$updateArmPose(T livingEntity, HumanoidArm humanoidArm, HumanoidModel.ArmPose currentArmPose) {
+        HumanoidModel.ArmPose pose = getArmPose(livingEntity, humanoidArm, getArmPoseFallback());
+        if (pose != null) return pose;
+        if (currentArmPose == BarchedClient.ArmPose.SPEAR) return HumanoidModel.ArmPose.EMPTY;
+        return currentArmPose != null ? currentArmPose : HumanoidModel.ArmPose.EMPTY;
     }
 
     @Inject(method = "setupAttackAnimation", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Mth;sin(F)F", ordinal = 4, shift = At.Shift.AFTER), cancellable = true)
