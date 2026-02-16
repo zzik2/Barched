@@ -20,6 +20,7 @@
     "client.multiplayer.ClientLevelMixin",
     "client.multiplayer.MultiPlayerGameModeMixin",
     "client.player.LocalPlayerMixin",
+    "client.renderer.GameRendererMixin",
     "client.renderer.ItemInHandRendererMixin",
     "client.renderer.ItemRendererMixin",
     "client.renderer.entity.EntityRenderersMixin",
