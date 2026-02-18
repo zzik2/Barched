@@ -23,6 +23,7 @@ public class SpearItem extends TieredItem {
         return true;
     }
 
+    @Override
     public void postHurtEnemy(ItemStack itemStack, LivingEntity livingEntity, LivingEntity livingEntity2) {
         itemStack.hurtAndBreak(1, livingEntity2, EquipmentSlot.MAINHAND);
     }
