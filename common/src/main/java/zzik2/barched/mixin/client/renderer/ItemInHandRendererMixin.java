@@ -24,73 +24,52 @@ import zzik2.barched.bridge.entity.LivingEntityBridge;
 import zzik2.barched.bridge.entity.PlayerBridge;
 import zzik2.barched.bridge.item.ItemStackBridge;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 @Mixin(ItemInHandRenderer.class)
 public abstract class ItemInHandRendererMixin {
 
-    @Unique private AbstractClientPlayer barched$abstractClientPlayer;
-    @Unique private InteractionHand barched$interactionHand;
-    @Unique private PoseStack barched$poseStack;
-    @Unique private float barched$f;
+    @Unique private boolean barched$firstPersonAttack = false;
 
-    @Unique private boolean barched$use;
+    @Shadow protected abstract void applyItemArmAttackTransform(PoseStack arg, HumanoidArm arg2, float g);
 
-    @Shadow
-    protected abstract void applyItemArmAttackTransform(PoseStack arg, HumanoidArm arg2, float g);
+    @Shadow protected abstract void applyItemArmTransform(PoseStack poseStack, HumanoidArm humanoidArm, float f);
 
-    @Shadow
-    protected abstract void applyItemArmTransform(PoseStack poseStack, HumanoidArm humanoidArm, float f);
-
-    @Inject(method = "renderArmWithItem", at = @At("HEAD"))
-    private void barched$capture(AbstractClientPlayer abstractClientPlayer, float f, float g, InteractionHand interactionHand, float h, ItemStack itemStack, float i, PoseStack poseStack, MultiBufferSource multiBufferSource, int j, CallbackInfo ci) {
-        this.barched$abstractClientPlayer = abstractClientPlayer;
-        this.barched$interactionHand = interactionHand;
-        this.barched$poseStack = poseStack;
-        this.barched$f = f;
+    @Inject(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getUseAnimation()Lnet/minecraft/world/item/UseAnim;", ordinal = 0))
+    private void barched$firstPersonUse(AbstractClientPlayer abstractClientPlayer, float f, float g, InteractionHand interactionHand, float h, ItemStack itemStack, float i, PoseStack poseStack, MultiBufferSource multiBufferSource, int j, CallbackInfo ci, @Local(ordinal = 0) HumanoidArm humanoidArm , @Local(ordinal = 1) int q) {
+        if (itemStack.getUseAnimation() == Barched.UseAnim.BARCHED$SPEAR) {
+            poseStack.translate((float)q * 0.56F, -0.52F, -0.72F);
+            float l = (float)itemStack.getUseDuration(abstractClientPlayer) - ((float)abstractClientPlayer.getUseItemRemainingTicks() - f + 1.0F);
+            SpearAnimations.firstPersonUse(((LivingEntityBridge) abstractClientPlayer).getTicksSinceLastKineticHitFeedback(f), poseStack, l, humanoidArm, itemStack);
+        }
     }
 
-    @Redirect(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getUseAnimation()Lnet/minecraft/world/item/UseAnim;", ordinal = 0))
-    private UseAnim barched$renderArmWithItem(ItemStack instance) {
-        if (instance.getUseAnimation() == Barched.UseAnim.BARCHED$SPEAR) {
-            boolean bl = barched$interactionHand == InteractionHand.MAIN_HAND;
-            HumanoidArm humanoidArm = bl ? barched$abstractClientPlayer.getMainArm() : barched$abstractClientPlayer.getMainArm().getOpposite();
-            boolean bl2 = humanoidArm == HumanoidArm.RIGHT;
-            int q = bl2 ? 1 : -1;
-
-            barched$poseStack.translate((float)q * 0.56F, -0.52F, -0.72F);
-            float l = (float)instance.getUseDuration(barched$abstractClientPlayer) - ((float)barched$abstractClientPlayer.getUseItemRemainingTicks() - barched$f + 1.0F);
-            SpearAnimations.firstPersonUse(((LivingEntityBridge) barched$abstractClientPlayer).getTicksSinceLastKineticHitFeedback(barched$f), barched$poseStack, l, humanoidArm, instance);
-            this.barched$use = true;
-            return UseAnim.NONE;
+    @Inject(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/vertex/PoseStack;translate(FFF)V", ordinal = 12, shift = At.Shift.BEFORE))
+    private void barched$firstPersonAttack(AbstractClientPlayer abstractClientPlayer, float f, float g, InteractionHand interactionHand, float h, ItemStack itemStack, float i, PoseStack poseStack, MultiBufferSource multiBufferSource, int j, CallbackInfo ci) {
+        SwingAnimationType type = ((ItemStackBridge) (Object) itemStack).getSwingAnimation().type();
+        if (type == SwingAnimationType.STAB) {
+            barched$firstPersonAttack = true;
         }
-        return instance.getUseAnimation();
     }
 
     @Redirect(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/vertex/PoseStack;translate(FFF)V", ordinal = 12))
-    private void barched$renderArmWithItemTranslate(PoseStack poseStack, float x, float y, float z, @Local(argsOnly = true) ItemStack itemStack) {
-        SwingAnimationType type = ((ItemStackBridge) (Object) itemStack).getSwingAnimation().type();
-        if (type != SwingAnimationType.STAB) {
-            poseStack.translate(x, y, z);
-        }
+    private void barched$firstPersonAttack0(PoseStack instance, float f, float g, float h) {
+        if (!barched$firstPersonAttack) instance.translate(f, g, h);
     }
 
-    @Redirect(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/ItemInHandRenderer;applyItemArmTransform(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V", ordinal = 2))
-    private void barched$applyItemArmTransform(ItemInHandRenderer instance, PoseStack poseStack, HumanoidArm humanoidArm, float f) {
-        if (!this.barched$use) {
-            this.applyItemArmTransform(poseStack, humanoidArm, f);
-        } else {
-            this.barched$use = false;
-        }
+    @Inject(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/ItemInHandRenderer;applyItemArmTransform(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V", ordinal = 8, shift = At.Shift.AFTER))
+    private void barched$firstpersonAttack1(AbstractClientPlayer abstractClientPlayer, float f, float g, InteractionHand interactionHand, float h, ItemStack itemStack, float i, PoseStack poseStack, MultiBufferSource multiBufferSource, int j, CallbackInfo ci, @Local(ordinal = 0) HumanoidArm humanoidArm , @Local(ordinal = 1) int q) {
+        if (barched$firstPersonAttack) SpearAnimations.firstPersonAttack(h, poseStack, q, humanoidArm);
     }
 
     @Redirect(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/ItemInHandRenderer;applyItemArmAttackTransform(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V", ordinal = 1))
-    private void barched$renderArmWithItemAttack(ItemInHandRenderer instance, PoseStack poseStack, HumanoidArm humanoidArm, float h, @Local(argsOnly = true) ItemStack itemStack) {
-        SwingAnimationType type = ((ItemStackBridge) (Object) itemStack).getSwingAnimation().type();
-        int q = humanoidArm == HumanoidArm.RIGHT ? 1 : -1;
-        if (type == SwingAnimationType.STAB) {
-            SpearAnimations.firstPersonAttack(h, poseStack, q, humanoidArm);
-        } else {
-            this.applyItemArmAttackTransform(poseStack, humanoidArm, h);
-        }
+    private void barched$firstPersonAttack2(ItemInHandRenderer instance, PoseStack poseStack, HumanoidArm humanoidArm, float f) {
+        if (!barched$firstPersonAttack) this.applyItemArmAttackTransform(poseStack, humanoidArm, f);
+    }
+
+    @Inject(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/ItemInHandRenderer;applyItemArmAttackTransform(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V", ordinal = 1, shift = At.Shift.AFTER))
+    private void barched$firstPersonAttack3(AbstractClientPlayer abstractClientPlayer, float f, float g, InteractionHand interactionHand, float h, ItemStack itemStack, float i, PoseStack poseStack, MultiBufferSource multiBufferSource, int j, CallbackInfo ci) {
+        barched$firstPersonAttack = false;
     }
 
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;getAttackStrengthScale(F)F"))

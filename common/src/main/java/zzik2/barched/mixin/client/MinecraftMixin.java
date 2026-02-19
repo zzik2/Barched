@@ -64,6 +64,13 @@ public class MinecraftMixin {
         }
     }
 
+    @Redirect(method = "startAttack", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;swing(Lnet/minecraft/world/InteractionHand;)V"))
+    private void barched$swing(LocalPlayer instance, InteractionHand interactionHand) {
+        if (!instance.isSpectator()) {
+            instance.swing(interactionHand);
+        }
+    }
+
     @Inject(method = "continueAttack", at = @At("HEAD"), cancellable = true)
     private void barched$continueAttack(boolean bl, CallbackInfo ci) {
         LocalPlayer player = Minecraft.getInstance().player;
