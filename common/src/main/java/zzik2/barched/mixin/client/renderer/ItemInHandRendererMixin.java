@@ -7,11 +7,11 @@ import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwingAnimationType;
-import net.minecraft.world.item.UseAnim;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -23,8 +23,6 @@ import zzik2.barched.Barched;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
 import zzik2.barched.bridge.entity.PlayerBridge;
 import zzik2.barched.bridge.item.ItemStackBridge;
-
-import java.util.concurrent.atomic.AtomicBoolean;
 
 @Mixin(ItemInHandRenderer.class)
 public abstract class ItemInHandRendererMixin {
@@ -72,8 +70,21 @@ public abstract class ItemInHandRendererMixin {
         barched$firstPersonAttack = false;
     }
 
+    @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;matches(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z"))
+    private boolean barched$firstPersonAttack4(ItemStack itemStack, ItemStack itemStack2) {
+        return this.shouldInstantlyReplaceVisibleItem(itemStack, itemStack2);
+    }
+
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;getAttackStrengthScale(F)F"))
     private float barched$tick(LocalPlayer instance, float v) {
         return ((PlayerBridge) instance).getItemSwapScale(v);
+    }
+
+    private boolean shouldInstantlyReplaceVisibleItem(ItemStack itemStack, ItemStack itemStack2) {
+        if (Barched.ItemStack.matchesIgnoringComponents(itemStack, itemStack2, Barched.DataComponentType::ignoreSwapAnimation)) {
+            return true;
+        } else {
+            return true; //return !this.itemModelResolver.shouldPlaySwapAnimation(itemStack2); TODO
+        }
     }
 }

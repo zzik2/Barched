@@ -10,7 +10,6 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.minecraft.advancements.criterion.SpearMobsTrigger;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.protocol.game.ServerboundPlayerActionPacket;
 import net.minecraft.resources.ResourceKey;
@@ -41,6 +40,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.*;
 import zzik2.barched.bridge.EnchantmentBridge;
+import zzik2.barched.bridge.component.DataComponentTypeBridge;
 import zzik2.barched.bridge.entity.AbstractHorseBridge;
 import zzik2.barched.bridge.entity.EntityBridge;
 import zzik2.barched.bridge.level.LevelBridge;
@@ -150,7 +150,7 @@ public final class Barched {
 
     public static class EnchantmentEffectComponents {
 
-        public static DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK;
+        public static net.minecraft.core.component.DataComponentType<List<ConditionalEffect<EnchantmentEntityEffect>>> POST_PIERCING_ATTACK;
     }
 
     public static class SmithingTemplateItem {
@@ -198,19 +198,19 @@ public final class Barched {
     }
 
     public static class DataComponents {
-        public static final DataComponentType<UseEffects> USE_EFFECTS = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "USE_EFFECTS");
+        public static final net.minecraft.core.component.DataComponentType<UseEffects> USE_EFFECTS = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "USE_EFFECTS");
 
-        public static final DataComponentType<EitherHolder<DamageType>> DAMAGE_TYPE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "DAMAGE_TYPE");
+        public static final net.minecraft.core.component.DataComponentType<EitherHolder<DamageType>> DAMAGE_TYPE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "DAMAGE_TYPE");
 
-        public static final DataComponentType<Float> MINIMUM_ATTACK_CHARGE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "MINIMUM_ATTACK_CHARGE");
+        public static final net.minecraft.core.component.DataComponentType<Float> MINIMUM_ATTACK_CHARGE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "MINIMUM_ATTACK_CHARGE");
 
-        public static final DataComponentType<PiercingWeapon> PIERCING_WEAPON = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "PIERCING_WEAPON");
+        public static final net.minecraft.core.component.DataComponentType<PiercingWeapon> PIERCING_WEAPON = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "PIERCING_WEAPON");
 
-        public static final DataComponentType<AttackRange> ATTACK_RANGE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "ATTACK_RANGE");
+        public static final net.minecraft.core.component.DataComponentType<AttackRange> ATTACK_RANGE = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "ATTACK_RANGE");
 
-        public static final DataComponentType<KineticWeapon> KINETIC_WEAPON = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "KINETIC_WEAPON");
+        public static final net.minecraft.core.component.DataComponentType<KineticWeapon> KINETIC_WEAPON = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "KINETIC_WEAPON");
 
-        public static final DataComponentType<SwingAnimation> SWING_ANIMATION = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "SWING_ANIMATION");
+        public static final net.minecraft.core.component.DataComponentType<SwingAnimation> SWING_ANIMATION = ZReflectionTool.getStaticFieldValue(net.minecraft.core.component.DataComponents.class, "SWING_ANIMATION");
     }
 
     public static class CriteriaTriggers {
@@ -272,7 +272,7 @@ public final class Barched {
             }
         }
 
-        public static void runIterationOnItem(ItemStack itemStack, EnchantmentHelper.EnchantmentVisitor enchantmentVisitor) {
+        public static void runIterationOnItem(net.minecraft.world.item.ItemStack itemStack, EnchantmentHelper.EnchantmentVisitor enchantmentVisitor) {
             ItemEnchantments itemEnchantments = (ItemEnchantments)itemStack.getOrDefault(net.minecraft.core.component.DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
             Iterator var3 = itemEnchantments.entrySet().iterator();
 
@@ -283,7 +283,7 @@ public final class Barched {
 
         }
 
-        public static void runIterationOnItem(ItemStack itemStack, EquipmentSlot equipmentSlot, LivingEntity livingEntity, EnchantmentHelper.EnchantmentInSlotVisitor enchantmentInSlotVisitor) {
+        public static void runIterationOnItem(net.minecraft.world.item.ItemStack itemStack, EquipmentSlot equipmentSlot, LivingEntity livingEntity, EnchantmentHelper.EnchantmentInSlotVisitor enchantmentInSlotVisitor) {
             if (!itemStack.isEmpty()) {
                 ItemEnchantments itemEnchantments = (ItemEnchantments)itemStack.get(net.minecraft.core.component.DataComponents.ENCHANTMENTS);
                 if (itemEnchantments != null && !itemEnchantments.isEmpty()) {
@@ -432,6 +432,49 @@ public final class Barched {
 
         private static Codec<Float> floatRangeMinExclusiveWithMessage(float f, float g, Function<Float, String> function) {
             return Codec.FLOAT.validate((float_) -> float_.compareTo(f) > 0 && float_.compareTo(g) <= 0 ? DataResult.success(float_) : DataResult.error(() -> (String)function.apply(float_)));
+        }
+    }
+
+    public static class ItemStack {
+
+        public static boolean matchesIgnoringComponents(net.minecraft.world.item.ItemStack itemStack, net.minecraft.world.item.ItemStack itemStack2, Predicate<net.minecraft.core.component.DataComponentType<?>> predicate) {
+            if (itemStack == itemStack2) {
+                return true;
+            } else if (itemStack.getCount() != itemStack2.getCount()) {
+                return false;
+            } else if (!itemStack.is(itemStack2.getItem())) {
+                return false;
+            } else if (itemStack.isEmpty() && itemStack2.isEmpty()) {
+                return true;
+            } else if (itemStack.getComponents().size() != itemStack2.getComponents().size()) {
+                return false;
+            } else {
+                Iterator var3 = itemStack.getComponents().keySet().iterator();
+
+                net.minecraft.core.component.DataComponentType dataComponentType;
+                Object object;
+                Object object2;
+                do {
+                    if (!var3.hasNext()) {
+                        return true;
+                    }
+
+                    dataComponentType = (net.minecraft.core.component.DataComponentType)var3.next();
+                    object = itemStack.getComponents().get(dataComponentType);
+                    object2 = itemStack2.getComponents().get(dataComponentType);
+                    if (object == null || object2 == null) {
+                        return false;
+                    }
+                } while(Objects.equals(object, object2) || predicate.test(dataComponentType));
+
+                return false;
+            }
+        }
+    }
+
+    public static class DataComponentType {
+        public static boolean ignoreSwapAnimation(net.minecraft.core.component.DataComponentType<?> type) {
+            return ((DataComponentTypeBridge) type).ignoreSwapAnimation();
         }
     }
 }

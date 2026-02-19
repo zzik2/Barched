@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.barched.Barched;
+import zzik2.barched.bridge.component.DataComponentTypeBridge;
 import zzik2.zreflex.mixin.ModifyAccess;
 
 import java.util.function.UnaryOperator;
@@ -36,6 +37,8 @@ public abstract class DataComponentsMixin {
         DataComponentMap originalMap = COMMON_ITEM_COMPONENTS;
         DataComponentMap newMap = DataComponentMap.builder().addAll(originalMap).set(SWING_ANIMATION, SwingAnimation.DEFAULT).set(USE_EFFECTS, UseEffects.DEFAULT).build();
         COMMON_ITEM_COMPONENTS = newMap;
+
+        ((DataComponentTypeBridge) DataComponents.DAMAGE).barched$setIgnoreSwapAnimation(true);
     }
 
     @Unique
