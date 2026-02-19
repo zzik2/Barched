@@ -27,9 +27,7 @@ import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.animal.CamelHusk;
 import net.minecraft.world.entity.monster.Parched;
 import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.item.EitherHolder;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.ConditionalEffect;
@@ -63,7 +61,11 @@ public final class Barched {
 
     public static void init() {
         //why the hell field is not loaded?!@?!#?!@?!?#
-        Object o = EnchantmentEffectComponents.POST_PIERCING_ATTACK;
+        Object o;
+        o = EnchantmentEffectComponents.POST_PIERCING_ATTACK;
+        o = Tiers.COPPER;
+        o = UseAnim.BARCHED$SPEAR;
+        o = ServerboundPlayerActionPacket$Action.STAB;
 
         AutoConfig.register(BarchedConfig.class, GsonConfigSerializer::new);
     }
