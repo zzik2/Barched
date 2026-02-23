@@ -1,5 +1,10 @@
 ![68747470733a2f2f63646e2e6d6f6472696e74682e636f6d2f646174612f6361636865645f696d616765732f303063306362646430633932613766613936393037326166623938623132666133663937666436662e6a706567](https://github.com/user-attachments/assets/38c6f383-a549-47b9-8945-b06462855674)
 
+# Want to See more spears?
+please look:
+
+[Modrinth](https://modrinth.com/mod/barched-extra-spears) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/barched-extra-spears)
+
 # Preview
 
 ## Mobs
