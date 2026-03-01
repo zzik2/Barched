@@ -1,5 +1,6 @@
 package zzik2.barched.mixin.client.renderer;
 
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.effects.SpearAnimations;
@@ -70,9 +71,12 @@ public abstract class ItemInHandRendererMixin {
         barched$firstPersonAttack = false;
     }
 
-    @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;matches(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z"))
-    private boolean barched$firstPersonAttack4(ItemStack itemStack, ItemStack itemStack2) {
-        return this.shouldInstantlyReplaceVisibleItem(itemStack, itemStack2);
+    @ModifyExpressionValue(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;matches(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z"))
+    private boolean barched$firstPersonAttack4(boolean original, @Local(ordinal = 0) ItemStack itemStack, @Local(ordinal = 1) ItemStack itemStack2) {
+        if (this.shouldInstantlyReplaceVisibleItem(itemStack, itemStack2)) {
+            return true;
+        }
+        return original;
     }
 
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;getAttackStrengthScale(F)F"))
