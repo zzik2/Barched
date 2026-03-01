@@ -119,3 +119,6 @@ runs/
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+/common/bin
+/neoforge/bin
+/fabric/bin
