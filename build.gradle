@@ -88,3 +88,56 @@ subprojects {
         }
     }
 }
+
+tasks.register('applyPatches') {
+    group = 'patching'
+    description = 'Apply all patches from the patches/ directory.'
+    doLast {
+        def patchDir = file("patches")
+        if (!patchDir.exists()) {
+            throw new GradleException("patches/ directory does not exist.")
+        }
+        def patches = patchDir.listFiles()
+                .findAll { it.name.endsWith('.patch') }
+                .sort { it.name }
+        if (patches.isEmpty()) {
+            logger.lifecycle("No patch files to apply.")
+            return
+        }
+        patches.each { patch ->
+            logger.lifecycle("Applying patch: ${patch.name}")
+            exec {
+                commandLine 'git', 'apply', '--stat', patch.absolutePath
+            }
+            exec {
+                commandLine 'git', 'apply', patch.absolutePath
+            }
+        }
+        logger.lifecycle("${patches.size()} patch(es) applied successfully.")
+    }
+}
+tasks.register('revertPatches') {
+    group = 'patching'
+    description = 'Revert all applied patches.'
+    doLast {
+        def patchDir = file("patches")
+        if (!patchDir.exists()) {
+            throw new GradleException("patches/ directory does not exist.")
+        }
+        def patches = patchDir.listFiles()
+                .findAll { it.name.endsWith('.patch') }
+                .sort { it.name }
+                .reverse()
+        if (patches.isEmpty()) {
+            logger.lifecycle("No patch files to revert.")
+            return
+        }
+        patches.each { patch ->
+            logger.lifecycle("Reverting patch: ${patch.name}")
+            exec {
+                commandLine 'git', 'apply', '--reverse', patch.absolutePath
+            }
+        }
+        logger.lifecycle("${patches.size()} patch(es) reverted successfully.")
+    }
+}
