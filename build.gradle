@@ -107,10 +107,10 @@ tasks.register('applyPatches') {
         patches.each { patch ->
             logger.lifecycle("Applying patch: ${patch.name}")
             exec {
-                commandLine 'git', 'apply', '--stat', patch.absolutePath
+                commandLine 'git', 'apply', '--check', '--ignore-space-change', '--ignore-whitespace', patch.absolutePath
             }
             exec {
-                commandLine 'git', 'apply', patch.absolutePath
+                commandLine 'git', 'apply', '--ignore-space-change', '--ignore-whitespace', patch.absolutePath
             }
         }
         logger.lifecycle("${patches.size()} patch(es) applied successfully.")
@@ -135,7 +135,7 @@ tasks.register('revertPatches') {
         patches.each { patch ->
             logger.lifecycle("Reverting patch: ${patch.name}")
             exec {
-                commandLine 'git', 'apply', '--reverse', patch.absolutePath
+                commandLine 'git', 'apply', '--reverse', '--ignore-space-change', '--ignore-whitespace', patch.absolutePath
             }
         }
         logger.lifecycle("${patches.size()} patch(es) reverted successfully.")
