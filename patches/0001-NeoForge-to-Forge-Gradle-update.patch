@@ -1,0 +1,141 @@
+From 9e98389ff3a2c74e7178322096983dcf353b55ff Mon Sep 17 00:00:00 2001
+From: zzik2 <cheese.zzik2@gmail.com>
+Date: Wed, 4 Mar 2026 16:22:07 +0900
+Subject: [PATCH] NeoForge to Forge Gradle update
+
+---
+ build.gradle               |  6 +++---
+ gradle.properties          | 14 +++++++-------
+ neoforge/build.gradle      | 25 ++++++++++++-------------
+ neoforge/gradle.properties |  2 +-
+ settings.gradle            |  2 +-
+ 5 files changed, 24 insertions(+), 25 deletions(-)
+
+diff --git a/build.gradle b/build.gradle
+index 00a7bd2..e4fb8ee 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -47,12 +47,12 @@ subprojects {
+         // If you remove this line, sources will not be generated.
+         withSourcesJar()
+ 
+-        sourceCompatibility = JavaVersion.VERSION_21
+-        targetCompatibility = JavaVersion.VERSION_21
++        sourceCompatibility = JavaVersion.VERSION_17
++        targetCompatibility = JavaVersion.VERSION_17
+     }
+ 
+     tasks.withType(JavaCompile).configureEach {
+-        it.options.release = 21
++        it.options.release = 17
+     }
+ 
+     // Configure Maven publishing.
+diff --git a/gradle.properties b/gradle.properties
+index d3e96fa..4321bb6 100644
+--- a/gradle.properties
++++ b/gradle.properties
+@@ -2,18 +2,18 @@
+ org.gradle.jvmargs=-Xmx2G
+ org.gradle.parallel=true
+ # Mod properties
+-mod_version=0.0.9
++mod_version=0.0.9-a1
+ maven_group=zzik2
+ archives_name=barched
+-enabled_platforms=fabric,neoforge
++enabled_platforms=fabric,forge
+ # Minecraft properties
+-minecraft_version=1.21.1
++minecraft_version=1.20.1
+ # Dependencies
+-architectury_api_version=13.0.8
++architectury_api_version=9.2.14
+ fabric_loader_version=0.18.4
+-fabric_api_version=0.116.7+1.21.1
+-neoforge_version=21.1.218
+-cloth_config_version=15.0.140
++fabric_api_version=0.92.7+1.20.1
++forge_version=1.20.1-47.4.16
++cloth_config_version=11.1.136
+ 
+ # Lib
+ zreflex_version=0.0.4
+\ No newline at end of file
+diff --git a/neoforge/build.gradle b/neoforge/build.gradle
+index 10b99ce..bb3d4e6 100644
+--- a/neoforge/build.gradle
++++ b/neoforge/build.gradle
+@@ -2,9 +2,15 @@ plugins {
+     id 'com.github.johnrengelman.shadow'
+ }
+ 
++loom {
++    forge {
++        mixinConfig "barched.mixins.json"
++    }
++}
++
+ architectury {
+     platformSetupLoomIde()
+-    neoForge()
++    forge()
+ }
+ 
+ configurations {
+@@ -24,22 +30,15 @@ configurations {
+     }
+ }
+ 
+-repositories {
+-    maven {
+-        name = 'NeoForged'
+-        url = 'https://maven.neoforged.net/releases'
+-    }
+-}
+-
+ dependencies {
+-    neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
++    forge "net.minecraftforge:forge:$rootProject.forge_version"
+ 
+-    modImplementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
++    modImplementation "dev.architectury:architectury-forge:$rootProject.architectury_api_version"
+ 
+-    modApi("me.shedaniel.cloth:cloth-config-neoforge:$rootProject.cloth_config_version")
++    modApi("me.shedaniel.cloth:cloth-config-forge:$rootProject.cloth_config_version")
+ 
+     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
+-    shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
++    shadowBundle project(path: ':common', configuration: 'transformProductionForge')
+ 
+     shadowBundle implementation("kr.zzik2:zreflex:$rootProject.zreflex_version")
+ }
+@@ -47,7 +46,7 @@ dependencies {
+ processResources {
+     inputs.property 'version', project.version
+ 
+-    filesMatching('META-INF/neoforge.mods.toml') {
++    filesMatching('META-INF/mods.toml') {
+         expand version: project.version
+     }
+ }
+diff --git a/neoforge/gradle.properties b/neoforge/gradle.properties
+index 7da18ea..8242585 100644
+--- a/neoforge/gradle.properties
++++ b/neoforge/gradle.properties
+@@ -1 +1 @@
+-loom.platform=neoforge
++loom.platform=forge
+diff --git a/settings.gradle b/settings.gradle
+index 7cbb9cb..75ec5a4 100644
+--- a/settings.gradle
++++ b/settings.gradle
+@@ -11,4 +11,4 @@ rootProject.name = 'barched'
+ 
+ include 'common'
+ include 'fabric'
+-include 'neoforge'
++include 'forge'
+-- 
+2.45.1.windows.1
+
