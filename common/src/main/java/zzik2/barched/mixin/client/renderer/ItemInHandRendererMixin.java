@@ -88,7 +88,7 @@ public abstract class ItemInHandRendererMixin {
         if (Barched.ItemStack.matchesIgnoringComponents(itemStack, itemStack2, Barched.DataComponentType::ignoreSwapAnimation)) {
             return true;
         } else {
-            return true; //return !this.itemModelResolver.shouldPlaySwapAnimation(itemStack2); TODO
+            return false; //return !this.itemModelResolver.shouldPlaySwapAnimation(itemStack2); TODO
         }
     }
 }
