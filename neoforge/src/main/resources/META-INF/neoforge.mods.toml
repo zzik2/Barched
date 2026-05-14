@@ -7,7 +7,7 @@ license = "MIT"
 modId = "barched"
 version = "${version}"
 displayName = "Barched"
-authors = "zzik2"
+authors = "zzik2, CubesterYT"
 description = '''
 Bringing Parched, Camel Husk and Spears from 1.21.11 to 1.21.1!
 '''

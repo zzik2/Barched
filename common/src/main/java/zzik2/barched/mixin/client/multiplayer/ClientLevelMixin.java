@@ -13,6 +13,7 @@ import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import zzik2.barched.bridge.level.LevelBridge;
 
 @Mixin(ClientLevel.class)
@@ -35,6 +36,7 @@ public abstract class ClientLevelMixin implements LevelBridge {
 
     }
 
+    @Unique
     private void playSound(double d, double e, double f, SoundEvent soundEvent, SoundSource soundSource, float g, float h, boolean bl, long l) {
         double i = this.minecraft.gameRenderer.getMainCamera().getPosition().distanceToSqr(d, e, f);
         SimpleSoundInstance simpleSoundInstance = new SimpleSoundInstance(soundEvent, soundSource, g, h, RandomSource.create(l), d, e, f);
