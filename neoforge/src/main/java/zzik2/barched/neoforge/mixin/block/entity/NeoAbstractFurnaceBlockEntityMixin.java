@@ -16,7 +16,6 @@ public abstract class NeoAbstractFurnaceBlockEntityMixin {
 
     @Inject(method = "canPlaceItem", at = @At("RETURN"), cancellable = true)
     private void barched$canPlaceItem(int i, ItemStack arg, CallbackInfoReturnable<Boolean> cir) {
-        LogUtils.getLogger().info("canPlaceItem");
         if (arg.is(Barched.Items.WOODEN_SPEAR)) {
             cir.setReturnValue(true);
         }
@@ -24,7 +23,6 @@ public abstract class NeoAbstractFurnaceBlockEntityMixin {
 
     @Inject(method = "getBurnDuration", at = @At("RETURN"), cancellable = true)
     private void barched$getBurnDuration(ItemStack arg, CallbackInfoReturnable<Integer> cir) {
-        LogUtils.getLogger().info("getBurnDuration");
         if (arg.is(Barched.Items.WOODEN_SPEAR)) {
             cir.setReturnValue(200);
         }
