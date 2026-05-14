@@ -2,17 +2,15 @@ package zzik2.barched.mixin.client.player;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.mojang.authlib.GameProfile;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.player.Input;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySelector;
-import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.AttackRange;
 import net.minecraft.world.item.component.UseEffects;
@@ -22,6 +20,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import zzik2.barched.Barched;
+import zzik2.barched.mixin.accessor.client.renderer.GameRendererAccessor;
 import zzik2.barched.bridge.client.LocalPlayerBridge;
 import zzik2.barched.bridge.entity.LivingEntityBridge;
 
@@ -76,7 +75,7 @@ public abstract class LocalPlayerMixin extends AbstractClientPlayer implements L
     }
 
     @Override
-    public HitResult raycastHitResult(float f, Entity entity) {
+    public HitResult raycastHitResult(GameRenderer renderer, float f, Entity entity) {
         ItemStack itemStack = this.getActiveItem();
         AttackRange attackRange = (AttackRange)itemStack.get(Barched.DataComponents.ATTACK_RANGE);
         double d = this.blockInteractionRange();
@@ -89,30 +88,10 @@ public abstract class LocalPlayerMixin extends AbstractClientPlayer implements L
         }
 
         if (hitResult == null || hitResult.getType() == HitResult.Type.MISS) {
-            double e = this.entityInteractionRange();
-            hitResult = pick(entity, d, e, f);
+            hitResult = ((GameRendererAccessor) renderer).barched$pick(entity, d, this.entityInteractionRange(), f);
         }
 
         return hitResult;
-    }
-
-    private static HitResult pick(Entity entity, double d, double e, float f) {
-        double g = Math.max(d, e);
-        double h = Mth.square(g);
-        Vec3 vec3 = entity.getEyePosition(f);
-        HitResult hitResult = entity.pick(g, f, false);
-        double i = hitResult.getLocation().distanceToSqr(vec3);
-        if (hitResult.getType() != HitResult.Type.MISS) {
-            h = i;
-            g = Math.sqrt(i);
-        }
-
-        Vec3 vec32 = entity.getViewVector(f);
-        Vec3 vec33 = vec3.add(vec32.x * g, vec32.y * g, vec32.z * g);
-        float j = 1.0F;
-        AABB aABB = entity.getBoundingBox().expandTowards(vec32.scale(g)).inflate(1.0D, 1.0D, 1.0D);
-        EntityHitResult entityHitResult = ProjectileUtil.getEntityHitResult(entity, vec3, vec33, aABB, EntitySelector.NO_SPECTATORS.and(Entity::isPickable), h);
-        return entityHitResult != null && entityHitResult.getLocation().distanceToSqr(vec3) < i ? filterHitResult(entityHitResult, vec3, e) : filterHitResult(hitResult, vec3, d);
     }
 
     private static HitResult filterHitResult(HitResult hitResult, Vec3 vec3, double d) {
