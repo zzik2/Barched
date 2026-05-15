@@ -6,6 +6,7 @@
   "minVersion": "0.8",
   "client": [
     "accessor.client.HumanoidModelAccessor",
+    "accessor.client.renderer.GameRendererAccessor",
     "client.GuiMixin",
     "client.HumanoidModel$ArmPoseMixin",
     "client.MinecraftMixin",
