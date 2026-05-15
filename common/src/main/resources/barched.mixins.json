@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [
+    "accessor.client.GameRendererAccessor",
     "accessor.client.HumanoidModelAccessor",
     "client.GuiMixin",
     "client.HumanoidModel$ArmPoseMixin",
