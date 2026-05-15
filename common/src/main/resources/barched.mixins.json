@@ -35,6 +35,8 @@
     "InteractionHandMixin",
     "accessor.LivingEntityAccessor",
     "advancements.CriteriaTriggersMixin",
+    "advancements.critereon.EntityFlagsPredicate$BuilderMixin",
+    "advancements.critereon.EntityFlagsPredicateMixin",
     "block.entity.AbstractFurnaceBlockEntityMixin",
     "component.DataComponentsMixin",
     "component.DataComponentType$$BuilderMixin",

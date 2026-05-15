@@ -1,5 +1,6 @@
 package zzik2.barched.mixin.item.enchantment;
 
+import net.minecraft.advancements.critereon.EntityFlagsPredicate;
 import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -24,6 +25,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zzik2.barched.Barched;
+import zzik2.barched.bridge.advancements.critereon.EntityFlagsPredicate$BuilderBridge;
 import zzik2.zreflex.mixin.ModifyAccess;
 
 @Mixin(Enchantments.class)
@@ -45,6 +47,6 @@ public abstract class EnchantmentsMixin {
     private static void barched$bootstrap(BootstrapContext<Enchantment> bootstrapContext, CallbackInfo ci) {
         HolderGetter<Item> holderGetter3 = bootstrapContext.lookup(Registries.ITEM);
 
-        register(bootstrapContext, LUNGE, Enchantment.enchantment(Enchantment.definition(holderGetter3.getOrThrow(Barched.ItemTags.LUNGE_ENCHANTABLE), 5, 3, Enchantment.dynamicCost(5, 8), Enchantment.dynamicCost(25, 8), 2, EquipmentSlotGroup.HAND)).withEffect(Barched.EnchantmentEffectComponents.POST_PIERCING_ATTACK, AllOf.entityEffects(new DamageItem(new LevelBasedValue.Constant(1.0F)), new ApplyExhaustion(LevelBasedValue.perLevel(4.0F)), new ApplyEntityImpulse(new Vec3(0.0D, 0.0D, 1.0D), new Vec3(1.0D, 0.0D, 1.0D), LevelBasedValue.perLevel(0.458F)), new PlaySoundEffect(Barched.SoundEvents.LUNGE, ConstantFloat.of(1.0F), ConstantFloat.of(1.0F))), AllOfCondition.allOf(InvertedLootItemCondition.invert(LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().vehicle(EntityPredicate.Builder.entity()))))));
+        register(bootstrapContext, LUNGE, Enchantment.enchantment(Enchantment.definition(holderGetter3.getOrThrow(Barched.ItemTags.LUNGE_ENCHANTABLE), 5, 3, Enchantment.dynamicCost(5, 8), Enchantment.dynamicCost(25, 8), 2, EquipmentSlotGroup.HAND)).withEffect(Barched.EnchantmentEffectComponents.POST_PIERCING_ATTACK, AllOf.entityEffects(new DamageItem(new LevelBasedValue.Constant(1.0F)), new ApplyExhaustion(LevelBasedValue.perLevel(4.0F)), new ApplyEntityImpulse(new Vec3(0.0D, 0.0D, 1.0D), new Vec3(1.0D, 0.0D, 1.0D), LevelBasedValue.perLevel(0.458F)), new PlaySoundEffect(Barched.SoundEvents.LUNGE, ConstantFloat.of(1.0F), ConstantFloat.of(1.0F))), AllOfCondition.allOf(InvertedLootItemCondition.invert(LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().vehicle(EntityPredicate.Builder.entity()))), LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().flags(((EntityFlagsPredicate$BuilderBridge) EntityFlagsPredicate.Builder.flags()).setIsFallFlying(false))), LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().flags(((EntityFlagsPredicate$BuilderBridge) EntityFlagsPredicate.Builder.flags()).setIsInWater(false))))));
     }
 }
