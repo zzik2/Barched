@@ -106,7 +106,7 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
         int i = ((ItemStackBridge) (Object) itemStack).getSwingAnimation().duration();
         return i;
     }
-    
+
     @Override
     public void lungeForwardMaybe() {
         barched$lungeForwardMaybe();
@@ -119,6 +119,10 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityBr
 
     @Unique
     public void barched$lungeForwardMaybe() {
+        if (((LivingEntity)(Object)this).isFallFlying()) {
+            return;
+        }
+
         Level var2 = this.level();
         if (var2 instanceof ServerLevel) {
             ServerLevel serverLevel = (ServerLevel)var2;
