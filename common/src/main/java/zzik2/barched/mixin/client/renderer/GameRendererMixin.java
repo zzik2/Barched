@@ -18,6 +18,6 @@ public abstract class GameRendererMixin {
 
     @Redirect(method = "pick(F)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GameRenderer;pick(Lnet/minecraft/world/entity/Entity;DDF)Lnet/minecraft/world/phys/HitResult;"))
     private HitResult barched$pick(GameRenderer instance, Entity entity, double d, double e, float f) {
-        return ((LocalPlayerBridge) this.minecraft.player).raycastHitResult(f, entity);
+        return ((LocalPlayerBridge) this.minecraft.player).raycastHitResult(instance, f, entity);
     }
 }
