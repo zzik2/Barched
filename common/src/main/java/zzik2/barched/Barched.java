@@ -50,7 +50,6 @@ import zzik2.zreflex.reflection.ZReflectionTool;
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
-import java.util.function.Supplier;
 
 import static net.minecraft.core.Direction.NORTH;
 import static net.minecraft.world.entity.Mob.checkMobSpawnRules;
@@ -158,13 +157,38 @@ public final class Barched {
     }
 
     public static class Tiers {
-        public static final net.minecraft.world.item.Tiers COPPER = ZEnumTool.addConstant(
-                net.minecraft.world.item.Tiers.class,
-                "COPPER",
-                new Class<?>[] { TagKey.class, int.class, float.class, float.class, int.class, Supplier.class },
-                Barched.BlockTags.INCORRECT_FOR_COPPER_TOOL, 190, 5.0F, 1.0F, 13,
-                (Supplier<Ingredient>) () -> Ingredient.of(net.minecraft.world.item.Items.COPPER_INGOT)
-        );
+        public static final Tier COPPER = new Tier() {
+
+            @Override
+            public int getUses() {
+                return 190;
+            }
+
+            @Override
+            public float getSpeed() {
+                return 5.0F;
+            }
+
+            @Override
+            public float getAttackDamageBonus() {
+                return 1.0F;
+            }
+
+            @Override
+            public TagKey<Block> getIncorrectBlocksForDrops() {
+                return Barched.BlockTags.INCORRECT_FOR_COPPER_TOOL;
+            }
+
+            @Override
+            public int getEnchantmentValue() {
+                return 13;
+            }
+
+            @Override
+            public Ingredient getRepairIngredient() {
+                return Ingredient.of(net.minecraft.world.item.Items.COPPER_INGOT);
+            }
+        };
     }
 
     public static class UseAnim {
