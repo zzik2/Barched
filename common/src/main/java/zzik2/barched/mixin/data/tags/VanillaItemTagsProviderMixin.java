@@ -28,9 +28,9 @@ public abstract class VanillaItemTagsProviderMixin extends ItemTagsProvider {
         this.tag(Barched.ItemTags.ZOMBIE_HORSE_FOOD).add(Items.RED_MUSHROOM);
         this.tag(Barched.ItemTags.SPEARS).add(Barched.Items.DIAMOND_SPEAR, Barched.Items.STONE_SPEAR, Barched.Items.GOLDEN_SPEAR, Barched.Items.NETHERITE_SPEAR, Barched.Items.WOODEN_SPEAR, Barched.Items.IRON_SPEAR, Barched.Items.COPPER_SPEAR);
         this.tag(Barched.ItemTags.LUNGE_ENCHANTABLE).addTag(Barched.ItemTags.SPEARS);
+        this.tag(Barched.ItemTags.MELEE_WEAPON_ENCHANTABLE).addTag(ItemTags.SWORDS).addTag(Barched.ItemTags.SPEARS);
         this.tag(ItemTags.DURABILITY_ENCHANTABLE).addTag(Barched.ItemTags.SPEARS);
-        this.tag(ItemTags.SWORD_ENCHANTABLE).addTag(Barched.ItemTags.SPEARS);
+        this.tag(ItemTags.FIRE_ASPECT_ENCHANTABLE).addTag(Barched.ItemTags.SPEARS);
         this.tag(ItemTags.SHARP_WEAPON_ENCHANTABLE).addTag(Barched.ItemTags.SPEARS);
-        this.tag(ItemTags.DURABILITY_ENCHANTABLE).addTag(Barched.ItemTags.SPEARS);
     }
 }

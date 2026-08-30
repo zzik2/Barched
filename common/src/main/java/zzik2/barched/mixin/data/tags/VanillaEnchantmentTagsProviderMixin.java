@@ -36,7 +36,7 @@ public abstract class VanillaEnchantmentTagsProviderMixin extends EnchantmentTag
 
         System.arraycopy(original, 0, newArray, 0, insertIndex);
         newArray[insertIndex] = Barched.Enchantments.LUNGE;
-        System.arraycopy(original, insertIndex - 1, newArray, insertIndex + 1, original.length - (insertIndex - 1));
+        System.arraycopy(original, insertIndex, newArray, insertIndex + 1, original.length - insertIndex);
 
         return newArray;
     }

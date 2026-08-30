@@ -39,6 +39,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.*;
+import zzik2.barched.data.BarchedBiomeModifications;
 import zzik2.barched.bridge.EnchantmentBridge;
 import zzik2.barched.bridge.component.DataComponentTypeBridge;
 import zzik2.barched.bridge.entity.AbstractHorseBridge;
@@ -67,6 +68,7 @@ public final class Barched {
         o = ServerboundPlayerActionPacket$Action.STAB;
 
         AutoConfig.register(BarchedConfig.class, GsonConfigSerializer::new);
+        BarchedBiomeModifications.register();
     }
 
     public static BarchedConfig getConfig() {
@@ -203,6 +205,7 @@ public final class Barched {
         public static final TagKey<Item> ZOMBIE_HORSE_FOOD = ZReflectionTool.getStaticFieldValue(net.minecraft.tags.ItemTags.class, "ZOMBIE_HORSE_FOOD");
         public static final TagKey<Item> SPEARS = ZReflectionTool.getStaticFieldValue(net.minecraft.tags.ItemTags.class, "SPEARS");
         public static final TagKey<Item> LUNGE_ENCHANTABLE = ZReflectionTool.getStaticFieldValue(net.minecraft.tags.ItemTags.class, "LUNGE_ENCHANTABLE");
+        public static final TagKey<Item> MELEE_WEAPON_ENCHANTABLE = ZReflectionTool.getStaticFieldValue(net.minecraft.tags.ItemTags.class, "MELEE_WEAPON_ENCHANTABLE");
     }
 
     public static class BlockTags {
