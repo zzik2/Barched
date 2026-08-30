@@ -3,7 +3,6 @@ package zzik2.barched.mixin.client.model;
 import net.minecraft.client.model.AbstractZombieModel;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.Monster;

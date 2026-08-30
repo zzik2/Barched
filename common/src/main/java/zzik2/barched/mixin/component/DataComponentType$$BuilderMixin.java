@@ -5,8 +5,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import zzik2.barched.bridge.component.DataComponentTypeBridge;
 import zzik2.barched.bridge.component.DataComponentType$BuilderBridge;
+import zzik2.barched.bridge.component.DataComponentTypeBridge;
 
 @Mixin(DataComponentType.Builder.class)
 public class DataComponentType$$BuilderMixin<T> implements DataComponentType$BuilderBridge<T> {
