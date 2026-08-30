@@ -59,6 +59,12 @@ Config file: `config/barched.json`
 | `zombifiedPiglinSpearSpawnChance` | 5       | Chance (0-100%) for a Zombified Piglin's Spear Equipped Spawn Chance |
 | `piglinOverrideSpearSpawnChance`  | 0       | Chance (0-100%) for a Override Piglin's Spear Equipped Spawn Chance  |
 | `zombieOverrideSpearSpawnChance`  | 0       | Chance (0-100%) for a Override Zombie's Spear Equipped Spawn Chance  |
+| `zombieHorseSpawnWeight`          | 5       | Relative natural spawn weight for Zombie Horses; `0` disables it     |
+| `zombieHorseSpawnBiomes`          | 6 biomes | Biome IDs or `#namespace:tag` selectors for Zombie Horse spawning    |
+| `parchedSpawnWeight`              | 50      | Relative natural spawn weight for Parched; `0` disables it           |
+| `parchedSpawnBiomes`              | desert  | Biome IDs or `#namespace:tag` selectors for Parched spawning         |
+
+Natural spawn weights accept values from `0` to `1000` and are relative to the other monster entries in each biome, not percentages. A value of `0` disables that mob's natural spawning. Changes to natural spawn weights or biome selectors require a game restart.
 
 ## Dependencies
 **Architectury**([CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/all?page=1&pageSize=20&version=1.21.1&showAlphaFiles=hide), [Modrinth](https://modrinth.com/mod/architectury-api/versions?g=1.21.1))
