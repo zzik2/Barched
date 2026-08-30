@@ -8,6 +8,7 @@ import net.bettercombat.network.Packets;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
+import org.spongepowered.asm.mixin.Dynamic;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -21,16 +22,19 @@ import zzik2.barched.bridge.entity.PlayerBridge;
 @Mixin(net.bettercombat.network.ServerNetwork.class)
 public abstract class ServerNetworkMixin {
 
+    @Dynamic
     @Inject(method = "lambda$handleAttackRequest$3", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerGamePacketListenerImpl;handleInteract(Lnet/minecraft/network/protocol/game/ServerboundInteractPacket;)V", shift = At.Shift.AFTER))
     private static void barched$captureAttack(ServerPlayer player, WeaponAttributes attributes, WeaponAttributes.Attack attack, AttackHand hand, ServerLevel world, Packets.C2S_AttackRequest request, boolean useVanillaPacket, ServerGamePacketListenerImpl handler, CallbackInfo ci, @Share("attackedAnyEntity") LocalBooleanRef attackedAnyEntity) {
         attackedAnyEntity.set(true);
     }
 
+    @Dynamic
     @Inject(method = "lambda$handleAttackRequest$3", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerPlayer;attack(Lnet/minecraft/world/entity/Entity;)V", shift = At.Shift.AFTER))
     private static void barched$captureDirectAttack(ServerPlayer player, WeaponAttributes attributes, WeaponAttributes.Attack attack, AttackHand hand, ServerLevel world, Packets.C2S_AttackRequest request, boolean useVanillaPacket, ServerGamePacketListenerImpl handler, CallbackInfo ci, @Share("attackedAnyEntity") LocalBooleanRef attackedAnyEntity) {
         attackedAnyEntity.set(true);
     }
 
+    @Dynamic
     @Inject(method = "lambda$handleAttackRequest$3", at = @At(value = "INVOKE", target = "Lnet/bettercombat/logic/PlayerAttackProperties;setComboCount(I)V", shift = At.Shift.BEFORE))
     private static void barched$applyLunge(ServerPlayer player, WeaponAttributes attributes, WeaponAttributes.Attack attack, AttackHand hand, ServerLevel world, Packets.C2S_AttackRequest request, boolean useVanillaPacket, ServerGamePacketListenerImpl handler, CallbackInfo ci, @Share("attackedAnyEntity") LocalBooleanRef attackedAnyEntity) {
         if (!attackedAnyEntity.get()) {
