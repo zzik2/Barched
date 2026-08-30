@@ -32,6 +32,10 @@ subprojects {
         mavenCentral()
         mavenLocal()
         maven { url "https://maven.shedaniel.me/" }
+        maven {
+            name = "Modrinth"
+            url = "https://api.modrinth.com/maven"
+        }
     }
 
     dependencies {

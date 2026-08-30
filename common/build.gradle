@@ -13,4 +13,6 @@ dependencies {
     modApi("me.shedaniel.cloth:cloth-config:$rootProject.cloth_config_version") {
         exclude(group: "net.fabricmc.fabric-api")
     }
+
+    modCompileOnly("maven.modrinth:better-combat:${project.better_combat}+${project.minecraft_version}-fabric")
 }

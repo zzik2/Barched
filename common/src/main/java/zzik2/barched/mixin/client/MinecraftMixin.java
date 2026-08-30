@@ -1,5 +1,6 @@
 package zzik2.barched.mixin.client;
 
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
@@ -71,17 +72,8 @@ public class MinecraftMixin {
         }
     }
 
-    @Inject(method = "continueAttack", at = @At("HEAD"), cancellable = true)
-    private void barched$continueAttack(boolean bl, CallbackInfo ci) {
-        LocalPlayer player = Minecraft.getInstance().player;
-        if (player != null) {
-            ItemStack itemStack = player.getItemInHand(InteractionHand.MAIN_HAND);
-            if (itemStack.has(Barched.DataComponents.PIERCING_WEAPON)) {
-                if (!bl) {
-                    this.missTime = 0;
-                }
-                ci.cancel();
-            }
-        }
+    @ModifyExpressionValue(method = "continueAttack", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;isUsingItem()Z"))
+    private boolean barched$continueAttack(boolean original) {
+        return original || this.player.getItemInHand(InteractionHand.MAIN_HAND).has(Barched.DataComponents.PIERCING_WEAPON);
     }
 }

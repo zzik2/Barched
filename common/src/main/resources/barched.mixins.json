@@ -1,6 +1,6 @@
 {
   "required": true,
-  "plugin": "zzik2.zreflex.mixin.ModifyAccessTransformer",
+  "plugin": "zzik2.barched.mixin.BarchedMixinPlugin",
   "package": "zzik2.barched.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
@@ -43,6 +43,7 @@
     "component.DataComponentType$$BuilderMixin",
     "component.DataComponentType$Builder$SimpleTypeMixin",
     "component.DataComponentTypeMixin",
+    "compat.bettercombat.ServerNetworkMixin",
     "damagesource.DamageSourcesMixin",
     "damagesource.DamageTypesMixin",
     "data.advancements.VanillaAdventureAdvancementsMixin",
